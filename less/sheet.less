@@ -1,0 +1,254 @@
+@import "./config.less";
+
+.window-app .window-content{
+    background-color: @background;
+    background: @background;
+}
+
+.section-header{
+            
+    background-color: @black;
+    padding: 5px;
+    margin: 0px;
+    font-family: Avant, sans-serif;
+    color: @white;
+    font-weight: 700;
+    font-size: 1.2em;
+    font-style: normal;
+    
+}
+
+.main{
+    flex-direction: column;
+    margin-left: 5px;
+    min-width: 70%;
+    justify-content: flex-start;
+    .info-group{
+        border: 1px solid @black;    
+        border-radius: 0px;
+        margin: 2px;
+        padding: 0px;
+        box-shadow: 2px 2px @drop-shadow-color;
+        height: max-content;
+    }
+    .conditions{
+        border: 1px solid @black;    
+        border-radius: 0px;
+        margin: 2px;
+        padding: 0px;
+        box-shadow: 2px 2px @drop-shadow-color;
+        
+        line-height: 15px;
+        max-height: 35px;
+        
+        
+       
+        .info-item{
+            font-size: .77em;
+            line-height: 25px;
+
+            p{
+                margin: 0px;
+            }
+            
+            img{
+                border:none;
+                vertical-align: middle;
+            }
+        }
+        .special-item{
+            font-size: .77em;
+            line-height: 25px;
+            img{
+                border:none;
+                vertical-align: middle;
+            }
+        }
+        .section-header{
+            
+            line-height: 25px;
+        }
+    }
+    .info-list{
+        margin: 0px;
+        padding-left: 0px;
+    }
+    .iconic-item{
+        list-style: none;
+        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-size: 1em;
+        background: @iconic-item-color;
+        border-right: 1px solid @black;
+        border-bottom: 1px solid @black;
+        line-height: 34px;
+    }
+    .info-item{
+        list-style: none;
+        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-size: 1em;
+        background: @field-color;
+        border-right: 1px solid @black;
+        border-bottom: 1px solid @black;
+
+       
+        line-height: 34px;
+        img{
+            border: none;
+        }
+        select{
+            background: @transparent;
+            border: none;
+        }
+
+    }
+    .special-item{
+        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-size: 1em;
+        background: @section-head-color;
+        border-right: 1px solid @black;
+        border-bottom: 1px solid @black;
+        
+        img{
+            border:none;
+            align-self: flex-end;
+        }
+    }
+}
+
+.kid-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        max-width: 50%;
+    }
+}
+
+.logo{
+    border: none;
+}
+
+.sidebar{
+    max-width: 30%;
+    .name-box{
+        
+        margin: 0px;
+
+        .type{
+            background: @field-color;
+            border: 1px solid @black;
+            
+            border-radius: 0px;
+            margin: 2px;
+            padding: 4px;
+            box-shadow: 2px 2px @drop-shadow-color;
+            select{
+                background: @transparent;
+                border: none;
+            }
+        }
+        
+        .portrait{
+            background: @field-color;
+            border: 1px solid @black;
+            
+            border-radius: 0px;
+            margin: 2px;
+            padding: 4px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px @drop-shadow-color;
+            img{
+                
+                border:none;
+                
+            }
+        }
+        h1.charname{
+            background: @field-color;
+            font-family: Avant, sans-serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            border: 1px solid @black;
+            border-radius: 0px;
+            margin: 2px;
+            padding: 4px;
+            box-shadow: 2px 2px @drop-shadow-color;
+            input{
+                background: @transparent;
+                border: none;
+            }
+
+        }
+
+    }
+    .experience-group{
+        margin:2px;
+        box-shadow: 2px 2px @drop-shadow-color;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        .experience{
+            text-align: left;
+        }
+        .exp-boxes{
+            background: @section-head-color;
+            flex: 0 0 auto;
+            justify-content: center;
+            align-items: center;
+            padding: 2px;
+            border: 1px solid @black;
+            img{
+                border: none;
+            }
+        }
+    }
+   .attributes-skills{
+       margin: 2px;
+       box-shadow: 2px 2px @drop-shadow-color;
+
+        .attribute-list{
+            list-style: none;
+            padding-left: 0px;
+            margin: 0px;
+            border: 1px solid @black;
+
+            .attribute{
+                background-color: @section-head-color;
+                font-family: Avant, sans-serif;
+                padding: 3px;
+                margin: 0px;
+                color: @black;
+                font-weight: 500;
+                font-size: 1.1em;
+                font-style:normal;
+                border-top: 1px solid @black;
+            }
+
+            .skill-list{
+                list-style: none;
+                margin: 0px;
+                padding-left: 0px;
+                .skill{
+                    background-color: @section-item-color;
+                    font-family: Avant, sans-serif;
+                    padding-top: 3px;
+                    padding-bottom: 3px;
+                    padding-left: 15px;
+                    margin: 0px;
+                    color: @black;
+                    font-weight: 400;
+                    font-size: 1.1em;
+                    font-style: normal ;
+                    border-top: 1px solid @black;
+
+                }
+            }
+        }
+    }
+
+}

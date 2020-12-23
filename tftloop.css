@@ -5,3 +5,238 @@
 /******************************
 /        Fonts
 ******************************/
+@font-face {
+  font-family: Avant;
+  src: url(fonts/AvantGuard.ttf);
+}
+@font-face {
+  font-family: SabonItalic;
+  src: url(fonts/Sabon_Italic.ttf);
+}
+@font-face {
+  font-family: SabonRoman;
+  src: url(fonts/Sabon_Roman.ttf);
+}
+@font-face {
+  font-family: Trixie;
+  src: url(fonts/Trixie-Text.otf);
+}
+.window-app .window-content {
+  background-color: white;
+  background: white;
+}
+.section-header {
+  background-color: black;
+  padding: 5px;
+  margin: 0px;
+  font-family: Avant, sans-serif;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2em;
+  font-style: normal;
+}
+.main {
+  flex-direction: column;
+  margin-left: 5px;
+  min-width: 70%;
+  justify-content: flex-start;
+}
+.main .info-group {
+  border: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  padding: 0px;
+  box-shadow: 2px 2px #7f7f7f;
+  height: max-content;
+}
+.main .conditions {
+  border: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  padding: 0px;
+  box-shadow: 2px 2px #7f7f7f;
+  line-height: 15px;
+  max-height: 35px;
+}
+.main .conditions .info-item {
+  font-size: 0.77em;
+  line-height: 25px;
+}
+.main .conditions .info-item p {
+  margin: 0px;
+}
+.main .conditions .info-item img {
+  border: none;
+  vertical-align: middle;
+}
+.main .conditions .special-item {
+  font-size: 0.77em;
+  line-height: 25px;
+}
+.main .conditions .special-item img {
+  border: none;
+  vertical-align: middle;
+}
+.main .conditions .section-header {
+  line-height: 25px;
+}
+.main .info-list {
+  margin: 0px;
+  padding-left: 0px;
+}
+.main .iconic-item {
+  list-style: none;
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-size: 1em;
+  background: #fedd9e;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  line-height: 34px;
+}
+.main .info-item {
+  list-style: none;
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-size: 1em;
+  background: #fff1da;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  line-height: 34px;
+}
+.main .info-item img {
+  border: none;
+}
+.main .info-item select {
+  background: #ffffff00;
+  border: none;
+}
+.main .special-item {
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-size: 1em;
+  background: #f9bd8d;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.main .special-item img {
+  border: none;
+  align-self: flex-end;
+}
+.kid-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.kid-header img {
+  max-width: 50%;
+}
+.logo {
+  border: none;
+}
+.sidebar {
+  max-width: 30%;
+}
+.sidebar .name-box {
+  margin: 0px;
+}
+.sidebar .name-box .type {
+  background: #fff1da;
+  border: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  padding: 4px;
+  box-shadow: 2px 2px #7f7f7f;
+}
+.sidebar .name-box .type select {
+  background: #ffffff00;
+  border: none;
+}
+.sidebar .name-box .portrait {
+  background: #fff1da;
+  border: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  padding: 4px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px #7f7f7f;
+}
+.sidebar .name-box .portrait img {
+  border: none;
+}
+.sidebar .name-box h1.charname {
+  background: #fff1da;
+  font-family: Avant, sans-serif;
+  font-size: 1.8em;
+  font-weight: 700;
+  border: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  padding: 4px;
+  box-shadow: 2px 2px #7f7f7f;
+}
+.sidebar .name-box h1.charname input {
+  background: #ffffff00;
+  border: none;
+}
+.sidebar .experience-group {
+  margin: 2px;
+  box-shadow: 2px 2px #7f7f7f;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sidebar .experience-group .experience {
+  text-align: left;
+}
+.sidebar .experience-group .exp-boxes {
+  background: #f9bd8d;
+  flex: 0 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border: 1px solid black;
+}
+.sidebar .experience-group .exp-boxes img {
+  border: none;
+}
+.sidebar .attributes-skills {
+  margin: 2px;
+  box-shadow: 2px 2px #7f7f7f;
+}
+.sidebar .attributes-skills .attribute-list {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+  border: 1px solid black;
+}
+.sidebar .attributes-skills .attribute-list .attribute {
+  background-color: #f9bd8d;
+  font-family: Avant, sans-serif;
+  padding: 3px;
+  margin: 0px;
+  color: black;
+  font-weight: 500;
+  font-size: 1.1em;
+  font-style: normal;
+  border-top: 1px solid black;
+}
+.sidebar .attributes-skills .attribute-list .skill-list {
+  list-style: none;
+  margin: 0px;
+  padding-left: 0px;
+}
+.sidebar .attributes-skills .attribute-list .skill-list .skill {
+  background-color: #fde5d2;
+  font-family: Avant, sans-serif;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 15px;
+  margin: 0px;
+  color: black;
+  font-weight: 400;
+  font-size: 1.1em;
+  font-style: normal ;
+  border-top: 1px solid black;
+}

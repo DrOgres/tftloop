@@ -1,0 +1,166 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="kid-header">
+        <img src="systems/tftloop/img/tftl-logo.png" class="logo" title="tales from the loop logo">
+    </header>
+    <div class="sheet-body flexrow">
+        <div class="sidebar flexcol">
+            <div class="name-box">
+                <h1 class="charname">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="name"/>
+                </h1>
+                <div class = "portrait">
+                    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160"  width="160"/>
+                </div>
+                <div class = "type">
+                    <label>type</label>
+                <select>
+                    <option>bookworm</option>
+                    <option>computer geek</option>
+                    <option>hick</option>
+                    <option>jock</option>
+                    <option>popular kid</option>
+                    <option>rocker</option>
+                    <option>troublemaker</option>
+                    <option>weirdo</option>
+                </select>
+                </div>  
+            </div>
+            <div class="attributes-skills">
+                <h4 class="section-header">{{localize "tftloop.attributesSkills"}}</h4>
+                <ol class="attribute-list">
+                    <li class="attribute">body</li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill">sneak</li>
+                            <li class="skill">force</li>
+                            <li class="skill">move</li>
+                        </ol>
+                    </li>
+                    <li class="attribute" >tech</li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill">tinker</li>
+                            <li class="skill">program</li>
+                            <li class="skill">calculate</li>
+                        </ol>
+                    </li>
+                    <li class="attribute">heart</li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill">contact</li>
+                            <li class="skill">charm</li>
+                            <li class="skill">lead</li>
+                        </ol>
+                    </li>
+                    <li class="attribute">mind</li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill">investigate</li>
+                            <li class="skill">comprehend</li>
+                            <li class="skill">empathize</li>
+                        </ol>
+                    </li>    
+                </ol>
+
+            </div>
+            <div class="experience-group">
+            <div class="section-header experience">
+            {{localize "tftloop.experience"}}
+            </div>
+            <div class="exp-boxes">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+            </div>
+            </div>
+        </div>
+        <div class="main flexcol">
+            <div class="core-info info-group">
+                <div class="flexrow">
+                    <div class="info-item">
+                        <label>age</label>
+                        <select>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                        </select>
+                    </div>
+                    <div class="special-item">
+                        <label>luck points</label>
+                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
+                        <img src="systems/tftloop/img/box_checked.png" height="22px" width="22px">
+                    </div>
+                </div>
+                <div class="flexrow">
+                    <div class="info-item">
+                        <label>drive</label>
+                    </div>
+                    <div class="info-item">
+                        <label>anchor</label>
+                    </div>
+                </div>
+                 <div class="info-item">
+                     <label>problem</label>
+                 </div>
+                 <div class="info-item">
+                     <label>pride</label>
+                 </div>
+                 <div class="info-item">
+                     <label>description</label>
+                 </div>
+                 <div class="info-item">
+                     <label>fav song</label>
+                 </div>
+            </div>
+            <div class="conditions flexrow">
+                <div class="section-header">Conditions</div>
+                <div class="info-item">upset <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                <div class="info-item">scared <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                <div class="info-item">exhausted <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                <div class="info-item">injured <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                <div class="special-item">broken <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                
+            </div>
+            <div class="relationships info-group">
+                <h4 class="section-header">Relationships</h4>
+                <ol class="info-list">
+                    <li class="info-item">kid 1</li>
+                </ol>
+            </div>
+            <div class="items-hideout flexrow">
+                <div class="items info-group">
+                    <h4 class="section-header">items</h4>
+                    <ol class="info-list">
+                        
+                        <li class="iconic-item">iconic item  +2</li>
+                        <li class="info-item">item added</li>
+                    </ol>
+                </div>
+                <div class="hideout info-group">
+                <h4 class="section-header">hideout</h4>
+                <p class="info-item">hideout editor</p>
+                </div>
+            </div>
+            <div class="notes-group info-group">
+                <h4 class="section-header">notes</h4>
+                <p class="info-item">Notes Editor</p>
+            </div>
+        </div>
+    </div>
+    <footer class="sheet-footer">
+        <img src="systems/tftloop/img/footer-image.png" class="logo" title="page footer image">
+    </footer>
+</form>
