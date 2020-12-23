@@ -1,0 +1,38 @@
+{
+    "name" : "tftloop",
+    "title" : "Tales from the Loop",
+    "description": " ",
+    "author" : "Dr Ogres", 
+    "version" : "0.0.1",
+    "miniumumCoreVersion" : "0.7.5",
+    "compatibleCoreVersion" : "0.7.9",
+
+    "esmodules" : [
+        "tftloop.js"
+    ],
+
+    "styles" : [
+       "tftloop.css" 
+    ],
+
+    "packs": [
+
+    ],
+    "languages" : [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
+        }
+
+    ],
+
+    "gridDistance": 1,
+    "gridUnits": "meter",
+    "primaryTokenAttribute" : "",
+    "inititive" : "",
+    "url": "https://github.com/DrOgres/tftloop",
+    "manifest": "https://github.com/DrOgres/tftloop/raw/master/system.json",
+    "download": "https://github.com/DrOgres/tftloop/archive/master.zip"
+
+}

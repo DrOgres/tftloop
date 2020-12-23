@@ -1,0 +1,77 @@
+{
+    "Actor": {
+        "types": [
+            "kid",
+            "npc",
+            "creature"
+        ],
+        "templates": {
+            "attributes": {
+                "body": 0,
+                "tech": 0,
+                "heart": 0,
+                "mind": 0
+            },
+            "bodySkills":{
+                "sneak": 0,
+                "force": 0,
+                "move": 0
+            },
+            "techSkills":{
+                "tinker": 0,
+                "program": 0,
+                "calculate": 0
+            }, 
+            "heartSkills":{
+                "contact": 0,
+                "charm": 0,
+                "lead": 0
+            },
+            "mindSkills":{
+                "investigate": 0,
+                "comprehend": 0,
+                "empathize": 0
+            },
+            "conditions": {
+                "upset": false,
+                "scared": false,
+                "exhaused": false,
+                "injured": false,
+                "broken": false
+            }
+
+
+
+        },
+        "kid" : {
+            "templates": ["attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"],
+            "age": 10,
+            "type": "type",
+            "drive": "drive",
+            "luck": 0,
+            "anchor": "",
+            "problem": "",
+            "pride": "",
+            "description": "",
+            "favoriteSong": "",
+            "relationships": [],
+            "iconicItems": {
+                "desc": "",
+                "bonus": 2
+            },
+            "hideout": "",
+            "notes": ""
+
+            
+
+        },
+        "npc":{
+
+        },
+        "creature": {
+
+        }
+    }
+
+
+}
