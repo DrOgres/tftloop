@@ -1,7 +1,54 @@
 {
     "tftloop" : {
         "attributesSkills" : "Attributes/Skills",
-        "experience": "Experience"
+        "experience": "Experience",
+        "type": "Type",
+        "bookworm": "Bookworm",
+        "geek": "Computer Geek",
+        "hick": "Hick",
+        "jock": "Jock",
+        "popular": "Popular Kid",
+        "rocker": "Rocker",
+        "troublemaker": "Troublemaker",
+        "weirdo": "Weirdo",
+        "body": "Body",
+        "tech": "Tech",
+        "heart": "Heart",
+        "mind": "Mind",
+        "sneak": "Sneak",
+        "force": "Force",
+        "move": "Move",
+        "tinker": "Tinker",
+        "program": "Program",
+        "calculate": "Calculate",
+        "investigate": "Investigate",
+        "comprehend": "Comprehend",
+        "empathize": "Empathize",
+        "contact": "Contact",
+        "charm": "Charm",
+        "lead": "Lead",
+        "age": "Age",
+        "luck": "Luck Points",
+        "drive": "Drive",
+        "anchor": "Anchor",
+        "problem": "Problem",
+        "pride": "Pride",
+        "description": "Description",
+        "favSong": "Favorite Song",
+        "conditions": "Conditions",
+        "upset": "Upset",
+        "scared": "Scared",
+        "exhausted": "Exhausted",
+        "injured": "Injured",
+        "broken": "Broken",
+        "relationships": "Relationships",
+        "items": "Items",
+        "iconic": "Iconic Item",
+        "hideout": "Hideout",
+        "notes": "Notes"
+
+
+
     }
 
 

@@ -18,11 +18,42 @@
     
 }
 
+.editor {
+	height: auto;
+	min-height: 30px;
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.tox.tox-tinymce {
+	border: none;
+	flex: 1;
+	min-height: 200px;
+}
+
+.kid-notes{
+    background: @field-color;
+}
 .main{
-    flex-direction: column;
+    display: table;
     margin-left: 5px;
     min-width: 70%;
     justify-content: flex-start;
+
+    #hideout{
+        border:none;
+        resize: none;
+    }
+    .notes-group{
+        height: fit-content;
+        background: @field-color;
+    }
+    
+    .hideout{
+        background: @field-color;
+    }
+
     .info-group{
         border: 1px solid @black;    
         border-radius: 0px;
@@ -30,6 +61,7 @@
         padding: 0px;
         box-shadow: 2px 2px @drop-shadow-color;
         height: max-content;
+        min-height: 0px;
     }
     .conditions{
         border: 1px solid @black;    
@@ -37,14 +69,15 @@
         margin: 2px;
         padding: 0px;
         box-shadow: 2px 2px @drop-shadow-color;
-        
+        margin-bottom: 4px;
+        margin-top: 4px;
         line-height: 15px;
         max-height: 35px;
         
         
        
         .info-item{
-            font-size: .77em;
+            font-size: .85em;
             line-height: 25px;
 
             p{
@@ -227,6 +260,20 @@
                 font-size: 1.1em;
                 font-style:normal;
                 border-top: 1px solid @black;
+                justify-content: space-between;
+
+                input{
+                    background: @background;
+                    max-width: 35px;
+                    max-height: 18px;
+                    text-align: right;
+                    border: 1px solid @black;
+                    border-radius: 0px;
+                    box-shadow: 2px 2px @drop-shadow-color;
+                    font-family: Trixie, 'Courier New', Courier, monospace;
+                    font-size: .8em;
+
+                }
             }
 
             .skill-list{
@@ -240,11 +287,26 @@
                     padding-bottom: 3px;
                     padding-left: 15px;
                     margin: 0px;
+                    padding-right: 3px;
                     color: @black;
                     font-weight: 400;
                     font-size: 1.1em;
                     font-style: normal ;
                     border-top: 1px solid @black;
+                    justify-content: space-between;
+                    
+                    input{
+                        background: @background;
+                        max-width: 25px;
+                        max-height: 18px;
+                        text-align: right;
+                        border: 1px solid @black;
+                        border-radius: 0px;
+                        box-shadow: 2px 2px @drop-shadow-color;
+                        font-family: Trixie, 'Courier New', Courier, monospace;
+                        font-size: .8em;
+    
+                    }
 
                 }
             }

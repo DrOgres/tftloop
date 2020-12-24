@@ -59,9 +59,10 @@
                 "desc": "",
                 "bonus": 2
             },
-            "hideout": "",
-            "notes": ""
-
+            "hideout": "Hideout Notes",
+            "notes": {
+                "value": "Notes"
+            }
             
 
         },

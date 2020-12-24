@@ -35,11 +35,37 @@
   font-size: 1.2em;
   font-style: normal;
 }
-.main {
+.editor {
+  height: auto;
+  min-height: 30px;
+  margin-bottom: 10px;
+  display: flex;
   flex-direction: column;
+}
+.tox.tox-tinymce {
+  border: none;
+  flex: 1;
+  min-height: 200px;
+}
+.kid-notes {
+  background: #fff1da;
+}
+.main {
+  display: table;
   margin-left: 5px;
   min-width: 70%;
   justify-content: flex-start;
+}
+.main #hideout {
+  border: none;
+  resize: none;
+}
+.main .notes-group {
+  height: fit-content;
+  background: #fff1da;
+}
+.main .hideout {
+  background: #fff1da;
 }
 .main .info-group {
   border: 1px solid black;
@@ -48,6 +74,7 @@
   padding: 0px;
   box-shadow: 2px 2px #7f7f7f;
   height: max-content;
+  min-height: 0px;
 }
 .main .conditions {
   border: 1px solid black;
@@ -55,11 +82,13 @@
   margin: 2px;
   padding: 0px;
   box-shadow: 2px 2px #7f7f7f;
+  margin-bottom: 4px;
+  margin-top: 4px;
   line-height: 15px;
   max-height: 35px;
 }
 .main .conditions .info-item {
-  font-size: 0.77em;
+  font-size: 0.85em;
   line-height: 25px;
 }
 .main .conditions .info-item p {
@@ -221,6 +250,18 @@
   font-size: 1.1em;
   font-style: normal;
   border-top: 1px solid black;
+  justify-content: space-between;
+}
+.sidebar .attributes-skills .attribute-list .attribute input {
+  background: white;
+  max-width: 35px;
+  max-height: 18px;
+  text-align: right;
+  border: 1px solid black;
+  border-radius: 0px;
+  box-shadow: 2px 2px #7f7f7f;
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-size: 0.8em;
 }
 .sidebar .attributes-skills .attribute-list .skill-list {
   list-style: none;
@@ -234,9 +275,22 @@
   padding-bottom: 3px;
   padding-left: 15px;
   margin: 0px;
+  padding-right: 3px;
   color: black;
   font-weight: 400;
   font-size: 1.1em;
   font-style: normal ;
   border-top: 1px solid black;
+  justify-content: space-between;
+}
+.sidebar .attributes-skills .attribute-list .skill-list .skill input {
+  background: white;
+  max-width: 25px;
+  max-height: 18px;
+  text-align: right;
+  border: 1px solid black;
+  border-radius: 0px;
+  box-shadow: 2px 2px #7f7f7f;
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-size: 0.8em;
 }

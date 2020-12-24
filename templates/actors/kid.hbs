@@ -12,52 +12,54 @@
                     <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160"  width="160"/>
                 </div>
                 <div class = "type">
-                    <label>type</label>
-                <select>
-                    <option>bookworm</option>
-                    <option>computer geek</option>
-                    <option>hick</option>
-                    <option>jock</option>
-                    <option>popular kid</option>
-                    <option>rocker</option>
-                    <option>troublemaker</option>
-                    <option>weirdo</option>
+                    <label>{{localize "tftloop.type"}}</label>
+                <select name="data.type">
+                    {{#select data.type}}
+                    <option value="bookworm">{{localize "tftloop.bookworm"}}</option>
+                    <option value="geek">{{localize "tftloop.geek"}}</option>
+                    <option value="hick">{{localize "tftloop.hick"}}</option>
+                    <option value="jock">{{localize "tftloop.jock"}}</option>
+                    <option value="popular">{{localize "tftloop.popular"}}</option>
+                    <option value="rocker">{{localize "tftloop.rocker"}}</option>
+                    <option value="troublemaker">{{localize "tftloop.troublemaker"}}</option>
+                    <option value="weirdo">{{localize "tftloop.weirdo"}}</option>
+                    {{/select}}
                 </select>
                 </div>  
             </div>
             <div class="attributes-skills">
                 <h4 class="section-header">{{localize "tftloop.attributesSkills"}}</h4>
                 <ol class="attribute-list">
-                    <li class="attribute">body</li>
+                    <li class="attribute flexrow">{{localize "tftloop.body"}} <input type="text" name="data.body" value="{{data.body}}" data-dtype="Number"/> </li>
                     <li>
                         <ol class="skill-list">
-                            <li class="skill">sneak</li>
-                            <li class="skill">force</li>
-                            <li class="skill">move</li>
+                            <li class="skill flexrow">{{localize "tftloop.sneak"}} <input type="text" name="data.sneak" value="{{data.sneak}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.force"}} <input type="text" name="data.force" value="{{data.force}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.move"}} <input type="text" name="data.move" value="{{data.move}}" data-dtype="Number"/></li>
                         </ol>
                     </li>
-                    <li class="attribute" >tech</li>
+                    <li class="attribute flexrow" >{{localize "tftloop.tech"}} <input type="text" name="data.tech" value="{{data.tech}}" data-dtype="Number"/></li>
                     <li>
                         <ol class="skill-list">
-                            <li class="skill">tinker</li>
-                            <li class="skill">program</li>
-                            <li class="skill">calculate</li>
+                            <li class="skill flexrow">{{localize "tftloop.tinker"}} <input type="text" name="data.tinker" value="{{data.tinker}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.program"}} <input type="text" name="data.program" value="{{data.program}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.calculate"}} <input type="text" name="data.calculate" value="{{data.calculate}}" data-dtype="Number"/></li>
                         </ol>
                     </li>
-                    <li class="attribute">heart</li>
+                    <li class="attribute flexrow">{{localize "tftloop.heart"}} <input type="text" name="data.heart" value="{{data.heart}}" data-dtype="Number"/></li>
                     <li>
                         <ol class="skill-list">
-                            <li class="skill">contact</li>
-                            <li class="skill">charm</li>
-                            <li class="skill">lead</li>
+                            <li class="skill flexrow">{{localize "tftloop.contact"}} <input type="text" name="data.contact" value="{{data.contact}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.charm"}} <input type="text" name="data.charm" value="{{data.charm}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.lead"}} <input type="text" name="data.lead" value="{{data.lead}}" data-dtype="Number"/></li>
                         </ol>
                     </li>
-                    <li class="attribute">mind</li>
+                    <li class="attribute flexrow">{{localize "tftloop.mind"}} <input type="text" name="data.mind" value="{{data.mind}}" data-dtype="Number"/></li>
                     <li>
                         <ol class="skill-list">
-                            <li class="skill">investigate</li>
-                            <li class="skill">comprehend</li>
-                            <li class="skill">empathize</li>
+                            <li class="skill flexrow">{{localize "tftloop.investigate"}} <input type="text" name="data.investigate" value="{{data.investigate}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.comprehend"}} <input type="text" name="data.comprehend" value="{{data.comprehend}}" data-dtype="Number"/></li>
+                            <li class="skill flexrow">{{localize "tftloop.empathize"}} <input type="text" name="data.empathize" value="{{data.empathize}}" data-dtype="Number"/></li>
                         </ol>
                     </li>    
                 </ol>
@@ -85,78 +87,84 @@
             <div class="core-info info-group">
                 <div class="flexrow">
                     <div class="info-item">
-                        <label>age</label>
-                        <select>
-                            <option>10</option>
-                            <option>11</option>
-                            <option>12</option>
-                            <option>13</option>
-                            <option>14</option>
-                            <option>15</option>
+                        <label>{{localize "tftloop.age"}}</label>
+                        <select name="data.age">
+                            {{#select data.age}}
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            {{/select}}
                         </select>
                     </div>
                     <div class="special-item">
-                        <label>luck points</label>
-                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
-                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
-                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
-                        <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px">
-                        <img src="systems/tftloop/img/box_checked.png" height="22px" width="22px">
+                        <label>{{localize "tftloop.luck"}}</label>
+                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                        <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     </div>
                 </div>
                 <div class="flexrow">
                     <div class="info-item">
-                        <label>drive</label>
+                        <label>{{localize "tftloop.drive"}}</label>
                     </div>
                     <div class="info-item">
-                        <label>anchor</label>
+                        <label>{{localize "tftloop.anchor"}}</label>
                     </div>
                 </div>
                  <div class="info-item">
-                     <label>problem</label>
+                     <label>{{localize "tftloop.problem"}}</label>
                  </div>
                  <div class="info-item">
-                     <label>pride</label>
+                     <label>{{localize "tftloop.pride"}}</label>
                  </div>
                  <div class="info-item">
-                     <label>description</label>
+                     <label>{{localize "tftloop.description"}}</label>
                  </div>
                  <div class="info-item">
-                     <label>fav song</label>
+                     <label>{{localize "tftloop.favSong"}}</label>
                  </div>
             </div>
             <div class="conditions flexrow">
-                <div class="section-header">Conditions</div>
-                <div class="info-item">upset <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
-                <div class="info-item">scared <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
-                <div class="info-item">exhausted <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
-                <div class="info-item">injured <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
-                <div class="special-item">broken <img src="systems/tftloop/img/box_not_checked.png" height="22px" width="22px"></div>
+                <div class="section-header">{{localize "tftloop.conditions"}}</div>
+                <div class="info-item">{{localize "tftloop.upset"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
+                <div class="info-item">{{localize "tftloop.scared"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
+                <div class="info-item">{{localize "tftloop.exhausted"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
+                <div class="info-item">{{localize "tftloop.injured"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
+                <div class="special-item">{{localize "tftloop.broken"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
                 
             </div>
             <div class="relationships info-group">
-                <h4 class="section-header">Relationships</h4>
+                <h4 class="section-header">{{localize "tftloop.relationships"}}</h4>
                 <ol class="info-list">
                     <li class="info-item">kid 1</li>
                 </ol>
             </div>
             <div class="items-hideout flexrow">
                 <div class="items info-group">
-                    <h4 class="section-header">items</h4>
+                    <h4 class="section-header">{{localize "tftloop.items"}}</h4>
                     <ol class="info-list">
                         
-                        <li class="iconic-item">iconic item  +2</li>
+                        <li class="iconic-item">{{localize "tftloop.iconic"}} +2</li>
                         <li class="info-item">item added</li>
                     </ol>
                 </div>
                 <div class="hideout info-group">
-                <h4 class="section-header">hideout</h4>
-                <p class="info-item">hideout editor</p>
+                <h4 class="section-header">{{localize "tftloop.hideout"}}</h4>
+                <div class="hideout-text">
+                    <textarea id="hideout" name="data.hideout" rows="5">{{data.hideout}}</textarea>
+                </div>
                 </div>
             </div>
             <div class="notes-group info-group">
-                <h4 class="section-header">notes</h4>
-                <p class="info-item">Notes Editor</p>
+                <h4 class="section-header">{{localize "tftloop.notes"}}</h4>
+                <div class="kid-notes">
+                {{editor content=data.notes.value target="data.notes.value" button=true owner=owner editable=editable}}
+                </div>
             </div>
         </div>
     </div>

@@ -14,5 +14,12 @@ export default class tftloopActorSheet extends ActorSheet {
         return `${path}/${this.actor.data.type}.hbs`;
     }
 
+    getData(){
+        const data = super.getData();
+        data.config = CONFIG.tftloop;
+
+        return data;
+    }
+
 
 }
