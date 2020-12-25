@@ -46,8 +46,11 @@
         "iconic": "Iconic Item: ",
         "hideout": "Hideout",
         "notes": "Notes",
+        "new": "New",
+        "delete": "Delete",
         "newRelationship": "New Relationship",
-        "newItem" : "New Item"
+        "newItem" : "New Item",
+        "reset": "Reset"
 
 
 

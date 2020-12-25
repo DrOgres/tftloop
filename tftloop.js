@@ -30,4 +30,14 @@ Hooks.once("init", function(){
 
     preloadHandlebarsTemplates();
 
+    Handlebars.registerHelper("times", function(n, content) {
+        let result = "";
+        //console.log(n);
+        for(let i = 0; i<n; ++i){
+            result = result+content.fn(i);
+        }
+        
+        return result;
+    });
+
 })

@@ -1,15 +1,20 @@
 @import "./config.less";
 
-
-
 .imgCheck{
     
     cursor: pointer;
 }
 
+.use-luck{
+    cursor: pointer;
+}
 
-
-
+.reset-luck{
+    cursor: pointer;
+    text-align: right;
+    max-width: 50px;
+    padding-right: 3px;
+}
 
 .section-header{
             
@@ -54,14 +59,26 @@
     #hideout{
         border:none;
         resize: none;
+        height: 85%;
     }
     .notes-group{
         height: fit-content;
         background: @field-color;
     }
+
+    .items{
+        min-height: 0px;
+        background: @field-color;
+    }
     
     .hideout{
+        flex: 1 1 auto;
+        flex-direction: column;
         background: @field-color;
+        max-width: 250px;
+        .hideout-text{
+            height: 85%;
+        }
     }
 
     .info-group{
@@ -70,8 +87,7 @@
         margin: 2px;
         padding: 0px;
         box-shadow: 2px 2px @drop-shadow-color;
-        height: max-content;
-        min-height: 0px;
+        
     }
     .conditions{
         border: 1px solid @black;    
@@ -84,14 +100,15 @@
         line-height: 15px;
         max-height: 35px;
         
-        
        
+    
         .info-item{
             font-size: .85em;
             line-height: 25px;
             padding-left: 2px;
             align-content: space-between;
 
+            
             p{
                 margin: 0px;
             }
@@ -118,7 +135,7 @@
             
             line-height: 25px;
         }
-    }
+        }
     .info-list{
         margin: 0px;
         padding-left: 0px;
@@ -129,17 +146,63 @@
         font-size: 1em;
         background: @iconic-item-color;
         border-right: 1px solid @black;
-        border-bottom: 1px solid @black;
+        border-top: 1px solid @black;
         line-height: 34px;
+        justify-content: space-between;
+
+        .item-name{
+            flex: 0 0 60%;
+            font-size: .8em;
+        }
+        .item-bonus{
+            flex: 0 0 30px;
+        }
+        .item-plus{
+            flex: 0 0 10px;
+        }
+        .item-control{
+            flex: 0 0 30px;
+            text-align: center;
+            
+        }
+       
+        input{
+            margin-top: 3px;
+            margin-right: 3px;
+            background: @transparent;
+            border: none;
+            font-size: 1.2em;
+        }
+        input[type="text"]:focus{
+            box-shadow: 0 0 5px @highlight;
+        }
     }
+    
     .info-item{
         list-style: none;
         font-family: Trixie, 'Courier New', Courier, monospace;
         font-size: 1em;
         background: @field-color;
         border-right: 1px solid @black;
-        border-bottom: 1px solid @black;
+        border-top: 1px solid @black;
 
+        .item-name{
+            flex: 0 0 60%;
+        }
+        .item-bonus{
+            flex: 0 0 30px;
+        }
+        .item-plus{
+            flex: 0 0 10px;
+        }
+        .relationship-name{
+            flex: 0 0 150px;
+        }
+        .item-control{
+            flex: 0 0 30px;
+            text-align: center;
+            
+        }
        
         line-height: 34px;
         justify-content: space-between;;
@@ -174,6 +237,7 @@
         background: @section-head-color;
         border-right: 1px solid @black;
         border-bottom: 1px solid @black;
+        padding-top: 3px;
         
         img{
             border:none;

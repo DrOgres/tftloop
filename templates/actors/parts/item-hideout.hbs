@@ -1,0 +1,39 @@
+<div class="items-hideout flexrow">
+    <div class="items info-group">
+        <div class="section-header flexrow">
+        <h4>{{localize "tftloop.items"}}</h4>
+            <div class = "item-control">
+        <a class="item-control item-create" data-type="item" data-trait="item" title="{{localize "tftloop.newItem"}}" >
+        <i class="fas fa-plus"></i>
+        </a>
+        </div>
+    </div>
+        <ol class="info-list">
+            <li class="iconic-item flexrow">
+                <div class="item-name flexrow">
+                {{localize "tftloop.iconic"}}
+                <input name="data.iconicItem.desc" type="text" value="{{data.iconicItem.desc}}"/> 
+                </div>
+                <div class="item-plus">+</div>
+                <div class="item-bonus">{{data.iconicItem.bonus}}</div>
+                <div class="item-control">&nbsp;</div>
+            </li>
+            {{#each bonusItems as |item id|}}
+            <li class="info-item flexrow" data-item-id="{{item._id}}">
+            <input class="item-name inline-edit" data-field="description" type="text" value="{{item.data.description}}"/>
+            <div class="item-plus">+</div>
+            <input class="item-bonus inline-edit" data-field="bonus" type="text" value="{{item.data.bonus}}" data-dtype="Number"/> 
+            <a class="item-control item-delete" data-type="item" data-trait="item" title="{{localize "tftloop.delete"}}" >
+            <i class="fas fa-minus"></i>
+            </a>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    <div class="hideout info-group">
+    <h4 class="section-header">{{localize "tftloop.hideout"}}</h4>
+    <div class="hideout-text">
+        <textarea id="hideout" name="data.hideout" rows="5">{{data.hideout}}</textarea>
+    </div>
+    </div>
+</div>

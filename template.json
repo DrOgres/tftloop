@@ -48,13 +48,16 @@
             "age": 10,
             "type": "type",
             "drive": "Drive",
-            "luck": 0,
+            "luck": {
+                "value": 0,
+                "max": 0
+            },
             "anchor": "",
             "problem": "",
             "pride": "",
+            "prideCheck": false,
             "description": "",
             "favoriteSong": "",
-            "relationships": ["Kid 1:"],
             "iconicItem": {
                 "desc": "",
                 "bonus": 2
@@ -62,7 +65,8 @@
             "hideout": "Hideout Notes",
             "notes": {
                 "value": "Notes"
-            }
+            },
+            "dicePool": 0
             
 
         },
@@ -72,6 +76,23 @@
         "creature": {
 
         }
+    },
+
+    "Item": {
+        "types": [
+            "item",
+            "relationship"
+        ],
+
+        "relationship":{
+            "description" : "kid"
+        },
+
+        "item": {
+            "description" : "item",
+            "bonus": 1
+        }
+
     }
 
 

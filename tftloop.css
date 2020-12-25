@@ -46,8 +46,25 @@ a:hover {
 .fa-edit:hover {
   text-shadow: none;
 }
+textarea {
+  font-family: Trixie, 'Courier New', Courier, monospace;
+  height: 100%;
+}
+textarea:focus {
+  outline: 2px solid #f38704;
+  box-shadow: 0 0 5px #ee7113;
+}
 .imgCheck {
   cursor: pointer;
+}
+.use-luck {
+  cursor: pointer;
+}
+.reset-luck {
+  cursor: pointer;
+  text-align: right;
+  max-width: 50px;
+  padding-right: 3px;
 }
 .section-header {
   background-color: black;
@@ -87,13 +104,24 @@ a:hover {
 .main #hideout {
   border: none;
   resize: none;
+  height: 85%;
 }
 .main .notes-group {
   height: fit-content;
   background: #fff1da;
 }
-.main .hideout {
+.main .items {
+  min-height: 0px;
   background: #fff1da;
+}
+.main .hideout {
+  flex: 1 1 auto;
+  flex-direction: column;
+  background: #fff1da;
+  max-width: 250px;
+}
+.main .hideout .hideout-text {
+  height: 85%;
 }
 .main .info-group {
   border: 1px solid black;
@@ -101,8 +129,6 @@ a:hover {
   margin: 2px;
   padding: 0px;
   box-shadow: 2px 2px #7f7f7f;
-  height: max-content;
-  min-height: 0px;
 }
 .main .conditions {
   border: 1px solid black;
@@ -153,8 +179,33 @@ a:hover {
   font-size: 1em;
   background: #fedd9e;
   border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   line-height: 34px;
+  justify-content: space-between;
+}
+.main .iconic-item .item-name {
+  flex: 0 0 60%;
+  font-size: 0.8em;
+}
+.main .iconic-item .item-bonus {
+  flex: 0 0 30px;
+}
+.main .iconic-item .item-plus {
+  flex: 0 0 10px;
+}
+.main .iconic-item .item-control {
+  flex: 0 0 30px;
+  text-align: center;
+}
+.main .iconic-item input {
+  margin-top: 3px;
+  margin-right: 3px;
+  background: #ffffff00;
+  border: none;
+  font-size: 1.2em;
+}
+.main .iconic-item input[type="text"]:focus {
+  box-shadow: 0 0 5px #f38704;
 }
 .main .info-item {
   list-style: none;
@@ -162,10 +213,26 @@ a:hover {
   font-size: 1em;
   background: #fff1da;
   border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-top: 1px solid black;
   line-height: 34px;
   justify-content: space-between;
   align-content: space-between;
+}
+.main .info-item .item-name {
+  flex: 0 0 60%;
+}
+.main .info-item .item-bonus {
+  flex: 0 0 30px;
+}
+.main .info-item .item-plus {
+  flex: 0 0 10px;
+}
+.main .info-item .relationship-name {
+  flex: 0 0 150px;
+}
+.main .info-item .item-control {
+  flex: 0 0 30px;
+  text-align: center;
 }
 .main .info-item label {
   max-width: fit-content;
@@ -192,6 +259,7 @@ a:hover {
   background: #f9bd8d;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
+  padding-top: 3px;
 }
 .main .special-item img {
   border: none;

@@ -18,15 +18,88 @@ export default class tftloopActorSheet extends ActorSheet {
         const data = super.getData();
         data.config = CONFIG.tftloop;
 
+        data.relationships = data.items.filter(function(item) {return item.type == "relationship"});
+        data.bonusItems = data.items.filter(function(item) {return item.type == "item"});
+
+        data.data.luck.max = 15-Number(data.data.age);
+        data.curLuck = data.data.luck.max - data.data.luck.value;
+        
         return data;
     }
 
   
 
     activateListeners(html){
+        html.find(".reset-luck").click(this._resetLuck.bind(this));
+        html.find(".use-luck").click(this._onUseLuck.bind(this));
         html.find(".toggle-boolean").click(this._onToggleClick.bind(this));
+        html.find(".item-create").click(this._onItemCreate.bind(this));
+        html.find(".inline-edit").change(this._onItemEdit.bind(this));
+        html.find(".item-delete").click(this._onItemDelete.bind(this));
 
         super.activateListeners(html);
+    }
+
+    _resetLuck(event){
+        event.preventDefault();
+        let actor = this.actor;
+        actor.update({"data.luck.value": 0});
+    }
+
+    _onUseLuck(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+
+        let actor = this.actor;
+        let maxLuck = actor.data.data.luck.max;
+        let usedLuck = actor.data.data.luck.value;
+        console.log(actor);
+        if(usedLuck<maxLuck){
+            usedLuck+=1;
+        } else {
+            usedLuck=usedLuck;
+        }
+
+        actor.update({"data.luck.value": usedLuck});
+        console.log(actor.data.data.luck.max);
+        console.log(actor.data.data.luck.value);
+    }
+
+    _onItemEdit(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".info-item").dataset.itemId;
+        let item = this.actor.getOwnedItem(itemId);
+        let field = element.dataset.field;
+
+        return item.update({[field]: element.value});
+
+    }
+
+
+    _onItemDelete(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".info-item").dataset.itemId;
+       
+        return this.actor.deleteOwnedItem(itemId);
+
+
+    }
+
+    _onItemCreate(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+        let actor = this.actor;
+        let type = element.dataset.type
+        let itemData = {
+                name: game.i18n.localize("tftloop.new"),
+                type: element.dataset.type
+                };
+        
+       
+        
+        return actor.createOwnedItem(itemData);
     }
 
     _onToggleClick(event){
@@ -98,6 +171,19 @@ export default class tftloopActorSheet extends ActorSheet {
                    
                     this.actor.data.data.broken = true;
                     actor.update({ "data.broken" : true});
+                    
+                }
+                break;
+            case "prideCheck":
+                if(this.actor.data.data.prideCheck){
+                    
+                    this.actor.data.data.prideCheck = false;
+                    actor.update({ "data.prideCheck" : false});
+                    ;
+                } else {
+                   
+                    this.actor.data.data.prideCheck = true;
+                    actor.update({ "data.prideCheck" : true});
                     
                 }
                 break;

@@ -1,0 +1,57 @@
+ <div class="conditions flexrow">
+                <div class="section-header">{{localize "tftloop.conditions"}}</div>
+                
+                <div class="info-item">{{localize "tftloop.upset"}}
+                
+                <label class="imgCheck">
+                    {{#unless data.upset}}
+                        <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.upset}}
+                        <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label></div>
+                <div class="info-item">{{localize "tftloop.scared"}} 
+                    <label class="imgCheck">
+                    {{#unless data.scared}}
+                        <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.scared}}
+                        <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                </div>
+                <div class="info-item">{{localize "tftloop.exhausted"}} 
+                      <label class="imgCheck">
+                    {{#unless data.exhausted}}
+                        <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.exhausted}}
+                        <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                    </div>
+                <div class="info-item">{{localize "tftloop.injured"}} 
+                    <label class="imgCheck">
+                    {{#unless data.injured}}
+                        <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.injured}}
+                        <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                    </div>
+                    
+                <div class="special-item">{{localize "tftloop.broken"}} 
+                    <label class="imgCheck">
+                    {{#unless data.broken}}
+                        <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.broken}}
+                        <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+
+                </div>
+                
+            </div>

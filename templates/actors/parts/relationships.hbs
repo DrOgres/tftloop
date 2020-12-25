@@ -1,0 +1,21 @@
+<div class="relationships info-group">
+    <div class="section-header flexrow">
+    <h4>{{localize "tftloop.relationships"}}</h4>
+    <div class = "item-control">
+        <a class="item-control item-create" data-type="relationship" data-trait="relationship" title="{{localize "tftloop.newRelationship"}}" >
+        <i class="fas fa-plus"></i>
+        </a>
+    </div>
+    </div>
+    <ol class="info-list">
+        {{#each relationships as |relationship id|}}
+        <li class="info-item flexrow" data-item-id="{{relationship._id}}">
+        <input class="relationship-name inline-edit" data-field="name" type="text" value="{{relationship.name}}"/>
+        <input class="relationship-desc inline-edit" data-field="data.description" type="text" value="{{this.data.description}}"/>
+        <a class="item-control item-delete" data-type="relationship" data-trait="relationship" title="{{localize "tftloop.delete"}}" >
+        <i class="fas fa-minus"></i>
+        </a>
+        </li>
+        {{/each}}
+    </ol>
+</div>
