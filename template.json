@@ -1,9 +1,7 @@
 {
     "Actor": {
         "types": [
-            "kid",
-            "npc",
-            "creature"
+            "kid"
         ],
         "templates": {
             "attributes": {
@@ -52,21 +50,22 @@
                 "value": 0,
                 "max": 0
             },
-            "anchor": "",
-            "problem": "",
-            "pride": "",
+            "anchor": "Anchor",
+            "problem": "Problem",
+            "pride": "Pride",
             "prideCheck": false,
-            "description": "",
-            "favoriteSong": "",
+            "description": "Description",
+            "favoriteSong": "Favorite Song",
             "iconicItem": {
-                "desc": "",
+                "desc": "Item",
                 "bonus": 2
             },
             "hideout": "Hideout Notes",
             "notes": {
                 "value": "Notes"
             },
-            "dicePool": 0
+            "dicePool": 0, 
+            "exp": 0
             
 
         },

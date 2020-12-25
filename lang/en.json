@@ -50,7 +50,8 @@
         "delete": "Delete",
         "newRelationship": "New Relationship",
         "newItem" : "New Item",
-        "reset": "Reset"
+        "reset": "Reset",
+        "addexp": "Click to add Experience, Right-Click to spend it!"
 
 
 

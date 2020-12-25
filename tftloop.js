@@ -34,6 +34,7 @@ Hooks.once("init", function(){
         let result = "";
         //console.log(n);
         for(let i = 0; i<n; ++i){
+            content.data.index = i+1;
             result = result+content.fn(i);
         }
         

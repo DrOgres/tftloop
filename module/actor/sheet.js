@@ -30,14 +30,37 @@ export default class tftloopActorSheet extends ActorSheet {
   
 
     activateListeners(html){
+        if (this.isEditable){
         html.find(".reset-luck").click(this._resetLuck.bind(this));
         html.find(".use-luck").click(this._onUseLuck.bind(this));
         html.find(".toggle-boolean").click(this._onToggleClick.bind(this));
         html.find(".item-create").click(this._onItemCreate.bind(this));
         html.find(".inline-edit").change(this._onItemEdit.bind(this));
         html.find(".item-delete").click(this._onItemDelete.bind(this));
+        html.find(".exp-boxes").on("click contextmenu", this._onExpChange.bind(this));
+        }
+
+        if(this.actor.owner){
+
+        }
 
         super.activateListeners(html);
+    }
+    
+    _onExpChange(event){
+        event.preventDefault();
+
+        let currentCount = this.actor.data.data.exp;
+        let newCount;
+
+        if(event.type == "click"){
+            newCount = Math.min(currentCount + 1, 10);
+        } else {
+            //right click
+            newCount = Math.max(currentCount - 1, 0);
+        }
+
+        this.actor.update({"data.exp" : newCount});
     }
 
     _resetLuck(event){
