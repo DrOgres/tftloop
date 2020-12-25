@@ -109,44 +109,110 @@
                     </div>
                 </div>
                 <div class="flexrow">
-                    <div class="info-item">
+                    <div class="info-item flexrow">
                         <label>{{localize "tftloop.drive"}}</label>
+                        <input name="data.drive" type="text" value="{{data.drive}}" placeholder=""/>
                     </div>
-                    <div class="info-item">
+                    <div class="info-item flexrow">
                         <label>{{localize "tftloop.anchor"}}</label>
+                         <input name="data.anchor" type="text" value="{{data.anchor}}" placeholder=""/>
                     </div>
                 </div>
-                 <div class="info-item">
+                 <div class="info-item flexrow">
                      <label>{{localize "tftloop.problem"}}</label>
+                      <input name="data.problem" type="text" value="{{data.problem}}" placeholder=""/>
                  </div>
-                 <div class="info-item">
+                 <div class="info-item flexrow">
                      <label>{{localize "tftloop.pride"}}</label>
+                      <input name="data.pride" type="text" value="{{data.pride}}" placeholder=""/>
                  </div>
-                 <div class="info-item">
+                 <div class="info-item flexrow">
                      <label>{{localize "tftloop.description"}}</label>
+                      <input name="data.description" type="text" value="{{data.description}}" placeholder=""/>
                  </div>
-                 <div class="info-item">
+                 <div class="info-item flexrow">
                      <label>{{localize "tftloop.favSong"}}</label>
+                      <input name="data.favoriteSong" type="text" value="{{data.favoriteSong}}" placeholder=""/>
                  </div>
             </div>
             <div class="conditions flexrow">
                 <div class="section-header">{{localize "tftloop.conditions"}}</div>
-                <div class="info-item">{{localize "tftloop.upset"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
-                <div class="info-item">{{localize "tftloop.scared"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
-                <div class="info-item">{{localize "tftloop.exhausted"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
-                <div class="info-item">{{localize "tftloop.injured"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
-                <div class="special-item">{{localize "tftloop.broken"}} <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px"></div>
+                <div class="info-item">{{localize "tftloop.upset"}}
+                
+                <label class="imgCheck">
+                    {{#unless data.upset}}
+                        <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.upset}}
+                        <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label></div>
+                <div class="info-item">{{localize "tftloop.scared"}} 
+                    <label class="imgCheck">
+                    {{#unless data.scared}}
+                        <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.scared}}
+                        <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                </div>
+                <div class="info-item">{{localize "tftloop.exhausted"}} 
+                      <label class="imgCheck">
+                    {{#unless data.exhausted}}
+                        <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.exhausted}}
+                        <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                    </div>
+                <div class="info-item">{{localize "tftloop.injured"}} 
+                    <label class="imgCheck">
+                    {{#unless data.injured}}
+                        <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.injured}}
+                        <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+                    </div>
+                <div class="special-item">{{localize "tftloop.broken"}} 
+                    <label class="imgCheck">
+                    {{#unless data.broken}}
+                        <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                    {{/unless}}
+                    {{#if data.broken}}
+                        <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                    {{/if}}
+                </label>
+
+                </div>
                 
             </div>
             <div class="relationships info-group">
-                <h4 class="section-header">{{localize "tftloop.relationships"}}</h4>
+                <div class="section-header flexrow">
+                <h4>{{localize "tftloop.relationships"}}</h4>
+                <div class = "item-control">
+                    <a class="item-control item-create" data-type="relationship" data-trait="relationship" title="{{localize "tftloop.newRelationship"}}" >
+                    <i class="fas fa-plus"></i>
+                    </a>
+                </div>
+                </div>
                 <ol class="info-list">
                     <li class="info-item">kid 1</li>
                 </ol>
             </div>
             <div class="items-hideout flexrow">
                 <div class="items info-group">
-                    <h4 class="section-header">{{localize "tftloop.items"}}</h4>
+                    <div class="section-header flexrow">
+                    <h4>{{localize "tftloop.items"}}</h4>
+                     <div class = "item-control">
+                    <a class="item-control item-create" data-type="item" data-trait="item" title="{{localize "tftloop.newItem"}}" >
+                    <i class="fas fa-plus"></i>
+                    </a>
+                    </div>
+                </div>
                     <ol class="info-list">
                         
                         <li class="iconic-item">{{localize "tftloop.iconic"}} +2</li>

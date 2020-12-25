@@ -29,12 +29,12 @@
         "lead": "Lead",
         "age": "Age",
         "luck": "Luck Points",
-        "drive": "Drive",
-        "anchor": "Anchor",
-        "problem": "Problem",
-        "pride": "Pride",
-        "description": "Description",
-        "favSong": "Favorite Song",
+        "drive": "Drive: ",
+        "anchor": "Anchor: ",
+        "problem": "Problem: ",
+        "pride": "Pride: ",
+        "description": "Description: ",
+        "favSong": "Favorite Song: ",
         "conditions": "Conditions",
         "upset": "Upset",
         "scared": "Scared",
@@ -43,9 +43,11 @@
         "broken": "Broken",
         "relationships": "Relationships",
         "items": "Items",
-        "iconic": "Iconic Item",
+        "iconic": "Iconic Item: ",
         "hideout": "Hideout",
-        "notes": "Notes"
+        "notes": "Notes",
+        "newRelationship": "New Relationship",
+        "newItem" : "New Item"
 
 
 

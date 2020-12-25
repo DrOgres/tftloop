@@ -35,7 +35,7 @@
             "conditions": {
                 "upset": false,
                 "scared": false,
-                "exhaused": false,
+                "exhausted": false,
                 "injured": false,
                 "broken": false
             }
@@ -47,15 +47,15 @@
             "templates": ["attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"],
             "age": 10,
             "type": "type",
-            "drive": "drive",
+            "drive": "Drive",
             "luck": 0,
             "anchor": "",
             "problem": "",
             "pride": "",
             "description": "",
             "favoriteSong": "",
-            "relationships": [],
-            "iconicItems": {
+            "relationships": ["Kid 1:"],
+            "iconicItem": {
                 "desc": "",
                 "bonus": 2
             },

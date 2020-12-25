@@ -21,9 +21,33 @@
   font-family: Trixie;
   src: url(fonts/Trixie-Text.otf);
 }
+/******************************
+/        Foundry overrides
+******************************/
+.editor-edit {
+  box-shadow: none;
+}
+#context-menu li.context-item:hover {
+  color: #f38704;
+  text-shadow: none;
+}
+button:hover {
+  box-shadow: none;
+}
 .window-app .window-content {
   background-color: white;
   background: white;
+}
+a:hover {
+  box-shadow: none;
+  text-shadow: none;
+  color: #f38704;
+}
+.fa-edit:hover {
+  text-shadow: none;
+}
+.imgCheck {
+  cursor: pointer;
 }
 .section-header {
   background-color: black;
@@ -34,6 +58,10 @@
   font-weight: 700;
   font-size: 1.2em;
   font-style: normal;
+  justify-content: space-between;
+}
+.section-header .item-control {
+  text-align: right;
 }
 .editor {
   height: auto;
@@ -90,6 +118,8 @@
 .main .conditions .info-item {
   font-size: 0.85em;
   line-height: 25px;
+  padding-left: 2px;
+  align-content: space-between;
 }
 .main .conditions .info-item p {
   margin: 0px;
@@ -97,6 +127,10 @@
 .main .conditions .info-item img {
   border: none;
   vertical-align: middle;
+}
+.main .conditions .info-item input {
+  background: #ffffff00;
+  border: none;
 }
 .main .conditions .special-item {
   font-size: 0.77em;
@@ -130,6 +164,20 @@
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   line-height: 34px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.main .info-item label {
+  max-width: fit-content;
+}
+.main .info-item input {
+  margin-top: 3px;
+  margin-right: 3px;
+  background: #ffffff00;
+  border: none;
+}
+.main .info-item input[type="text"]:focus {
+  box-shadow: 0 0 5px #f38704;
 }
 .main .info-item img {
   border: none;

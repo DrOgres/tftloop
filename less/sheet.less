@@ -1,9 +1,15 @@
 @import "./config.less";
 
-.window-app .window-content{
-    background-color: @background;
-    background: @background;
+
+
+.imgCheck{
+    
+    cursor: pointer;
 }
+
+
+
+
 
 .section-header{
             
@@ -15,7 +21,11 @@
     font-weight: 700;
     font-size: 1.2em;
     font-style: normal;
+    justify-content: space-between;
     
+    .item-control{
+        text-align: right;
+    }
 }
 
 .editor {
@@ -79,6 +89,8 @@
         .info-item{
             font-size: .85em;
             line-height: 25px;
+            padding-left: 2px;
+            align-content: space-between;
 
             p{
                 margin: 0px;
@@ -87,6 +99,11 @@
             img{
                 border:none;
                 vertical-align: middle;
+            }
+
+            input{
+                background: @transparent;
+                border: none;
             }
         }
         .special-item{
@@ -125,6 +142,23 @@
 
        
         line-height: 34px;
+        justify-content: space-between;;
+        align-content: space-between;
+
+        label{
+            max-width: fit-content;
+        }
+        
+        input{
+            margin-top: 3px;
+            margin-right: 3px;
+            background: @transparent;
+            border: none;
+        }
+        input[type="text"]:focus{
+            box-shadow: 0 0 5px @highlight;
+        }
+
         img{
             border: none;
         }
