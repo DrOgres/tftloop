@@ -15,8 +15,8 @@ feedback is always welcome.
 </ul>
 
 
-<h3>Version 0.7.1</h3> 
+<h3>Version 0.7.0</h3> 
 
-Full roll Implementation complete.  System is now feature complete and ready for your games.
-Minor Bug fixes
-minor CSS tweaks
+* Full roll Implementation complete.  System is now feature complete and ready for your games.
+* Minor Bug fixes
+* minor CSS tweaks
