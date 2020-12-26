@@ -14,6 +14,8 @@ feedback is always welcome.
     <li>TODO - add re-roll function to roll result</li>
 </ul>
 
+<h3>Version 0.7.1</h3> 
+* minor bug fix
 
 <h3>Version 0.7.0</h3> 
 
