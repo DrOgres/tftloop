@@ -51,7 +51,8 @@
         "newRelationship": "New Relationship",
         "newItem" : "New Item",
         "reset": "Reset",
-        "addexp": "Click to add Experience, Right-Click to spend it!"
+        "addexp": "Click to add Experience, Right-Click to spend it!",
+        "currentPool": "Current Pool"
 
 
 

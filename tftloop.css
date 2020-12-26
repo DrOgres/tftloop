@@ -54,14 +54,19 @@ textarea:focus {
   outline: 2px solid #f38704;
   box-shadow: 0 0 5px #ee7113;
 }
+h2 {
+  font-family: SabonRoman, sans-serif;
+  font-weight: 700;
+  border-color: #f38704;
+}
 .imgCheck {
   cursor: pointer;
 }
 .use-luck {
   cursor: pointer;
 }
-.crossed {
-  filter: invert();
+.add-to-pool {
+  cursor: pointer;
 }
 .reset-luck {
   cursor: pointer;

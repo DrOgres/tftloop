@@ -20,7 +20,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
         data.relationships = data.items.filter(function(item) {return item.type == "relationship"});
         data.bonusItems = data.items.filter(function(item) {return item.type == "item"});
-
+        console.log(data.bonusItems);
         data.data.luck.max = 15-Number(data.data.age);
         data.curLuck = data.data.luck.max - data.data.luck.value;
         
@@ -41,12 +41,197 @@ export default class tftloopActorSheet extends ActorSheet {
         }
 
         if(this.actor.owner){
+            html.find(".add-to-pool").click(this._onAddToPool.bind(this));
 
         }
 
         super.activateListeners(html);
     }
     
+    _onAddToPool(event){
+        event.preventDefault();
+       // console.log("add to pool");
+        let actor = this.actor;
+        let data = actor.data.data;
+        let items = this.actor.data.items.filter(function(item) {return item.type == "item"});;
+        //console.log(this);
+        let element = event.currentTarget;
+        let rolled = element.dataset.rolled;
+        
+        // if we are broken then we fail no matter what.
+        if(!data.broken){
+            //see what we rolled on and set up initial dice pool
+        switch(rolled){
+            case "body":
+                console.log(data.body);
+                data.dicePool += data.body;
+                break;
+            case "tech":
+                data.dicePool += data.tech;
+                break;
+            case "heart":
+                data.dicePool += data.heart;
+                break;
+            case "mind":
+                data.dicePool += data.heart;
+                break;
+            case "sneak":
+                data.dicePool += data.body;
+                data.dicePool += data.sneak;
+                break;
+            case "force":
+                data.dicePool += data.body;
+                data.dicePool += data.force;
+                break;
+            case "move":
+                data.dicePool += data.body;
+                data.dicePool += data.move;
+                break;
+            case "tinker":
+                data.dicePool += data.tech;
+                data.dicePool += data.tinker;
+                break;
+            case "program":
+                data.dicePool += data.tech;
+                data.dicePool += data.program;
+                break;
+            case "calculate":
+                data.dicePool += data.tech;
+                data.dicePool += data.calculate;
+                break;
+            case "contact":
+                data.dicePool += data.heart;
+                data.dicePool += data.contact;
+                break;
+            case "charm":
+                data.dicePool += data.heart;
+                data.dicePool += data.charm;
+                break;
+            case "lead":
+                data.dicePool += data.heart;
+                data.dicePool += data.lead;
+                break;
+            case "investigate":
+                data.dicePool += data.mind;
+                data.dicePool += data.investigate;
+                break;
+            case "comprehend": 
+                data.dicePool += data.mind;
+                data.dicePool += data.comprehend;
+                break;
+            case "empathize":
+                data.dicePool += data.mind;
+                data.dicePool += data.empathize;
+                break;
+
+        }
+        //reduce dice by conditions
+        if(data.upset){
+            data.dicePool -= 1;
+        } 
+        if(data.scared){
+            data.dicePool -= 1;
+        }
+        if(data.exhausted){
+            data.dicePool -= 1;
+        }
+        if(data.injured){
+            data.dicePool -= 1;
+        }
+
+       // console.log(items);
+        let list = "";
+        //console.log("html segment"+items);
+            
+        for(let n = 0; n<items.length; n++){
+            list += '<option value="'+items[n].data.bonus+'">'+items[n].data.description+' + '+ items[n].data.bonus+'</option>'
+            
+        }
+        
+        //next set up the dialog to allow the player to select an item and add any bonus dice
+        // build the html for the roll dialog
+        let rollHTML = `<div class="form-group">
+            <h2>Rolling: `+game.i18n.localize("tftloop."+rolled)+`</h2>
+            <div class="pool-count">`+game.i18n.localize("tftloop.currentPool")+`: `+data.dicePool+` Dice</div>
+            <label>Use Item:</label>
+            <select id="roll-item" name="useItem" style="margin-bottom: 5px">
+                <option value="0">None</option>
+                <option value="2">Iconic Item:`+data.iconicItem.desc+` + 2</option>
+                `+list+`
+                
+            </select>
+            <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>Bonus Dice</label>
+            <input name="bonusDice" type="text" value="" placeholder="0" data-dtype="Number"/></div>
+        </div>
+       
+        `;
+
+        //create dialog to get the use of item and or a bonus for dice
+        let yesRoll = false;
+        let d = new Dialog({
+            title: "roll dialog",
+            content: rollHTML,
+            buttons: {
+                one: {
+                    icon: '<i class="fas fa-check"></i>',
+                    label: "Roll!",
+                    callback: () => {   yesRoll = true;
+                                        
+                                    }
+                   },
+                   two: {
+                    icon: '<i class="fas fa-times"></i>',
+                    label: "Cancel",
+                    callback: () => {
+                                        //console.log("Chose too cancel that roll");
+                                        data.dicePool = 0;
+                                        //console.log("dice pool " + data.dicePool);
+                                    }
+                   }
+            },
+            default: "two",
+            render: html => console.log("query mods and items then roll or cancel"),
+            close: html => {
+                if(yesRoll){
+                    let itemBonus = Number(html.find('[name="useItem"]')[0].value);
+                    let bonusDice = Number(html.find('[name="bonusDice"]')[0].value);
+                    data.dicePool += itemBonus;
+                    data.dicePool += bonusDice;
+                    let rollFormula = data.dicePool+"d6cs6";
+                    //console.log("Chose Roll with or without options now roll " + rollFormula + "!");
+                    data.dicePool = 0;
+                    //console.log("dice pool " + data.dicePool);
+                    let r = new Roll(rollFormula);
+                    r.evaluate();
+                    //r.toMessage("this is our roll from our dice pool");
+                    ChatMessage.create({
+                        user: game.user._id,
+                        speaker: ChatMessage.getSpeaker({actor: this.actor, token: this.actor.img}),
+                        content: "this is the roll we made from our dice pool",
+                        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+                        isRoll: true,
+                        roll: r,
+                        sound: ""
+                    });
+                } else {
+                console.log("dialog was closed!");
+                }
+            }
+        });
+        d.render(true);
+        //roll that pool from the dialog
+        //create the chat message and send to chat
+        //reset the dicepool in the callback only
+        
+        //console.log("dice pool " + data.dicePool);
+
+        } else {
+            ui.notifications.info("You Automatically fail any roll when you are Broken!");
+        }
+        
+
+    }
+
     _onExpChange(event){
         event.preventDefault();
 
@@ -91,10 +276,11 @@ export default class tftloopActorSheet extends ActorSheet {
     _onItemEdit(event){
         event.preventDefault();
         let element = event.currentTarget;
-        let itemId = element.closest(".info-item").dataset.itemId;
+        let itemId = element.closest(".item").dataset.itemId;
+        
         let item = this.actor.getOwnedItem(itemId);
         let field = element.dataset.field;
-
+        
         return item.update({[field]: element.value});
 
     }

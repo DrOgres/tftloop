@@ -19,10 +19,11 @@
                 <div class="item-control">&nbsp;</div>
             </li>
             {{#each bonusItems as |item id|}}
-            <li class="info-item flexrow" data-item-id="{{item._id}}">
-            <input class="item-name inline-edit" data-field="description" type="text" value="{{item.data.description}}"/>
+            <li class="info-item flexrow item" data-item-id="{{item._id}}">
+
+            <input class="item-name inline-edit" data-field="data.description" type="text" value="{{item.data.description}}"/>
             <div class="item-plus">+</div>
-            <input class="item-bonus inline-edit" data-field="bonus" type="text" value="{{item.data.bonus}}" data-dtype="Number"/> 
+            <input class="item-bonus inline-edit" data-field="data.bonus" type="text" value="{{item.data.bonus}}" data-dtype="Number"/> 
             <a class="item-control item-delete" data-type="item" data-trait="item" title="{{localize "tftloop.delete"}}" >
             <i class="fas fa-minus"></i>
             </a>

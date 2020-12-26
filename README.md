@@ -4,11 +4,19 @@
 <img src = "img/loop_system.png">
 This is an implementation of the Tales from the Loop game system for Foundry VTT.  
 
-The current sheet implements the data model and is set up for record-keeping. It is more than possible to run a game with the system in this state.
-
-I am still working out how I want to implement building dice pools and rolling but that should be relatively soon at which point the system will be feature complete.
-
-in the mean time:  Roll dice as such a simple /r #d6cs6  where # is the number of dice in your pool.  simple as that.
+This was coded in my spare time over the course of two days so there may be a couple bugs or things that can be improved! 
 
 feedback is always welcome.
 -Dr Ogres
+
+<ul>
+    <li>TODO - style chat cards for rolls</li>
+    <li>TODO - add re-roll function to roll result</li>
+</ul>
+
+
+<h3>Version 0.7.1</h3> 
+
+Full roll Implementation complete.  System is now feature complete and ready for your games.
+Minor Bug fixes
+minor CSS tweaks
