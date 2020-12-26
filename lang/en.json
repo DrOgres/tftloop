@@ -52,7 +52,12 @@
         "newItem" : "New Item",
         "reset": "Reset",
         "addexp": "Click to add Experience, Right-Click to spend it!",
-        "currentPool": "Current Pool"
+        "currentPool": "Current Pool",
+        "roll": "Roll!",
+        "cancel": "Cancel",
+        "useItem": "Use Item",
+        "none": "None",
+        "bonusDice": "Bonus Dice"
 
 
 

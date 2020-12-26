@@ -153,14 +153,14 @@ export default class tftloopActorSheet extends ActorSheet {
         let rollHTML = `<div class="form-group">
             <h2>Rolling: `+game.i18n.localize("tftloop."+rolled)+`</h2>
             <div class="pool-count">`+game.i18n.localize("tftloop.currentPool")+`: `+data.dicePool+` Dice</div>
-            <label>Use Item:</label>
+            <label>`+game.i18n.localize("tftloop.useItem")+`:</label>
             <select id="roll-item" name="useItem" style="margin-bottom: 5px">
-                <option value="0">None</option>
-                <option value="2">Iconic Item:`+data.iconicItem.desc+` + 2</option>
+                <option value="0">`+game.i18n.localize("tftloop.none")+`</option>
+                <option value="2">`+game.i18n.localize("tftloop.iconic")+`:`+data.iconicItem.desc+` + 2</option>
                 `+list+`
                 
             </select>
-            <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>Bonus Dice</label>
+            <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>`+game.i18n.localize("tftloop.bonusDice")+`</label>
             <input name="bonusDice" type="text" value="" placeholder="0" data-dtype="Number"/></div>
         </div>
        
@@ -174,14 +174,14 @@ export default class tftloopActorSheet extends ActorSheet {
             buttons: {
                 one: {
                     icon: '<i class="fas fa-check"></i>',
-                    label: "Roll!",
+                    label: game.i18n.localize("tftloop.roll"),
                     callback: () => {   yesRoll = true;
                                         
                                     }
                    },
                    two: {
                     icon: '<i class="fas fa-times"></i>',
-                    label: "Cancel",
+                    label: game.i18n.localize("tftloop.cancel"),
                     callback: () => {
                                         //console.log("Chose too cancel that roll");
                                         data.dicePool = 0;
