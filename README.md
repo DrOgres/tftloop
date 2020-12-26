@@ -15,6 +15,7 @@ feedback is always welcome.
 </ul>
 
 <h3>Version 0.7.1</h3> 
+
 * minor bug fix
 
 <h3>Version 0.7.0</h3> 
