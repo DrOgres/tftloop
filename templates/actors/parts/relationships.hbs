@@ -9,9 +9,9 @@
     </div>
     <ol class="info-list">
         {{#each relationships as |relationship id|}}
-        <li class="info-item flexrow" data-item-id="{{relationship._id}}">
-        <input class="relationship-name inline-edit" data-field="name" type="text" value="{{relationship.name}}"/>
-        <input class="relationship-desc inline-edit" data-field="data.description" type="text" value="{{this.data.description}}"/>
+        <li class="info-item flexrow item" data-item-id="{{relationship._id}}">
+        <input class="relationship-name inline-edit" data-field="name" type="text" value="{{name}}"/>
+        <input class="relationship-desc inline-edit" data-field="data.description" type="text" value="{{data.description}}"/>
         <a class="item-control item-delete" data-type="relationship" data-trait="relationship" title="{{localize "tftloop.delete"}}" >
         <i class="fas fa-minus"></i>
         </a>
