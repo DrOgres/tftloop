@@ -1,7 +1,7 @@
 # Tales from the loop
 
 
-<img src = "img/loop_system.png">
+<img src = "img/loop_system.jpg">
 This is an implementation of the Tales from the Loop game system for Foundry VTT.  
 
 This was coded in my spare time over the course of two days so there may be a couple bugs or things that can be improved! 
