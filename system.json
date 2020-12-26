@@ -31,7 +31,7 @@
     "gridUnits": "meter",
     "inititive" : "",
     "url": "https://github.com/DrOgres/tftloop",
-    "manifest": "https://github.com/DrOgres/tftloop/raw/master/system.json",
+    "manifest": "https://raw.githubusercontent.com/DrOgres/tftloop/main/system.json",
     "download": "https://github.com/DrOgres/tftloop/archive/master.zip"
 
 }
