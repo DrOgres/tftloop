@@ -62,7 +62,10 @@
         "diceRoll": "Dice Roll Dialog",
         "success": "Success",
         "successes": "Successes",
-        "failure": "Failure"
+        "failure": "Failure",
+        "tested": "Tested",
+        "rerolled": "Rerolled",
+        "reroll": "Reroll"
 
 
 

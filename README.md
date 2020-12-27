@@ -10,8 +10,12 @@ feedback is always welcome.
 -Dr Ogres
 
 <ul>
-    <li>TODO - add re-roll function to roll result</li>
+    <li>TODO - code clean-up and documentation of system use</li>
 </ul>
+
+<h3>Version 0.7.6</h3>
+
+* Added Re-roll buttons - Feature Complete!
 
 <h3>Version 0.7.5</h3>
 

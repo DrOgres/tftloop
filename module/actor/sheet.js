@@ -52,6 +52,7 @@ export default class tftloopActorSheet extends ActorSheet {
         event.preventDefault();
        // console.log("add to pool");
         let actor = this.actor;
+        console.log(actor._id);
         let data = actor.data.data;
         let items = this.actor.data.items.filter(function(item) {return item.type == "item"});;
         //console.log(this);
@@ -252,7 +253,7 @@ export default class tftloopActorSheet extends ActorSheet {
                     r.evaluate();
                     let rollValue = r.total;
                     let rollTooltip = await Promise.resolve(r.getTooltip());
-                    console.log(rollValue);
+                    //console.log(rollValue);
                     //r.toMessage("this is our roll from our dice pool");
                     let sucessText = game.i18n.localize("tftloop.failure");
                     if( rollValue>0 ){
@@ -263,13 +264,14 @@ export default class tftloopActorSheet extends ActorSheet {
                         }
                     }
 
-                    let reRollDiceFormula = Number(data.dicePool-r.total)+"d6cs6";
-                    console.log(reRollDiceFormula);
+                    let reRollDiceFormula = Number(data.dicePool-r.total);
+                    //console.log(reRollDiceFormula);
+                    //TODO pull this out to a template.
                     chatHTML = `
                     <span class="flavor-text">
                         <div class="chat-header flexrow">
                             <img class="portrait" width="48" height="48" src="`+this.actor.data.img+`"/>
-                            <h1>Tested: `+game.i18n.localize("tftloop."+rolled)+`</h1>
+                            <h1>`+game.i18n.localize("tftloop.tested")+`: `+game.i18n.localize("tftloop."+rolled)+`</h1>
                         </div>
                         
                         <div class="dice-roll">
@@ -281,7 +283,11 @@ export default class tftloopActorSheet extends ActorSheet {
                                 <h4 class="dice-total">`+sucessText+`</h4>
                             </div>
                         </div>
-                        
+                        <div class="reroll-info ">
+                            <button class="reroll" data-owner-id="`+actor._id+`" data-tested="`+game.i18n.localize("tftloop."+rolled)+`" data-dicepool="`+reRollDiceFormula+`" type="button">
+                            `+game.i18n.localize("tftloop.reroll")+`
+                            </button>
+                        </div>
                         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
                     </span>
                     `

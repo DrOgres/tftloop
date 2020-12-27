@@ -1,8 +1,11 @@
 import {tftloop} from "./module/config.js";
+import * as Chat from "./module/chat.js";
 import { preloadHandlebarsTemplates } from "./module/templates.js";
 import tftloopActorSheet from "./module/actor/sheet.js";
 import tftloopActor from "./module/actor/entity.js";
 
+
+Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
 
 Hooks.once("init", function(){
     console.log("TFTLOOP | Initializing Tales From the Loop");

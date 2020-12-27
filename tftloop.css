@@ -128,18 +128,18 @@ select:focus {
 .bug img {
   border: none;
 }
-.reroll {
+.reroll-info {
   margin-top: 3px;
   text-align: center;
 }
-.reroll button {
+.reroll-info button {
   background-color: #f38704;
   border: none;
   text-align: center;
   cursor: pointer;
   max-width: 100px;
 }
-.reroll button:focus {
+.reroll-info button:focus {
   box-shadow: none;
 }
 .dice-roll {
@@ -341,12 +341,14 @@ select:focus {
   margin: 0px;
   padding-left: 0px;
 }
+.main .info-list .item {
+  border-right: none;
+}
 .main .info-list .iconic-item {
   list-style: none;
   font-family: Trixie, 'Courier New', Courier, monospace;
   font-size: 1em;
   background: #fedd9e;
-  border-right: 1px solid black;
   border-top: 1px solid black;
   line-height: 34px;
   justify-content: space-between;
