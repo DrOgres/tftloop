@@ -281,12 +281,17 @@ export default class tftloopActorSheet extends ActorSheet {
                                 <h4 class="dice-total">`+sucessText+`</h4>
                             </div>
                         </div>
-                        
+                        <div class="reroll">
+                            <button type="button">Re-Roll</button>
+                        </div>
                         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
                     </span>
                     `
                     data.dicePool = 0;
-                    let check = game.dice3d.showForRoll(r, game.user, true, null, false);
+                    if(game.dice3d){
+                        console.log("dice so nice here");
+                        let check = game.dice3d.showForRoll(r, game.user, true, null, false);
+                    }
                     //console.log(chatHTML);
                     let chatOptions ={
                         user: game.user._id,
