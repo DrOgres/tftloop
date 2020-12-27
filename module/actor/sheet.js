@@ -384,13 +384,14 @@ export default class tftloopActorSheet extends ActorSheet {
                 }
                 break;
             case "prideCheck":
+                console.log("pride");
                 if(this.actor.data.data.prideCheck){
-                    
+                    console.log(this.actor.data.data.prideCheck);
                     this.actor.data.data.prideCheck = false;
                     actor.update({ "data.prideCheck" : false});
                     ;
                 } else {
-                   
+                    console.log(this.actor.data.data.prideCheck);
                     this.actor.data.data.prideCheck = true;
                     actor.update({ "data.prideCheck" : true});
                     

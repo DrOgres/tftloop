@@ -1,64 +1,65 @@
 <div class="core-info info-group">
-                <div class="flexrow">
-                    <div class="info-item">
-                        <label>{{localize "tftloop.age"}}</label>
-                        <select name="data.age">
-                            {{#select data.age}}
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
-                            {{/select}}
-                        </select>
-                    </div>
-                    <div class="special-item flexrow">
-                        <label class="use-luck">{{localize "tftloop.luck"}}
-                            {{data.curLuck}}
-                        {{#times curLuck}}
-                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
-                        {{/times}}
-                        {{#times data.luck.value}}
-                        <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
-                        {{/times}}
-                        </label>
-                        <div class="reset-luck">{{localize "tftloop.reset"}}</div>
+    <div class="flexrow">
+        <div class="info-item">
+            <label>{{localize "tftloop.age"}}</label>
+            <select name="data.age">
+                {{#select data.age}}
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                {{/select}}
+            </select>
+        </div>
+        <div class="special-item flexrow">
+            <label class="use-luck">{{localize "tftloop.luck"}}
+                {{data.curLuck}}
+            {{#times curLuck}}
+            <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+            {{/times}}
+            {{#times data.luck.value}}
+            <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+            {{/times}}
+            </label>
+            <div class="reset-luck">{{localize "tftloop.reset"}}</div>
 
-                    </div>
-                </div>
-                <div class="flexrow">
-                    <div class="info-item flexrow">
-                        <label>{{localize "tftloop.drive"}}</label>
-                        <input name="data.drive" type="text" value="{{data.drive}}" placeholder=""/>
-                    </div>
-                    <div class="info-item flexrow">
-                        <label>{{localize "tftloop.anchor"}}</label>
-                         <input name="data.anchor" type="text" value="{{data.anchor}}" placeholder=""/>
-                    </div>
-                </div>
-                 <div class="info-item flexrow">
-                     <label>{{localize "tftloop.problem"}}</label>
-                      <input name="data.problem" type="text" value="{{data.problem}}" placeholder=""/>
-                 </div>
-                 <div class="info-item flexrow">
-                     <label>{{localize "tftloop.pride"}}</label>
-                      <input name="data.pride" type="text" value="{{data.pride}}" placeholder=""/>
-                      <label class="imgCheck">
-                            {{#unless data.prideCheck}}
-                                <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
-                            {{/unless}}
-                            {{#if data.prideCheck}}
-                                <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
-                            {{/if}}
-                      </label>
-                 </div>
-                 <div class="info-item flexrow">
-                     <label>{{localize "tftloop.description"}}</label>
-                      <input name="data.description" type="text" value="{{data.description}}" placeholder=""/>
-                 </div>
-                 <div class="info-item flexrow">
-                     <label>{{localize "tftloop.favSong"}}</label>
-                      <input name="data.favoriteSong" type="text" value="{{data.favoriteSong}}" placeholder=""/>
-                 </div>
-            </div>
+        </div>
+    </div>
+    <div class="flexrow">
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.drive"}}</label>
+            <input name="data.drive" type="text" value="{{data.drive}}" placeholder=""/>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.anchor"}}</label>
+                <input name="data.anchor" type="text" value="{{data.anchor}}" placeholder=""/>
+        </div>
+    </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.problem"}}</label>
+            <input name="data.problem" type="text" value="{{data.problem}}" placeholder=""/>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.pride"}}</label>
+            <input name="data.pride" type="text" value="{{data.pride}}" placeholder=""/>
+            <label class="imgCheck">
+                {{#unless data.prideCheck}}
+                    <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                {{/unless}}
+                {{#if data.prideCheck}}
+                    
+                    <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                {{/if}}
+            </label>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.description"}}</label>
+            <input name="data.description" type="text" value="{{data.description}}" placeholder=""/>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.favSong"}}</label>
+            <input name="data.favoriteSong" type="text" value="{{data.favoriteSong}}" placeholder=""/>
+        </div>
+</div>
