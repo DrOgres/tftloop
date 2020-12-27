@@ -281,9 +281,7 @@ export default class tftloopActorSheet extends ActorSheet {
                                 <h4 class="dice-total">`+sucessText+`</h4>
                             </div>
                         </div>
-                        <div class="reroll">
-                            <button type="button">Re-Roll</button>
-                        </div>
+                        
                         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
                     </span>
                     `
