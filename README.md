@@ -10,9 +10,15 @@ feedback is always welcome.
 -Dr Ogres
 
 <ul>
-    <li>TODO - style chat cards for rolls</li>
     <li>TODO - add re-roll function to roll result</li>
 </ul>
+
+<h3>Version 0.7.5</h3>
+
+* Stytled chat and other windows to match core system
+* Beutified Roll Dialog
+* Added breakdown of components to the Roll Dialog (you can see why your pool is what it is)
+* Styled chat card for rolls, and ensured dice so nice played well with system.
 
 <h3>Version 0.7.1</h3> 
 

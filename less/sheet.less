@@ -1,5 +1,74 @@
 @import "./config.less";
 
+
+.dice-result{
+    .dice-formula, .dice-total{
+        background: @transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.chat-header{
+    flex: 0 1 0;
+    margin-left: -7px;
+    margin-right: -7px;
+    padding-left: 7px;
+    padding-right: 7px;
+
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-color: @highlight;
+    border-bottom: 1px solid;
+
+    .portrait{
+        max-width: 48px;
+        border: none;
+        padding: 0 5px 0 0;
+
+    }
+
+    h1{
+        font-family: Avant, sans-serif;
+        font-size: 1.5em;
+        font-weight: 700;
+        text-align: right;
+        align-self: flex-end;
+        border: none;
+        color: @highlight;
+    }
+
+    
+}
+
+.bug{
+    img{
+    border: none;
+    }
+    text-align: center;
+}
+
+
+.reroll{
+    margin-top: 3px;
+    text-align: center;
+    button{
+        background-color: @highlight;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        max-width: 100px;
+    }
+    button:focus{
+        box-shadow: none;
+
+    }
+}
+
+.dice-roll{
+    margin-top: 3px;
+}
+
 .imgCheck{
     
     cursor: pointer;
@@ -17,6 +86,93 @@
     text-align: right;
     max-width: 50px;
     padding-right: 3px;
+}
+
+.window-content{
+    
+    .dialog-content{
+        background: url(img/chat_background.jpg);
+        padding: 5px;
+        box-shadow: 2px 2px @drop-shadow-color;
+        margin-bottom: 3px;
+
+        .bug{
+            img{
+            border: none;
+            }
+            text-align: center;
+        }
+
+        .pool-count{
+            text-align: center;
+            font-family: Trixie, 'Courier New', Courier, monospace;
+            font-weight: 400;
+            font-size: 1.5em;
+            border-bottom: 1px solid @drop-shadow-color;
+        }
+
+        .pool-details{
+            
+            padding-left: 20px;
+            margin-top: 3px;
+            margin-bottom: 5px;
+            .pool-detail{
+                font-family: Trixie, 'Courier New', Courier, monospace;
+                font-size: 1.2em;
+                font-weight: 300;
+                padding-left: 80px;
+            }
+
+            .penalty{
+                color: @highlight;
+
+            }
+
+            .divider{
+                margin-top: 2px;
+            }
+            .pool-item-select{
+                font-family: Trixie, 'Courier New', Courier, monospace;
+                font-size: 1.2em;
+                font-weight: 300;
+                
+
+                select{
+                    font-family:Trixie, 'Courier New', Courier, monospace;
+                    font-size: .8em;
+                    font-weight: 400;
+                    border: none;
+                    border-bottom: 1px solid @drop-shadow-color;
+                    border-radius: 0;
+                    background: @transparent;
+
+                }
+            }
+            
+            .bonus-dice{
+                
+                font-family: Trixie, 'Courier New', Courier, monospace;
+                label{
+                    flex: 0 0 120px;
+                    align-self: flex-end;
+                    font-size: 1.2em;
+                }
+                input{
+                    margin-left: 3px;
+                    border: none;
+                    border-bottom: 1px solid @drop-shadow-color;
+                    border-radius: 0;
+                    background: @transparent;
+                    width: 200px;
+                }
+
+                input:focus{
+                    box-shadow: none;
+                    border-bottom: 1px solid @highlight;
+                }
+            }
+        }
+    }
 }
 
 .section-header{
@@ -53,6 +209,8 @@
 .kid-notes{
     background: @field-color;
 }
+
+
 .main{
     display: table;
     margin-left: 5px;
@@ -85,15 +243,20 @@
     }
 
     .info-group{
-        border: 1px solid @black;    
+        border-bottom: 1px solid @black;
+        border-left: 1px solid @black; 
+        border-right: 1px solid @black;   
         border-radius: 0px;
         margin: 2px;
         padding: 0px;
         box-shadow: 2px 2px @drop-shadow-color;
         
     }
+
     .conditions{
-        border: 1px solid @black;    
+        border-bottom: 1px solid @black;  
+        border-left: 1px solid @black;    
+        border-right: 1px solid @black;  
         border-radius: 0px;
         margin: 2px;
         padding: 0px;
@@ -126,6 +289,7 @@
                 border: none;
             }
         }
+
         .special-item{
             font-size: .77em;
             line-height: 25px;
@@ -134,50 +298,53 @@
                 vertical-align: middle;
             }
         }
+
         .section-header{
             
             line-height: 25px;
         }
-        }
+    }
+
     .info-list{
         margin: 0px;
         padding-left: 0px;
-    }
-    .iconic-item{
-        list-style: none;
-        font-family: Trixie, 'Courier New', Courier, monospace;
-        font-size: 1em;
-        background: @iconic-item-color;
-        border-right: 1px solid @black;
-        border-top: 1px solid @black;
-        line-height: 34px;
-        justify-content: space-between;
+   
+        .iconic-item{
+            list-style: none;
+            font-family: Trixie, 'Courier New', Courier, monospace;
+            font-size: 1em;
+            background: @iconic-item-color;
+            border-right: 1px solid @black;
+            border-top: 1px solid @black;
+            line-height: 34px;
+            justify-content: space-between;
 
-        .item-name{
-            flex: 0 0 60%;
-            font-size: .8em;
-        }
-        .item-bonus{
-            flex: 0 0 30px;
-        }
-        .item-plus{
-            flex: 0 0 10px;
-        }
-        .item-control{
-            flex: 0 0 30px;
-            text-align: center;
-            
-        }
-       
-        input{
-            margin-top: 3px;
-            margin-right: 3px;
-            background: @transparent;
-            border: none;
-            font-size: 1.2em;
-        }
-        input[type="text"]:focus{
-            box-shadow: 0 0 5px @highlight;
+            .item-name{
+                flex: 0 0 60%;
+                font-size: .8em;
+            }
+            .item-bonus{
+                flex: 0 0 30px;
+            }
+            .item-plus{
+                flex: 0 0 10px;
+            }
+            .item-control{
+                flex: 0 0 30px;
+                text-align: center;
+                
+            }
+        
+            input{
+                margin-top: 3px;
+                margin-right: 3px;
+                background: @transparent;
+                border: none;
+                font-size: 1.2em;
+            }
+            input[type="text"]:focus{
+                box-shadow: 0 0 5px @highlight;
+            }
         }
     }
     
@@ -239,7 +406,7 @@
         font-size: 1em;
         background: @section-head-color;
         border-right: 1px solid @black;
-        border-bottom: 1px solid @black;
+        border-top: 1px solid @black;
         padding-top: 3px;
         
         img{

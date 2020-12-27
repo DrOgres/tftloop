@@ -20,7 +20,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
         data.relationships = data.items.filter(function(item) {return item.type == "relationship"});
         data.bonusItems = data.items.filter(function(item) {return item.type == "item"});
-        console.log(data.bonusItems);
+        //console.log(data.bonusItems);
         data.data.luck.max = 15-Number(data.data.age);
         data.curLuck = data.data.luck.max - data.data.luck.value;
         
@@ -48,7 +48,7 @@ export default class tftloopActorSheet extends ActorSheet {
         super.activateListeners(html);
     }
     
-    _onAddToPool(event){
+    async _onAddToPool(event){
         event.preventDefault();
        // console.log("add to pool");
         let actor = this.actor;
@@ -57,6 +57,8 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log(this);
         let element = event.currentTarget;
         let rolled = element.dataset.rolled;
+        let statRolled = '';
+        let conditionPenalty = '';
         
         // if we are broken then we fail no matter what.
         if(!data.broken){
@@ -65,78 +67,111 @@ export default class tftloopActorSheet extends ActorSheet {
             case "body":
                 console.log(data.body);
                 data.dicePool += data.body;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.body")+' +'+data.body+'</div>';
                 break;
             case "tech":
                 data.dicePool += data.tech;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.tech")+' +'+data.tech+'</div>';
                 break;
             case "heart":
                 data.dicePool += data.heart;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.heart")+' +'+data.heart+'</div>';
                 break;
             case "mind":
-                data.dicePool += data.heart;
+                data.dicePool += data.mind;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.mind")+' +'+data.mind+'</div>';
                 break;
             case "sneak":
                 data.dicePool += data.body;
                 data.dicePool += data.sneak;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.body")+' +'+data.body+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.sneak")+' +'+data.sneak+'</div>';
                 break;
             case "force":
                 data.dicePool += data.body;
                 data.dicePool += data.force;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.body")+' +'+data.body+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.force")+' +'+data.force+'</div>';
                 break;
             case "move":
                 data.dicePool += data.body;
                 data.dicePool += data.move;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.body")+' +'+data.body+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.move")+' +'+data.move+'</div>';
                 break;
             case "tinker":
                 data.dicePool += data.tech;
                 data.dicePool += data.tinker;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.tech")+' +'+data.tech+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.tinker")+' +'+data.tinker+'</div>';
                 break;
             case "program":
                 data.dicePool += data.tech;
                 data.dicePool += data.program;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.tech")+' +'+data.tech+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.program")+' +'+data.program+'</div>';
                 break;
             case "calculate":
                 data.dicePool += data.tech;
                 data.dicePool += data.calculate;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.tech")+' +'+data.tech+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.calculate")+' +'+data.calculate+'</div>';
                 break;
             case "contact":
                 data.dicePool += data.heart;
                 data.dicePool += data.contact;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.heart")+' +'+data.heart+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.contact")+' +'+data.contact+'</div>';
                 break;
             case "charm":
                 data.dicePool += data.heart;
                 data.dicePool += data.charm;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.heart")+' +'+data.heart+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.charm")+' +'+data.charm+'</div>';
                 break;
             case "lead":
                 data.dicePool += data.heart;
                 data.dicePool += data.lead;
+                
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.heart")+' +'+data.heart+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.lead")+' +'+data.lead+'</div>';
                 break;
             case "investigate":
                 data.dicePool += data.mind;
                 data.dicePool += data.investigate;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.mind")+' +'+data.mind+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.investigate")+' +'+data.investigate+'</div>';
                 break;
             case "comprehend": 
                 data.dicePool += data.mind;
                 data.dicePool += data.comprehend;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.mind")+' +'+data.mind+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.comprehend")+' +'+data.comprehend+'</div>';
                 break;
             case "empathize":
                 data.dicePool += data.mind;
                 data.dicePool += data.empathize;
+                statRolled =  '<div class="pool-detail">'+game.i18n.localize("tftloop.mind")+' +'+data.mind+'</div>';
+                statRolled += '<div class="pool-detail">'+game.i18n.localize("tftloop.empathize")+' +'+data.empathize+'</div>';
                 break;
 
         }
         //reduce dice by conditions
         if(data.upset){
             data.dicePool -= 1;
+            conditionPenalty += '<div class="pool-detail penalty">'+game.i18n.localize("tftloop.upset")+' -1</div>';
         } 
         if(data.scared){
             data.dicePool -= 1;
+            conditionPenalty += '<div class="pool-detail penalty">'+game.i18n.localize("tftloop.scared")+' -1</div>';
         }
         if(data.exhausted){
             data.dicePool -= 1;
+            conditionPenalty += '<div class="pool-detail penalty">'+game.i18n.localize("tftloop.exhausted")+' -1</div>';
         }
         if(data.injured){
             data.dicePool -= 1;
+            conditionPenalty += '<div class="pool-detail penalty">'+game.i18n.localize("tftloop.injured")+' -1</div>';
         }
 
        // console.log(items);
@@ -153,23 +188,35 @@ export default class tftloopActorSheet extends ActorSheet {
         let rollHTML = `<div class="form-group">
             <h2>Rolling: `+game.i18n.localize("tftloop."+rolled)+`</h2>
             <div class="pool-count">`+game.i18n.localize("tftloop.currentPool")+`: `+data.dicePool+` Dice</div>
-            <label>`+game.i18n.localize("tftloop.useItem")+`:</label>
+            <div class="pool-details">
+            `+statRolled+`
+            
+            `+conditionPenalty+`
+            <div class="divider"></div>
+            <div class="pool-item-select">
+            <label for="roll-item">`+game.i18n.localize("tftloop.useItem")+`:</label>
             <select id="roll-item" name="useItem" style="margin-bottom: 5px">
                 <option value="0">`+game.i18n.localize("tftloop.none")+`</option>
                 <option value="2">`+game.i18n.localize("tftloop.iconic")+`:`+data.iconicItem.desc+` + 2</option>
-                `+list+`
-                
+                `+list+` 
             </select>
-            <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>`+game.i18n.localize("tftloop.bonusDice")+`</label>
+            </div>
+            <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>`+game.i18n.localize("tftloop.bonusDice")+`: </label>
             <input name="bonusDice" type="text" value="" placeholder="0" data-dtype="Number"/></div>
+            </div>
+            <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
         </div>
        
         `;
 
+
+        let chatHTML = ``;
+
+
         //create dialog to get the use of item and or a bonus for dice
         let yesRoll = false;
         let d = new Dialog({
-            title: "roll dialog",
+            title: game.i18n.localize("tftloop.diceRoll"),
             content: rollHTML,
             buttons: {
                 one: {
@@ -190,8 +237,8 @@ export default class tftloopActorSheet extends ActorSheet {
                    }
             },
             default: "two",
-            render: html => console.log("query mods and items then roll or cancel"),
-            close: html => {
+            render: html => console.log("TFTLOOP  |  Rendering Dice Rolling Dialog"),
+            close: async html => {
                 if(yesRoll){
                     let itemBonus = Number(html.find('[name="useItem"]')[0].value);
                     let bonusDice = Number(html.find('[name="bonusDice"]')[0].value);
@@ -199,22 +246,60 @@ export default class tftloopActorSheet extends ActorSheet {
                     data.dicePool += bonusDice;
                     let rollFormula = data.dicePool+"d6cs6";
                     //console.log("Chose Roll with or without options now roll " + rollFormula + "!");
-                    data.dicePool = 0;
+                    
                     //console.log("dice pool " + data.dicePool);
-                    let r = new Roll(rollFormula);
+                    let r = new Roll(rollFormula, this.actor.data.data);
                     r.evaluate();
+                    let rollValue = r.total;
+                    let rollTooltip = await Promise.resolve(r.getTooltip());
+                    console.log(rollValue);
                     //r.toMessage("this is our roll from our dice pool");
-                    ChatMessage.create({
+                    let sucessText = game.i18n.localize("tftloop.failure");
+                    if( rollValue>0 ){
+                        if(rollValue>1){
+                            sucessText = rollValue+" "+game.i18n.localize("tftloop.successes");
+                        } else {
+                            sucessText = rollValue+" "+game.i18n.localize("tftloop.success");
+                        }
+                    }
+
+                    let reRollDiceFormula = Number(data.dicePool-r.total)+"d6cs6";
+                    console.log(reRollDiceFormula);
+                    chatHTML = `
+                    <span class="flavor-text">
+                        <div class="chat-header flexrow">
+                            <img class="portrait" width="48" height="48" src="`+this.actor.data.img+`"/>
+                            <h1>Tested: `+game.i18n.localize("tftloop."+rolled)+`</h1>
+                        </div>
+                        
+                        <div class="dice-roll">
+                            <div class="dice-result">
+                                <div class="dice-formula">
+                                `+r._formula+`
+                                </div>
+                                `+rollTooltip+`
+                                <h4 class="dice-total">`+sucessText+`</h4>
+                            </div>
+                        </div>
+                        
+                        <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+                    </span>
+                    `
+                    data.dicePool = 0;
+                    let check = game.dice3d.showForRoll(r, game.user, true, null, false);
+                    //console.log(chatHTML);
+                    let chatOptions ={
                         user: game.user._id,
                         speaker: ChatMessage.getSpeaker({actor: this.actor, token: this.actor.img}),
-                        content: "this is the roll we made from our dice pool",
-                        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-                        isRoll: true,
+                        type: CONST.CHAT_MESSAGE_TYPES.OTHER,
                         roll: r,
-                        sound: ""
-                    });
+                        rollMode: game.settings.get("core", "rollMode"),
+                        content: chatHTML
+                    }
+                    ChatMessage.create(chatOptions);
                 } else {
                 console.log("dialog was closed!");
+                data.dicePool = 0;
                 }
             }
         });
@@ -226,7 +311,7 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log("dice pool " + data.dicePool);
 
         } else {
-            ui.notifications.info("You Automatically fail any roll when you are Broken!");
+            ui.notifications.info(game.i18n.localize("tftloop.brokeFail"));
         }
         
 
@@ -261,7 +346,7 @@ export default class tftloopActorSheet extends ActorSheet {
         let actor = this.actor;
         let maxLuck = actor.data.data.luck.max;
         let usedLuck = actor.data.data.luck.value;
-        console.log(actor);
+        //console.log(actor);
         if(usedLuck<maxLuck){
             usedLuck+=1;
         } else {
@@ -269,8 +354,8 @@ export default class tftloopActorSheet extends ActorSheet {
         }
 
         actor.update({"data.luck.value": usedLuck});
-        console.log(actor.data.data.luck.max);
-        console.log(actor.data.data.luck.value);
+        //console.log(actor.data.data.luck.max);
+        //console.log(actor.data.data.luck.value);
     }
 
     _onItemEdit(event){
@@ -384,14 +469,14 @@ export default class tftloopActorSheet extends ActorSheet {
                 }
                 break;
             case "prideCheck":
-                console.log("pride");
+                //console.log("pride");
                 if(this.actor.data.data.prideCheck){
-                    console.log(this.actor.data.data.prideCheck);
+                    //console.log(this.actor.data.data.prideCheck);
                     this.actor.data.data.prideCheck = false;
                     actor.update({ "data.prideCheck" : false});
                     ;
                 } else {
-                    console.log(this.actor.data.data.prideCheck);
+                    //console.log(this.actor.data.data.prideCheck);
                     this.actor.data.data.prideCheck = true;
                     actor.update({ "data.prideCheck" : true});
                     

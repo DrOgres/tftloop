@@ -57,7 +57,12 @@
         "cancel": "Cancel",
         "useItem": "Use Item",
         "none": "None",
-        "bonusDice": "Bonus Dice"
+        "bonusDice": "Bonus Dice",
+        "brokeFail": "You Automatically fail any roll when you are Broken!",
+        "diceRoll": "Dice Roll Dialog",
+        "success": "Success",
+        "successes": "Successes",
+        "failure": "Failure"
 
 
 

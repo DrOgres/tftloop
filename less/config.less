@@ -44,7 +44,7 @@
 /        Foundry overrides
 ******************************/
 .editor-edit{
-    box-shadow: none;
+    box-shadow: 2px 2px @drop-shadow-color;
 }
 
 
@@ -54,12 +54,13 @@
 }
 
 button:hover{
-    box-shadow: none;
+    box-shadow: 2px 2px @drop-shadow-color;
 }
 
 .window-app .window-content{
     background-color: @background;
     background: @background;
+    
 }
 
 a:hover{
@@ -83,8 +84,58 @@ textarea:focus{
     box-shadow: 0 0 5px @footer-color;
 }
 
-h2{
-    font-family: SabonRoman, sans-serif;
+h1, h2 {
+    font-family: Avant, sans-serif;
     font-weight: 700;
     border-color: @highlight;
+}
+
+#chat-form textarea{
+    background: url(img/chat_background.jpg);
+}
+
+#chat-controls{
+    .roll-type-select{
+        background: @white;
+    }
+}
+
+#chat-log .message{
+    border-color: @footer-color;
+}
+
+.chat-message{
+    background: url(img/chat_background.jpg);
+    font-family: Trixie, 'Courier New', Courier, monospace;
+}
+
+.app{
+    color: @white;
+}
+
+button {
+    background: @white;
+}
+
+.tabs {
+    .item.active{
+        text-shadow: none;
+        color: @highlight;
+        border-bottom: 3px solid @highlight;
+    }
+}
+
+.sidebar-tab {
+    .directory-header {
+        .header-search{
+            input{
+                background: @white;
+            }
+        }
+    }
+}
+
+select:focus{
+    box-shadow: none;
+    border: 1px solid @highlight;
 }
