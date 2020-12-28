@@ -13,6 +13,12 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.7.7</h3>
+
+* minor bug fix.  
+* restrictied visibility of reroll button by owner in chat.
+
+
 <h3>Version 0.7.6</h3>
 
 * Added Re-roll buttons - Feature Complete!

@@ -6,6 +6,10 @@ import tftloopActor from "./module/actor/entity.js";
 
 
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderChatMessage", (app, html, data) =>{
+    Chat.hideChatActionButtons(app, html, data);
+
+});
 
 Hooks.once("init", function(){
     console.log("TFTLOOP | Initializing Tales From the Loop");

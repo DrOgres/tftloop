@@ -273,7 +273,7 @@ export default class tftloopActorSheet extends ActorSheet {
                             <img class="portrait" width="48" height="48" src="`+this.actor.data.img+`"/>
                             <h1>`+game.i18n.localize("tftloop.tested")+`: `+game.i18n.localize("tftloop."+rolled)+`</h1>
                         </div>
-                        
+                        <div class="tftloop chat-card" data-actor-id="`+actor._id+`">
                         <div class="dice-roll">
                             <div class="dice-result">
                                 <div class="dice-formula">
@@ -283,10 +283,11 @@ export default class tftloopActorSheet extends ActorSheet {
                                 <h4 class="dice-total">`+sucessText+`</h4>
                             </div>
                         </div>
-                        <div class="reroll-info ">
+                        <div class="reroll-info" data-owner-id="`+actor._id+`">
                             <button class="reroll" data-owner-id="`+actor._id+`" data-tested="`+game.i18n.localize("tftloop."+rolled)+`" data-dicepool="`+reRollDiceFormula+`" type="button">
                             `+game.i18n.localize("tftloop.reroll")+`
                             </button>
+                        </div>
                         </div>
                         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
                     </span>

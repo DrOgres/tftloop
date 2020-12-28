@@ -1,5 +1,21 @@
+export const hideChatActionButtons = function (message, html, data){
+    const card =  html.find(".tftloop.chat-card");
+    console.log(card);
+    if(card.length >0){
+        let actor = game.actors.get(card.attr("data-actor-id"));
+
+        if ((actor && !actor.owner)){
+            const buttons = card.find(".reroll");
+            buttons.each((i, btn) =>{
+                btn.style.display = "none"
+            });
+        }
+    }
+}
+
 export function addChatListeners(html){
     html.on('click', 'button.reroll', onReroll);
+    
 }
 
 async function onReroll(event) {
