@@ -60,6 +60,19 @@ h2 {
   font-weight: 700;
   border-color: #f38704;
 }
+h3,
+h4,
+h5,
+h6 {
+  font-family: Avant, sans-serif;
+}
+blockquote {
+  font-family: SabonItalic;
+}
+section.secret {
+  font-family: SabonRoman;
+  font-size: 1.1em;
+}
 #chat-form textarea {
   background: url(img/chat_background.jpg);
 }
@@ -154,11 +167,19 @@ select:focus {
 .add-to-pool {
   cursor: pointer;
 }
+.add-to-pool:hover {
+  font-weight: 700;
+  color: #ee7113;
+  text-shadow: 1px 1px #7f7f7f;
+}
 .reset-luck {
   cursor: pointer;
   text-align: right;
   max-width: 50px;
   padding-right: 3px;
+}
+.reset-luck:hover {
+  font-weight: 700;
 }
 .window-content .dialog-content {
   background: url(img/chat_background.jpg);
@@ -506,6 +527,7 @@ select:focus {
   text-align: left;
 }
 .sidebar .experience-group .exp-boxes {
+  cursor: pointer;
   background: #f9bd8d;
   flex: 0 0 auto;
   justify-content: center;

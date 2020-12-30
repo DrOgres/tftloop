@@ -81,11 +81,23 @@
 .add-to-pool{
     cursor: pointer;
 }
+
+.add-to-pool:hover{
+    font-weight: 700;
+    color: @footer-color;
+    text-shadow: 1px 1px @drop-shadow-color;
+}
+
 .reset-luck{
     cursor: pointer;
     text-align: right;
     max-width: 50px;
     padding-right: 3px;
+}
+
+.reset-luck:hover{
+    font-weight: 700;
+
 }
 
 .window-content{
@@ -501,6 +513,7 @@
             text-align: left;
         }
         .exp-boxes{
+            cursor: pointer;
             background: @section-head-color;
             flex: 0 0 auto;
             justify-content: center;

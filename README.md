@@ -13,6 +13,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.7.8</h3>
+
+* French Language Localization | Localisation de la langue française
+* tweaks to CSS
+
 <h3>Version 0.7.7</h3>
 
 * minor bug fix.  

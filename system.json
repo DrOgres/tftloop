@@ -3,7 +3,7 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales From the Loop",
     "author" : "Dr Ogres", 
-    "version" : "0.7.7",
+    "version" : "0.7.8",
     "miniumumCoreVersion" : "0.7.9",
     "compatibleCoreVersion" : "0.7.9",
 
@@ -23,6 +23,11 @@
             "lang": "en",
             "name": "English",
             "path": "lang/en.json"
+        },
+        {
+            "lang": "fr",
+            "name": "Français",
+            "path": "lang/fr.json"
         }
 
     ],
