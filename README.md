@@ -16,6 +16,7 @@ feedback is always welcome.
 <h3>Version 0.7.8</h3>
 
 * French Language Localization | Localisation de la langue française
+    * thanks to Antoine and Carter!
 * tweaks to CSS
 
 <h3>Version 0.7.7</h3>
