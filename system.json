@@ -3,7 +3,7 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales From the Loop",
     "author" : "Dr Ogres", 
-    "version" : "0.7.8",
+    "version" : "0.7.9",
     "miniumumCoreVersion" : "0.7.9",
     "compatibleCoreVersion" : "0.7.9",
 
@@ -38,11 +38,12 @@
     "url": "https://github.com/DrOgres/tftloop",
     "manifest": "https://github.com/DrOgres/tftloop/raw/main/system.json",
     "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
+    "background" : "./img/loop_system.png",
 
     "media": [
         {
           "type": "cover",
-          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.jpg"
+          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.png"
         },
         {
           "type": "screenshot",

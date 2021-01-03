@@ -65,6 +65,11 @@ async function onReroll(event) {
                 <h4 class="dice-total">`+sucessText+`</h4>
             </div>
         </div>
+        <div class="reroll-info" data-owner-id="`+actor._id+`">
+                            <button class="reroll" data-owner-id="`+actor._id+`" data-tested="`+game.i18n.localize("tftloop."+rolled)+`" data-dicepool="`+reRollDiceFormula+`" type="button">
+                            `+game.i18n.localize("tftloop.reroll")+`
+                            </button>
+                        </div>
         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
     </span>
     `

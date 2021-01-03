@@ -13,6 +13,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.7.9</h3>
+
+* Fixed roll logic - If a pool is 0 the pool becomes 1d6cs6 (as per the clarification in flood).
+* added re-roll button to already re-rolled items to allow for expenditure of luck after a pushed roll
+
 <h3>Version 0.7.8</h3>
 
 * French Language Localization | Localisation de la langue française

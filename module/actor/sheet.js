@@ -253,6 +253,9 @@ export default class tftloopActorSheet extends ActorSheet {
                     let bonusDice = Number(html.find('[name="bonusDice"]')[0].value);
                     data.dicePool += itemBonus;
                     data.dicePool += bonusDice;
+                    if(data.dicePool <= 0){
+                        data.dicePool = 1;
+                    }
                     let rollFormula = data.dicePool+"d6cs6";
                     //console.log("Chose Roll with or without options now roll " + rollFormula + "!");
                     
