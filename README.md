@@ -15,6 +15,11 @@ feedback is always welcome.
 
 <h3>Version 0.7.9</h3>
 
+* German Language Localization  |  Deutschsprachige Übersetzung.
+    * Thanks to GreenTea173!
+
+<h3>Version 0.7.9</h3>
+
 * Fixed roll logic - If a pool is 0 the pool becomes 1d6cs6 (as per the clarification in flood).
 * added re-roll button to already re-rolled items to allow for expenditure of luck after a pushed roll
 
