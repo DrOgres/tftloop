@@ -3,9 +3,9 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales From the Loop",
     "author" : "Dr Ogres", 
-    "version" : "0.7.9",
-    "miniumumCoreVersion" : "0.7.9",
-    "compatibleCoreVersion" : "0.7.9",
+    "version" : "0.8.0",
+    "miniumumCoreVersion" : "0.8.0",
+    "compatibleCoreVersion" : "0.8.0",
 
     "esmodules" : [
         "tftloop.js"
@@ -28,6 +28,10 @@
             "lang": "fr",
             "name": "Français",
             "path": "lang/fr.json"
+        },
+        {   "lang": "de",
+            "name": "Deutsche",
+            "path": "lang/de.json"
         }
 
     ],
