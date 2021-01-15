@@ -25,6 +25,11 @@
 }
 
 @font-face{
+    font-family: AvantBold;
+    src:url(fonts/AvantBold.otf);
+}
+
+@font-face{
     font-family: SabonItalic;
     src:url(fonts/Sabon_Italic.ttf);
 }
@@ -95,7 +100,12 @@ h3, h4, h5, h6 {
 }
 
 blockquote{
-    font-family: SabonItalic;
+    font-family: Trixie, 'Courier New', Courier, monospace;
+    background: url(img/chat_background.jpg);
+    max-width: 90%;
+    padding: 20px;
+    border: none;
+    break-inside: avoid;
 }
 
 section.secret{
@@ -152,3 +162,90 @@ select:focus{
     box-shadow: none;
     border: 1px solid @highlight;
 }
+
+.chapter-header{
+    font-family: AvantBold;
+    font-weight: 900;
+    color: @footer-color;
+    border-bottom: none;
+    font-style: bold;
+    padding-left: 5px;
+}
+
+.lore-text{
+    font-family: SabonItalic;
+    padding-left: 5px;
+}
+
+.us-text{
+    color: @highlight;
+    font-weight: 300;
+}
+
+.example-text{
+    font-size: .9em;
+    padding-left: 8px;
+    border-left: dotted 2px @highlight;
+    max-width: 90%;
+    background: @field-color;
+}
+
+
+.major-heading{
+    display: grid;
+    grid-template-columns: 140px auto;
+    justify-items: stretch;
+       
+
+}
+
+.chap-number{
+    
+    font-family: AvantBold;
+    color: white;
+    background-image: url('img/grunge.png');
+    background-color: #fbba1c;
+    object-fit: cover;
+}
+
+.grunge{
+    
+    position: absolute;
+    width: 140px;
+    
+    img{
+    border: none;
+    object-fit: cover;
+    }
+    
+    z-index: 7;
+    
+    
+}
+
+.two-col{
+    column-count: 2;
+    column-gap: 3em;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: justify;
+}
+
+h5{
+    font-size: 1.5em;
+    font-family: AvantBold, Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: @highlight;
+    margin-block-start: 1em;
+    margin-block-end: .5em;
+    
+}
+
+h1{
+    font-size: 3.5em;
+}
+
+h2{
+    font-size: 2em;
+}
+
