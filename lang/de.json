@@ -1,4 +1,5 @@
 {
+       
        "tftloop" : {
               "attributesSkills" : "Attribute/Fertigkeiten",
               "experience": "Erfahrung",
@@ -67,8 +68,6 @@
               "rerolled": "Wiederholung des Wurfs",
               "reroll": "Wiederholung",
               "rolling": "Würfelnd"
-
-
 
     }
 }

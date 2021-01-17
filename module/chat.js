@@ -66,14 +66,14 @@ async function onReroll(event) {
             </div>
         </div>
         <div class="reroll-info" data-owner-id="`+actor._id+`">
-                            <button class="reroll" data-owner-id="`+actor._id+`" data-tested="`+game.i18n.localize("tftloop."+rolled)+`" data-dicepool="`+reRollDiceFormula+`" type="button">
+                            <button class="reroll" data-owner-id="`+actor._id+`" data-tested="`+rolled+`" data-dicepool="`+reRollDiceFormula+`" type="button">
                             `+game.i18n.localize("tftloop.reroll")+`
                             </button>
                         </div>
         <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
     </span>
     `
-    
+    console.log(rolled);
     if(game.dice3d){
         console.log("dice so nice here");
         let check = game.dice3d.showForRoll(r, game.user, true, null, false);
