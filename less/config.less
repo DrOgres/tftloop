@@ -170,6 +170,24 @@ select:focus{
 
 
 .editor-content{
+   
+
+        table{
+            background: @field-color;
+            border: none;
+            font-family: AvantBold;
+            th{ 
+                padding-left: 3px;
+                background:@black;
+                color: @white;
+                text-align: left;
+                font-family: AvantBold;
+            }
+            tr:nth-child(odd){
+                background: @iconic-item-color;
+
+            }
+        }
         .chapter-header{
             font-family: AvantBold;
             font-weight: 900;
@@ -196,6 +214,10 @@ select:focus{
             border-left: dotted 2px @highlight;
             max-width: 90%;
             background: @field-color;
+            break-inside: avoid;
+            p{
+            text-indent: 0px;
+            }
         }
 
 
@@ -237,24 +259,27 @@ select:focus{
             margin-top: 10px;
             margin-right: 10px;
             text-align: justify;
+            
         }
 
         h5{
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-family: AvantBold, Arial, Helvetica, sans-serif;
             font-weight: 600;
             color: @highlight;
             margin-block-start: 1em;
             margin-block-end: .5em;
+            font-style: italic;
             
         }
 
         h1{
             font-size: 3.5em;
+            border-color: @black;
         }
 
         h2{
-            font-size: 2.2em;
+            font-size: 1.5em;
             border: none;
             text-align: left;
         }
