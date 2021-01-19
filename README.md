@@ -13,6 +13,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.8.4</h3>
+
+* Spainish Localization |  Localización del idioma español
+    * Thanks to mikeldevcosmico
+
 <h3>Version 0.8.3</h3>
 
 * fixed Forge Bazaar issue
