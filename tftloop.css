@@ -441,7 +441,6 @@ select:focus {
   margin-bottom: 4px;
   margin-top: 4px;
   line-height: 15px;
-  max-height: 35px;
 }
 .main .conditions .info-item {
   font-size: 0.85em;
@@ -455,18 +454,24 @@ select:focus {
 .main .conditions .info-item img {
   border: none;
   vertical-align: middle;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main .conditions .info-item input {
   background: #ffffff00;
   border: none;
 }
 .main .conditions .special-item {
-  font-size: 0.77em;
+  font-size: 0.85em;
   line-height: 25px;
 }
 .main .conditions .special-item img {
   border: none;
   vertical-align: middle;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .main .conditions .section-header {
   line-height: 25px;
