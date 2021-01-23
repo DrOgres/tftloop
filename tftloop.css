@@ -118,6 +118,9 @@ select:focus {
   box-shadow: none;
   border: 1px solid #f38704;
 }
+.editor-content img {
+  border: none;
+}
 .editor-content table {
   background: #fff1da;
   border: none;
@@ -209,6 +212,7 @@ select:focus {
 }
 .editor-content h3 {
   font-family: AvantBold;
+  text-align: left;
 }
 .editor-content p {
   text-indent: 25px;
