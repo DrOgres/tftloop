@@ -66,8 +66,14 @@
         "tested": "Test",
         "rerolled": "Relancé",
         "reroll": "Relancer"
+    },
+
+    "france" : {
+        "resourceful": "Combinard",
+         "showoff": "Frimeur",
+         "inventor": "Inventeur",
+         "rolePlayer": "Rôliste"
+                    
     }
-
-
 
 }
