@@ -1,7 +1,7 @@
 {
     "name" : "tftloop",
     "title" : "Tales from the Loop",
-    "description": "A System for Tales From the Loop",
+    "description": "A System for Tales from the Loop",
     "author" : "Dr Ogres", 
     "version" : "0.8.6",
     "miniumumCoreVersion" : "0.7.6",
