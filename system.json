@@ -45,19 +45,19 @@
     "gridDistance": 1,
     "gridUnits": "meter",
     "inititive" : "",
-    "url": "https://github.com/DrOgres/tftflood",
-    "manifest": "https://github.com/DrOgres/tftflood/raw/main/system.json",
-    "download": "https://github.com/DrOgres/tftflood/archive/main.zip",
+    "url": "https://github.com/DrOgres/tftloop",
+    "manifest": "https://github.com/DrOgres/tftloop/raw/main/system.json",
+    "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
     "background" : "./img/loop_system.png",
 
     "media": [
         {
           "type": "cover",
-          "url": "https://raw.githubusercontent.com/DrOgres/tftflood/main/img/loop_system.png"
+          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.png"
         },
         {
           "type": "screenshot",
-          "url": "https://raw.githubusercontent.com/DrOgres/tftflood/main/img/loop_system.jpg"
+          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.jpg"
         }
       ]
 
