@@ -1,18 +1,18 @@
 {
-    "name" : "tftloop",
-    "title" : "Tales from the Loop",
-    "description": "A System for Tales From the Loop",
+    "name" : "tftflood",
+    "title" : "Things from the Flood",
+    "description": "A System for Things From the Flood",
     "author" : "Dr Ogres", 
-    "version" : "0.8.6",
+    "version" : "0.0.1",
     "miniumumCoreVersion" : "0.7.6",
     "compatibleCoreVersion" : "0.7.9",
 
     "esmodules" : [
-        "tftloop.js"
+        "tftflood.js"
     ],
 
     "styles" : [
-       "tftloop.css" 
+       "tftflood.css" 
     ],
 
     "packs": [
@@ -45,8 +45,8 @@
     "gridDistance": 1,
     "gridUnits": "meter",
     "inititive" : "",
-    "url": "https://github.com/DrOgres/tftloop",
-    "manifest": "https://github.com/DrOgres/tftloop/raw/main/system.json",
+    "url": "https://github.com/DrOgres/tftflood",
+    "manifest": "https://github.com/DrOgres/tftflood/raw/main/system.json",
     "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
     "background" : "./img/loop_system.png",
 

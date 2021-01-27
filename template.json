@@ -1,7 +1,7 @@
 {
     "Actor": {
         "types": [
-            "kid"
+            "teen"
         ],
         "templates": {
             "attributes": {
@@ -52,7 +52,7 @@
             },
             "anchor": "Anchor",
             "problem": "Problem",
-            "pride": "Pride",
+            "shame": "Shame",
             "prideCheck": false,
             "description": "Description",
             "favoriteSong": "Favorite Song",
@@ -84,7 +84,7 @@
         ],
 
         "relationship":{
-            "description" : "kid"
+            "description" : "teen"
         },
 
         "item": {
