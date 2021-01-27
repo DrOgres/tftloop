@@ -23,7 +23,13 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log(data.bonusItems);
         data.data.luck.max = 15-Number(data.data.age);
         data.curLuck = data.data.luck.max - data.data.luck.value;
-        
+
+        if(game.settings.get("tftloop", "francein80s")){
+            data.francein80s = true;
+        } else {
+            data.francein80s = false;
+        }
+        console.log(data);
         return data;
     }
 

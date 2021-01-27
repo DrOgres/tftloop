@@ -74,6 +74,15 @@
 
 
     "SETTINGS" : {
-        "homebrewKidTypes": "Kid Types"
+        "homebrewKidTypes": "Kid Types",
+        "francein80s" : "Use additional Kid Types in France in the 80's Supplement."
+    },
+
+    "france" : {
+        "resourceful": "Resourceful",
+         "showoff": "Showoff",
+         "inventor": "Inventor",
+         "rolePlayer": "Role Player"
+                    
     }
 }

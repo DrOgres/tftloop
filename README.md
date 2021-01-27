@@ -13,6 +13,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.8.6</h3>
+
+* added support for La france des Années 80 kid types
+    * initial support for extending kid types through home brew settings not fully implemented at this time.
+
 <h3>Version 0.8.4</h3>
 
 * Spainish Localization |  Localización del idioma español
