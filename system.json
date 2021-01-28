@@ -3,16 +3,16 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales from the Loop",
     "author" : "Dr Ogres", 
-    "version" : "0.8.6",
+    "version" : "0.8.7",
     "miniumumCoreVersion" : "0.7.6",
     "compatibleCoreVersion" : "0.7.9",
 
     "esmodules" : [
-        "tftflood.js"
+        "tftloop.js"
     ],
 
     "styles" : [
-       "tftflood.css" 
+       "tftloop.css" 
     ],
 
     "packs": [
