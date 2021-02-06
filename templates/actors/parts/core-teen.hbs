@@ -1,0 +1,53 @@
+<div class="core-info info-group">
+    <div class="flexrow">
+        <div class="info-item">
+            <label>{{localize "tftloop.age"}}</label>
+            <select name="data.age">
+                {{#select data.age}}
+                <option value="10">14</option>
+                <option value="11">15</option>
+                <option value="12">16</option>
+                <option value="13">17</option>
+                <option value="14">18</option>
+                <option value="15">19</option>
+                {{/select}}
+            </select>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.favSong"}}</label>
+            <input name="data.favoriteSong" type="text" value="{{data.favoriteSong}}" placeholder=""/>
+        </div>
+    </div>
+    <div class="flexrow">
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.drive"}}</label>
+            <input name="data.drive" type="text" value="{{data.drive}}" placeholder=""/>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.anchor"}}</label>
+                <input name="data.anchor" type="text" value="{{data.anchor}}" placeholder=""/>
+        </div>
+    </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.problem"}}</label>
+            <input name="data.problem" type="text" value="{{data.problem}}" placeholder=""/>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftflood.shame"}}: </label>
+            <input name="data.shame" type="text" value="{{data.shame}}" placeholder=""/>
+            <label class="imgCheck">
+                {{#unless data.shameCheck}}
+                    <img class="toggle-boolean" data-toggle="shameCheck" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                {{/unless}}
+                {{#if data.shameCheck}}
+                    
+                    <img class="toggle-boolean" data-toggle="shameCheck" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                {{/if}}
+            </label>
+        </div>
+        <div class="info-item flexrow">
+            <label>{{localize "tftloop.description"}}</label>
+            <input name="data.description" type="text" value="{{data.description}}" placeholder=""/>
+        </div>
+        
+</div>

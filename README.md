@@ -13,7 +13,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
-<h3>Version 0.8.6</h3>
+<h3>Version 0.8.8</h3>
+
+* Added sheet for Tales From the Flood Teen.  Module for CSS styling is coming soom(tm)
+
+<h3>Version 0.8.7</h3>
 
 * added support for La france des Années 80 kid types
     * initial support for extending kid types through home brew settings not fully implemented at this time.

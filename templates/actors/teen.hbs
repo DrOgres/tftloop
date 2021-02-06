@@ -1,0 +1,149 @@
+<form class="actor-sheet {{cssClass}}" autocomplete="off">
+    <header class="teen-header">
+        <img src="systems/tftloop/img/flood/tftflood_sheet_logo.png" class="logo" title="tales from the loop logo">
+    </header>
+    <div class="sheet-body flexrow">
+        <div class="sidebar flexcol">
+            <div class="name-box">
+                <h1 class="charname">
+                    <input name="name" type="text" value="{{actor.name}}" placeholder="name"/>
+                </h1>
+                <div class = "portrait">
+                    <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160"  width="160"/>
+                </div>
+                <div class = "type">
+                    <label>{{localize "tftloop.type"}}</label>
+                <select name="data.type">
+                    {{#select data.type}}
+                    <option value="hacker">{{localize "tftflood.hacker"}}</option>
+                    <option value="jock">{{localize "tftflood.jock"}}</option>
+                    <option value="wolf">{{localize "tftflood.wolf"}}</option>
+                    <option value="motorhead">{{localize "tftflood.motorhead"}}</option>
+                    <option value="partyanimal">{{localize "tftflood.partyanimal"}}</option>
+                    <option value="raver">{{localize "tftflood.raver"}}</option>
+                    <option value="rocker">{{localize "tftflood.rocker"}}</option>
+                    <option value="seeker">{{localize "tftflood.seeker"}}</option>
+                    <option value="snob">{{localize "tftflood.snob"}}</option>
+                    <option value="streetkid">{{localize "tftflood.streetkid"}}</option>
+                    {{/select}}
+                </select>
+                </div>  
+            </div>
+            <div class="attributes-skills">
+                <h4 class="section-header">{{localize "tftloop.attributesSkills"}}</h4>
+                <ol class="attribute-list">
+                    <li class="attribute flexrow body" >
+                        <span class="add-to-pool" data-rolled="body">{{localize "tftloop.body"}}</span>
+                        <input type="text" name="data.body" value="{{data.body}}" data-dtype="Number"/>
+                    </li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill flexrow sneak"  draggable="true">
+                                <span class="add-to-pool" data-rolled="sneak">{{localize "tftloop.sneak"}}</span>
+                                <input type="text" name="data.sneak" value="{{data.sneak}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow force">
+                                <span class="add-to-pool" data-rolled="force">{{localize "tftloop.force"}}</span>
+                                <input type="text" name="data.force" value="{{data.force}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow move">
+                                <span class="add-to-pool" data-rolled="move">{{localize "tftloop.move"}}</span>
+                                <input type="text" name="data.move" value="{{data.move}}" data-dtype="Number"/>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="attribute flexrow tech">
+                        <span class="add-to-pool" data-rolled="tech">{{localize "tftloop.tech"}}</span>
+                        <input type="text" name="data.tech" value="{{data.tech}}" data-dtype="Number"/>
+                    </li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill flexrow tinker">
+                                <span class="add-to-pool" data-rolled="tinker">{{localize "tftloop.tinker"}}</span>
+                                <input type="text" name="data.tinker" value="{{data.tinker}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow program">
+                                <span class="add-to-pool" data-rolled="program">{{localize "tftloop.program"}}</span>
+                                <input type="text" name="data.program" value="{{data.program}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow calculate">
+                                <span class="add-to-pool" data-rolled="calculate">{{localize "tftloop.calculate"}}</span>
+                                <input type="text" name="data.calculate" value="{{data.calculate}}" data-dtype="Number"/>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="attribute flexrow heart">
+                        <span class="add-to-pool"data-rolled="heart">{{localize "tftloop.heart"}}</span>
+                        <input type="text" name="data.heart" value="{{data.heart}}" data-dtype="Number"/>
+                    </li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill flexrow contact">
+                                <span class="add-to-pool"data-rolled="contact">{{localize "tftloop.contact"}}</span>
+                                <input type="text" name="data.contact" value="{{data.contact}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow charm">
+                                <span class="add-to-pool" data-rolled="charm">{{localize "tftloop.charm"}}</span>
+                                <input type="text" name="data.charm" value="{{data.charm}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow lead">
+                                <span class="add-to-pool" data-rolled="lead">{{localize "tftloop.lead"}}</span>
+                                <input type="text" name="data.lead" value="{{data.lead}}" data-dtype="Number"/>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="attribute flexrow mind">
+                        <span class="add-to-pool" data-rolled="mind">{{localize "tftloop.mind"}}</span>
+                        <input type="text" name="data.mind" value="{{data.mind}}" data-dtype="Number"/>
+                    </li>
+                    <li>
+                        <ol class="skill-list">
+                            <li class="skill flexrow investigate">
+                                <span class="add-to-pool" data-rolled="investigate">{{localize "tftloop.investigate"}}</span>
+                                <input type="text" name="data.investigate" value="{{data.investigate}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow comprehend">
+                                <span class="add-to-pool" data-rolled="comprehend">{{localize "tftloop.comprehend"}}</span>
+                                <input type="text" name="data.comprehend" value="{{data.comprehend}}" data-dtype="Number"/>
+                            </li>
+                            <li class="skill flexrow empathize">
+                                <span class="add-to-pool" data-rolled="empathize">{{localize "tftloop.empathize"}}</span>
+                                <input type="text" name="data.empathize" value="{{data.empathize}}" data-dtype="Number"/>
+                            </li>
+                        </ol>
+                    </li>    
+                </ol>
+
+            </div>
+            <div class="experience-group">
+            <div class="section-header experience">
+            {{localize "tftloop.experience"}}
+            </div>
+            <div class="exp-boxes flexrow" title="{{localize "tftloop.addexp"}}">
+                {{#times 10}}
+                <div class="exp-box">
+                    <div class="img-container">
+                        {{#if (gte ../data.exp @index)}}
+                        <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                        {{/if}}
+                        {{#unless (gte ../data.exp @index)}}
+                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                        {{/unless}}
+                    </div>
+                </div>
+                {{/times}}
+            </div>
+            </div>
+        </div>
+        <div class="main flexcol">
+            {{> "systems/tftloop/templates/actors/parts/core-teen.hbs"}}
+            
+            {{> "systems/tftloop/templates/actors/parts/teen-item-notes.hbs"}} 
+            {{> "systems/tftloop/templates/actors/parts/relationships-teen.hbs"}}
+            {{> "systems/tftloop/templates/actors/parts/conditions-teen.hbs"}}
+        </div>
+    </div>
+    <footer class="sheet-footer">
+        <img src="systems/tftloop/img/flood/sheet-footer.jpg" class="logo" title="page footer image">
+    </footer>
+</form>

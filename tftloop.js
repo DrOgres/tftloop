@@ -4,9 +4,14 @@ import { preloadHandlebarsTemplates } from "./module/templates.js";
 import tftloopActorSheet from "./module/actor/sheet.js";
 import tftloopActor from "./module/actor/entity.js";
 import { registerSystemSettings } from "./module/settings.js";
+import tftloopItemSheet from "./module/item/sheet.js";
+import tftloopItem from "./module/item/entity.js";
 
 
-
+Hooks.on("preCreateItem", (createData) => {
+    if (!createData.img)
+    createData.img = "systems/tftloop/img/riks_logo.jpg"
+});
 Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
 Hooks.on("renderChatMessage", (app, html, data) =>{
     Chat.hideChatActionButtons(app, html, data);
@@ -17,20 +22,25 @@ Hooks.once("init", function(){
     console.log("TFTLOOP | Initializing Tales From the Loop");
     console.log('%c     ', 'font-size:200px; background:url(./img/tftl-logo.png) no-repeat;');
     console.log(tftloop.ASCII);
+    
 
     game.tftloop ={
         applications:{
             tftloopActor,
-            tftloopActorSheet
+            tftloopActorSheet,
+            tftloopItem,
+            tftloopItemSheet
         },
         config: tftloop,
         entities: {
-            tftloopActor
+            tftloopActor,
+            tftloopItem
         }
     }
 
     CONFIG.tftloop = tftloop;
     CONFIG.Actor.entityClass = tftloopActor;
+    CONFIG.Item.entityClass = tftloopItem;
     
     // Register System Settings
     registerSystemSettings();
@@ -38,6 +48,9 @@ Hooks.once("init", function(){
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("tftloop", tftloopActorSheet, {makeDefault: true});
+
+    Items.unregisterSheet("core", ItemSheet);
+    Items.registerSheet("tftloop", tftloopItemSheet, {makeDefault: true});
 
     preloadHandlebarsTemplates();
 

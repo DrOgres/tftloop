@@ -1,7 +1,8 @@
 {
     "Actor": {
         "types": [
-            "kid"
+            "kid",
+            "teen"
         ],
         "templates": {
             "attributes": {
@@ -69,7 +70,28 @@
             
 
         },
-        "npc":{
+        "teen":{
+            "templates": ["attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"],
+            "age": 14,
+            "type": "type",
+            "drive": "Drive",
+            "anchor": "Anchor",
+            "problem": "Problem",
+            "shame": "Shame",
+            "shameCheck": false,
+            "description": "Description",
+            "favoriteSong": "Favorite Song",
+            "iconicItem": {
+                "desc": "Item",
+                "bonus": 2
+            },
+            "friction": "Friction",
+            "notes": {
+                "value": "Notes"
+            },
+            "dicePool": 0, 
+            "exp": 0, 
+            "scars": {}
 
         },
         "creature": {
@@ -80,16 +102,25 @@
     "Item": {
         "types": [
             "item",
-            "relationship"
+            "relationship",
+            "scar"
         ],
 
         "relationship":{
-            "description" : "kid"
+            "description" : "kid",
+            "notes": ""
         },
 
         "item": {
             "description" : "item",
-            "bonus": 1
+            "bonus": 1,
+            "notes": ""
+        },
+
+        "scar": {
+            "description" : "Scar",
+            "notes": "",
+            "accpted": false
         }
 
     }

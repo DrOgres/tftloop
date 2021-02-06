@@ -67,7 +67,12 @@
               "tested": "Gewürfelt",
               "rerolled": "Wiederholung des Wurfs",
               "reroll": "Wiederholung",
-              "rolling": "Würfelnd"
+              "rolling": "Würfelnd",
+              "relationship": "Beziehung",
+              "natureofRelationship": "Natur der Beziehung",
+              "relationWith": "Beziehung mit",
+              "item": "Gegenstand",
+              "bonus": "Bonus"
 
     }
 }

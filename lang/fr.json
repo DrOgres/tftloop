@@ -65,7 +65,13 @@
         "failure": "Echec",
         "tested": "Test",
         "rerolled": "Relancé",
-        "reroll": "Relancer"
+        "reroll": "Relancer",
+        "rolling": "Lancer",
+        "relationship": "Relation",
+        "natureofRelationship": "Nature de la Relation",
+        "relationWith": "Relation Avec",
+        "item": "Objet",
+        "bonus": "Prime"
     },
 
     "france" : {

@@ -66,9 +66,36 @@
         "tested": "Tested",
         "rerolled": "Rerolled",
         "reroll": "Reroll",
-        "rolling": "Rolling"
+        "rolling": "Rolling",
+        "relationship": "Relationship",
+        "natureofRelationship": "Nature of Relationship",
+        "relationWith": "Relation With",
+        "item": "Item",
+        "bonus": "Bonus"
 
 
+
+    },
+
+    "tftflood": {
+        "shame": "Shame",
+        "hacker": "Hacker",
+        "jock": "Jock",
+        "wolf": "Lone Wolf",
+        "motorhead": "Motorhead",
+        "partyanimal": "Party Animal",
+        "raver" : "Raver",
+        "rocker": "Rocker",
+        "seeker": "Seeker",
+        "snob" : "Snob",
+        "streetkid": "Street Kid",
+        "broken": "Broken & Scarred",
+        "scars": "Scars",
+        "newScar": "New Scar",
+        "accepted": "Accepted",
+        "friction": "Friction",
+        "scar": "Scar",
+        "shortDesc": "Short Description"
 
     },
 
