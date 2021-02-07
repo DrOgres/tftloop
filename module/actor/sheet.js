@@ -264,7 +264,7 @@ export default class tftloopActorSheet extends ActorSheet {
             <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>`+game.i18n.localize("tftloop.bonusDice")+`: </label>
             <input name="bonusDice" type="text" value="" placeholder="0" data-dtype="Number"/></div>
             </div>
-            <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+            <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
         </div>
        
         `;
@@ -351,7 +351,7 @@ export default class tftloopActorSheet extends ActorSheet {
                             </button>
                         </div>
                         </div>
-                        <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+                        <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
                     </span>
                     `
                     data.dicePool = 0;

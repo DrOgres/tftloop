@@ -265,6 +265,9 @@ select:focus {
   color: #f38704;
 }
 .bug {
+  background: url(img/loop_bug_sm.png);
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
 .bug img {
@@ -280,6 +283,7 @@ select:focus {
   text-align: center;
   cursor: pointer;
   max-width: 100px;
+  color: black;
 }
 .reroll-info button:focus {
   box-shadow: none;
@@ -318,6 +322,9 @@ select:focus {
   margin-bottom: 3px;
 }
 .window-content .dialog-content .bug {
+  background: url(img/loop_bug_sm.png);
+  background-repeat: no-repeat;
+  background-position: center;
   text-align: center;
 }
 .window-content .dialog-content .bug img {

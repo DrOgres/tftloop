@@ -70,7 +70,7 @@ async function onReroll(event) {
                             `+game.i18n.localize("tftloop.reroll")+`
                             </button>
                         </div>
-        <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+        <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
     </span>
     `
     console.log(rolled);
