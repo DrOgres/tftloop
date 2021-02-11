@@ -15,6 +15,10 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.8.9</h3>
+
+* Added Brazilian Portugese localization thanks lmartim! |  Adicionado português brasileiro obrigado lmartim!
+
 <h3>Version 0.8.8</h3>
 
 * Added sheet for Things From the Flood Teen.  Module for CSS styling is coming soom(tm)
