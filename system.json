@@ -3,7 +3,7 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales from the Loop - Now with Things from the Flood support.",
     "author" : "Dr Ogres", 
-    "version" : "0.8.8",
+    "version" : "0.8.9",
     "miniumumCoreVersion" : "0.7.6",
     "compatibleCoreVersion" : "0.7.9",
 
