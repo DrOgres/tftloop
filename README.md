@@ -1,6 +1,6 @@
 # Tales from the loop and Things From the Flood
 
-![Latest Release Download Count](https://img.shields.io/github/downloads/YOUR_USERNAME/YOUR_REPO/latest/module.zip)
+![Latest Release Download Count](https://img.shields.io/github/downloads/DrOgres/tftloop/latest/module.zip)
 
 <img src = "img/loop_system.jpg">
 This is an implementation of the Tales from the Loop and Things from the Flood game systems for Foundry VTT.
