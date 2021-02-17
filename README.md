@@ -11,7 +11,9 @@ This was coded in my spare time over the course a few days so there may be a cou
 
 feedback is always welcome.
 -Dr Ogres
+
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftftloop&colorB=4aa94a)
+
 <ul>
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
