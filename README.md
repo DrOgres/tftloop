@@ -18,6 +18,10 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.9.0</h3>
+
+* Added Swedish localization thanks to Mikael  |  Lagt till svensk lokalisering tack vare Mikael
+
 <h3>Version 0.8.9</h3>
 
 * Added Brazilian Portugese localization thanks lmartim! |  Adicionado português brasileiro obrigado lmartim!
