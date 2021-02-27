@@ -43,6 +43,11 @@
             "lang": "pt-BR",
             "name": "Português (Brasil)",
             "path": "lang/pt-br.json"
+        },
+        {   
+            "lang": "sv-SE",
+            "name": "Svenska (Sverige)",
+            "path": "lang/sv-SE.json"
         }
 
     ],

@@ -39,8 +39,8 @@ Hooks.once("init", function(){
     }
 
     CONFIG.tftloop = tftloop;
-    CONFIG.Actor.entityClass = tftloopActor;
-    CONFIG.Item.entityClass = tftloopItem;
+    CONFIG.Actor.entityClass = tftloopActor; //deprecated in 0.8.0
+    CONFIG.Item.entityClass = tftloopItem;  //deprecated in 0.8.0
     
     // Register System Settings
     registerSystemSettings();
