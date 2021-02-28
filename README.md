@@ -18,6 +18,10 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3>Version 0.9.1</h3>
+
+* Bugfix: Item name not displayed when selecting item in rolls - FIXED
+
 <h3>Version 0.9.0</h3>
 
 * Added Swedish localization thanks to Mikael  |  Lagt till svensk lokalisering tack vare Mikael

@@ -73,11 +73,12 @@ h6 {
 blockquote {
   font-family: Trixie, 'Courier New', Courier, monospace;
   background: url(img/chat_background.jpg);
-  max-width: 90%;
+  max-width: 50%;
   padding: 20px;
   border: none;
   break-inside: avoid;
   font-style: normal;
+  float: right;
 }
 blockquote hr {
   border-top: 1px solid black;
@@ -125,6 +126,10 @@ select:focus {
   background: #fff1da;
   border: none;
   font-family: AvantBold;
+  margin: 30px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .editor-content table th {
   padding-left: 3px;

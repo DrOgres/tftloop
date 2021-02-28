@@ -239,7 +239,7 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log("html segment"+items);
             
         for(let n = 0; n<items.length; n++){
-            list += '<option value="'+items[n].data.bonus+'">'+items[n].data.description+' + '+ items[n].data.bonus+'</option>'
+            list += '<option value="'+items[n].data.bonus+'">'+items[n].name+' + '+ items[n].data.bonus+'</option>'
             
         }
         
