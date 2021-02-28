@@ -18,9 +18,10 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
-<h3>Version 0.9.1</h3>
+<h3>Version 0.9.12</h3>
 
 * Bugfix: Item name not displayed when selecting item in rolls - FIXED
+* localization <strike>types</strike> typos fixed
 
 <h3>Version 0.9.0</h3>
 
