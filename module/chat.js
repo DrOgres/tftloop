@@ -1,6 +1,6 @@
 export const hideChatActionButtons = function (message, html, data){
     const card =  html.find(".tftloop.chat-card");
-    console.log(card);
+    //console.log(card);
     if(card.length >0){
         let actor = game.actors.get(card.attr("data-actor-id"));
 
@@ -28,8 +28,8 @@ async function onReroll(event) {
     let rolled = card.dataset.tested;
 
 
-    console.log("button click owner" + card.dataset.ownerId+ ": " +actor.data);
-    console.log(card.dataset.rerollformula);
+    //console.log("button click owner" + card.dataset.ownerId+ ": " +actor.data);
+    //console.log(card.dataset.rerollformula);
 
     let r = new Roll(rollFormula, actor.data.data);
     r.evaluate();
@@ -70,10 +70,10 @@ async function onReroll(event) {
                             `+game.i18n.localize("tftloop.reroll")+`
                             </button>
                         </div>
-        <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+        <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
     </span>
     `
-    console.log(rolled);
+    //console.log(rolled);
     if(game.dice3d){
         console.log("dice so nice here");
         let check = game.dice3d.showForRoll(r, game.user, true, null, false);

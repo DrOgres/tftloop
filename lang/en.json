@@ -66,14 +66,50 @@
         "tested": "Tested",
         "rerolled": "Rerolled",
         "reroll": "Reroll",
-        "rolling": "Rolling"
+        "rolling": "Rolling",
+        "relationship": "Relationship",
+        "natureofRelationship": "Nature of Relationship",
+        "relationWith": "Relation With",
+        "item": "Item",
+        "bonus": "Bonus"
 
 
 
     },
 
+    "tftflood": {
+        "shame": "Shame",
+        "hacker": "Hacker",
+        "jock": "Jock",
+        "wolf": "Lone Wolf",
+        "motorhead": "Motorhead",
+        "partyanimal": "Party Animal",
+        "raver" : "Raver",
+        "rocker": "Rocker",
+        "seeker": "Seeker",
+        "snob" : "Snob",
+        "streetkid": "Street Kid",
+        "broken": "Broken & Scarred",
+        "scars": "Scars",
+        "newScar": "New Scar",
+        "accepted": "Accepted",
+        "friction": "Friction",
+        "scar": "Scar",
+        "shortDesc": "Short Description"
+
+    },
+
 
     "SETTINGS" : {
-        "homebrewKidTypes": "Kid Types"
+        "homebrewKidTypes": "Kid Types",
+        "francein80s" : "Use additional Kid Types in France in the 80's Supplement."
+    },
+
+    "france" : {
+        "resourceful": "Resourceful",
+         "showoff": "Showoff",
+         "inventor": "Inventor",
+         "rolePlayer": "Role Player"
+                    
     }
 }

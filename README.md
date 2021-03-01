@@ -1,17 +1,49 @@
-# Tales from the loop
+# Tales from the loop and Things From the Flood
+
 
 
 <img src = "img/loop_system.jpg">
-This is an implementation of the Tales from the Loop game system for Foundry VTT.  
+This is an implementation of the Tales from the Loop and Things from the Flood game systems for Foundry VTT.
 
-This was coded in my spare time over the course of two days so there may be a couple bugs or things that can be improved! 
+To play Tales from the Loop simply create a kid Character and have fun, for Things from the Flood make that a teen character.  If you want to make the aesthetics of the Things from the Flood system match the style in the books install the companion <a href="https://foundryvtt.com/packages/tftflood/">Things from the Flood Mod</a> from inside the foundry client
+
+This was coded in my spare time over the course a few days so there may be a couple bugs or things that can be improved! 
 
 feedback is always welcome.
 -Dr Ogres
 
+![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftftloop&colorB=4aa94a)
+
 <ul>
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
+
+<h3>Version 0.9.12</h3>
+
+* Bugfix: Item name not displayed when selecting item in rolls - FIXED
+* localization <strike>types</strike> typos fixed
+
+<h3>Version 0.9.0</h3>
+
+* Added Swedish localization thanks to Mikael  |  Lagt till svensk lokalisering tack vare Mikael
+
+<h3>Version 0.8.9</h3>
+
+* Added Brazilian Portugese localization thanks lmartim! |  Adicionado português brasileiro obrigado lmartim!
+
+<h3>Version 0.8.8</h3>
+
+* Added sheet for Things From the Flood Teen.  Module for CSS styling is coming soom(tm)
+
+<h3>Version 0.8.7</h3>
+
+* added support for La france des Années 80 kid types
+    * initial support for extending kid types through home brew settings not fully implemented at this time.
+
+<h3>Version 0.8.4</h3>
+
+* Spainish Localization |  Localización del idioma español
+    * Thanks to mikeldevcosmico
 
 <h3>Version 0.8.3</h3>
 

@@ -1,0 +1,41 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+
+    {{!-- Item Sheet Header --}} 
+    <div class="item-sheet flexrow"> 
+
+        <div class="item-sidebar">
+            <div class="chap-number">
+
+                <div class="black-bar">&nbsp;</div>
+                <div class="dark-bar">
+                   &nbsp; 
+                    
+                </div>
+            </div>
+            
+        </div>   
+
+        <div class="item-info">
+            <h1 class="us-text">{{localize "tftloop.relationship"}}</h1>
+            <div class="header-details flexcol">
+            <lable>{{localize "tftloop.relationWith"}}:</lable>    
+            <h1 class = "charname">
+                <input name="name" type="text" value="{{item.name}}" />
+            </h1>
+            
+            </div>
+
+            <div class="item-desc flexcol">
+                <label>{{localize "tftloop.natureofRelationship"}}:</label>
+                <input class="relationship-desc" name="data.description" data-field="data.description" type="text" value="{{data.description}}"/>
+            </div>
+
+            <div class="item-notes">
+                <label>Notes:</label>
+                <textarea id="notes" name="data.notes" rows="6" wrap="soft">{{data.notes}}</textarea>
+    
+            </div>
+        </div>
+
+    </div>
+</form>

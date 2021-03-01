@@ -1,6 +1,6 @@
 <form class="actor-sheet {{cssClass}}" autocomplete="off">
-    <header class="kid-header">
-        <img src="systems/tftloop/img/tftl-logo.png" class="logo" title="tales from the loop logo">
+    <header class="teen-header">
+        <img src="systems/tftloop/img/flood/tftflood_sheet_logo.png" class="logo" title="tales from the loop logo">
     </header>
     <div class="sheet-body flexrow">
         <div class="sidebar flexcol">
@@ -15,20 +15,16 @@
                     <label>{{localize "tftloop.type"}}</label>
                 <select name="data.type">
                     {{#select data.type}}
-                    <option value="bookworm">{{localize "tftloop.bookworm"}}</option>
-                    <option value="geek">{{localize "tftloop.geek"}}</option>
-                    <option value="hick">{{localize "tftloop.hick"}}</option>
-                    <option value="jock">{{localize "tftloop.jock"}}</option>
-                    <option value="popular">{{localize "tftloop.popular"}}</option>
-                    <option value="rocker">{{localize "tftloop.rocker"}}</option>
-                    <option value="troublemaker">{{localize "tftloop.troublemaker"}}</option>
-                    <option value="weirdo">{{localize "tftloop.weirdo"}}</option>
-                    {{#if francein80s}}
-                    <option value="combinard">{{localize "france.resourceful"}}</option>
-                    <option value="frimeur">{{localize "france.showoff"}}</option>
-                    <option value="inventeur">{{localize "france.inventor"}}</option>
-                    <option value="roliste">{{localize "france.rolePlayer"}}</option>
-                    {{/if}}
+                    <option value="hacker">{{localize "tftflood.hacker"}}</option>
+                    <option value="jock">{{localize "tftflood.jock"}}</option>
+                    <option value="wolf">{{localize "tftflood.wolf"}}</option>
+                    <option value="motorhead">{{localize "tftflood.motorhead"}}</option>
+                    <option value="partyanimal">{{localize "tftflood.partyanimal"}}</option>
+                    <option value="raver">{{localize "tftflood.raver"}}</option>
+                    <option value="rocker">{{localize "tftflood.rocker"}}</option>
+                    <option value="seeker">{{localize "tftflood.seeker"}}</option>
+                    <option value="snob">{{localize "tftflood.snob"}}</option>
+                    <option value="streetkid">{{localize "tftflood.streetkid"}}</option>
                     {{/select}}
                 </select>
                 </div>  
@@ -42,7 +38,7 @@
                     </li>
                     <li>
                         <ol class="skill-list">
-                            <li class="skill flexrow sneak" >
+                            <li class="skill flexrow sneak"  draggable="true">
                                 <span class="add-to-pool" data-rolled="sneak">{{localize "tftloop.sneak"}}</span>
                                 <input type="text" name="data.sneak" value="{{data.sneak}}" data-dtype="Number"/>
                             </li>
@@ -140,19 +136,14 @@
             </div>
         </div>
         <div class="main flexcol">
-            {{> "systems/tftloop/templates/actors/parts/core-info.hbs"}}
-            {{> "systems/tftloop/templates/actors/parts/conditions.hbs"}}
-            {{> "systems/tftloop/templates/actors/parts/relationships.hbs"}}
-            {{> "systems/tftloop/templates/actors/parts/item-hideout.hbs"}} 
-            <div class="notes-group info-group">
-                <h4 class="section-header">{{localize "tftloop.notes"}}</h4>
-                <div class="kid-notes">
-                {{editor content=data.notes.value target="data.notes.value" button=true owner=owner editable=editable}}
-                </div>
-            </div>
+            {{> "systems/tftloop/templates/actors/parts/core-teen.hbs"}}
+            
+            {{> "systems/tftloop/templates/actors/parts/teen-item-notes.hbs"}} 
+            {{> "systems/tftloop/templates/actors/parts/relationships-teen.hbs"}}
+            {{> "systems/tftloop/templates/actors/parts/conditions-teen.hbs"}}
         </div>
     </div>
     <footer class="sheet-footer">
-        <img src="systems/tftloop/img/footer-image.png" class="logo" title="page footer image">
+        <img src="systems/tftloop/img/flood/sheet-footer.jpg" class="logo" title="page footer image">
     </footer>
 </form>

@@ -37,10 +37,10 @@
             {{/each}}
         </ol>
     </div>
-    <div class="hideout info-group">
-    <h4 class="section-header">{{localize "tftloop.hideout"}}</h4>
-    <div class="hideout-text">
-        <textarea id="hideout" name="data.hideout" rows="5">{{data.hideout}}</textarea>
-    </div>
-    </div>
+     <div class="notes-group info-group">
+                <h4 class="section-header">{{localize "tftloop.notes"}}</h4>
+                <div class="kid-notes">
+                {{editor content=data.notes.value target="data.notes.value" button=true owner=owner editable=editable}}
+                </div>
+            </div>
 </div>

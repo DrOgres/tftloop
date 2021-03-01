@@ -63,10 +63,16 @@
         "success": "Exito",
         "successes": "Exitos",
         "failure": "Fallo",
-        "tested": "Testado",
+        "tested": "Tirada",
         "rerolled": "Tirada repetida",
         "reroll": "Repetir tirada",
-        "rolling": "Tirando"
+        "rolling": "Tirando",
+        "relationship": "Relación",
+        "natureofRelationship": "Naturaleza de la Relación",
+        "relationWith": "Una Relación con",
+        "item": "Objeto",
+        "bonus": "Bonus"
+        
 
 
 

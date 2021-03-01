@@ -12,8 +12,12 @@ export const preloadHandlebarsTemplates = async function() {
       //"systems/tftloop/templates/actors/parts/partial.hbs",
       "systems/tftloop/templates/actors/parts/conditions.hbs",
       "systems/tftloop/templates/actors/parts/relationships.hbs",
+      "systems/tftloop/templates/actors/parts/relationships-teen.hbs",
       "systems/tftloop/templates/actors/parts/item-hideout.hbs",
-      "systems/tftloop/templates/actors/parts/core-info.hbs"
+      "systems/tftloop/templates/actors/parts/core-info.hbs",
+      "systems/tftloop/templates/actors/parts/core-teen.hbs",
+      "systems/tftloop/templates/actors/parts/conditions-teen.hbs",
+      "systems/tftloop/templates/actors/parts/teen-item-notes.hbs"
       
   
       // Item Sheet Partials

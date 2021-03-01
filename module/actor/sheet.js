@@ -20,10 +20,21 @@ export default class tftloopActorSheet extends ActorSheet {
 
         data.relationships = data.items.filter(function(item) {return item.type == "relationship"});
         data.bonusItems = data.items.filter(function(item) {return item.type == "item"});
+        if(this.actor.data.type == 'teen'){
+            data.scars = data.items.filter(function(item) {return item.type == "scar"});
+        }
         //console.log(data.bonusItems);
-        data.data.luck.max = 15-Number(data.data.age);
-        data.curLuck = data.data.luck.max - data.data.luck.value;
-        
+        if(this.actor.data.type == 'kid'){
+            data.data.luck.max = 15-Number(data.data.age);
+            data.curLuck = data.data.luck.max - data.data.luck.value;
+        }
+
+        if(game.settings.get("tftloop", "francein80s")){
+            data.francein80s = true;
+        } else {
+            data.francein80s = false;
+        }
+        //console.log(data);
         return data;
     }
 
@@ -38,6 +49,9 @@ export default class tftloopActorSheet extends ActorSheet {
         html.find(".inline-edit").change(this._onItemEdit.bind(this));
         html.find(".item-delete").click(this._onItemDelete.bind(this));
         html.find(".exp-boxes").on("click contextmenu", this._onExpChange.bind(this));
+        html.find(".item-open").click(this._onItemOpen.bind(this));
+        html.find(".sheet-body").on("drop", this._onItemDrop.bind(this));
+        html.find(".item").on("drag", this._onItemDrag.bind(this));
         }
 
         if(this.actor.owner){
@@ -47,7 +61,44 @@ export default class tftloopActorSheet extends ActorSheet {
 
         super.activateListeners(html);
     }
+
+    _onItemDrag(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        let item = this.actor.getOwnedItem(itemId);
+        game.data.itemstore = item;
+        //console.log("dragged:" + itemId);
+        //console.log(game.data.itemstore);
+        return;
+    }
     
+    _onItemDrop(event){
+        event.preventDefault();
+        let actor = this.actor;
+        let storedItem = game.data.itemstore;
+        let storedID = storedItem.data._id;
+        
+
+        // verify that this item is not already on the character sheet
+        //console.log(storedItem.actor);
+        //console.log( storedItem.actor!=actor)
+        //console.log(storedItem);
+        //console.log(this);
+
+        
+        if (storedID && storedItem.actor!=actor){
+            //console.log("dropped:" + storedID);
+
+            let itemData = storedItem.data;
+            return actor.createOwnedItem(itemData);
+        }
+
+        
+        return;
+
+    }
+
     async _onAddToPool(event){
         event.preventDefault();
        // console.log("add to pool");
@@ -188,7 +239,7 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log("html segment"+items);
             
         for(let n = 0; n<items.length; n++){
-            list += '<option value="'+items[n].data.bonus+'">'+items[n].data.description+' + '+ items[n].data.bonus+'</option>'
+            list += '<option value="'+items[n].data.bonus+'">'+items[n].name+' + '+ items[n].data.bonus+'</option>'
             
         }
         
@@ -213,7 +264,7 @@ export default class tftloopActorSheet extends ActorSheet {
             <div class="bonus-dice flexrow" style="margin-bottom: 5px;"><label>`+game.i18n.localize("tftloop.bonusDice")+`: </label>
             <input name="bonusDice" type="text" value="" placeholder="0" data-dtype="Number"/></div>
             </div>
-            <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+            <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
         </div>
        
         `;
@@ -300,7 +351,7 @@ export default class tftloopActorSheet extends ActorSheet {
                             </button>
                         </div>
                         </div>
-                        <div class="bug"><img src="systems/tftloop/img/loop_bug_sm.png" width="48" height="48"/></div>
+                        <div class="bug"><img src="systems/tftloop/img/full_transparent.png" width="48" height="48"/></div>
                     </span>
                     `
                     data.dicePool = 0;
@@ -379,6 +430,16 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log(actor.data.data.luck.value);
     }
 
+    _onItemOpen(event){
+        event.preventDefault();
+        let element = event.currentTarget;
+        let itemId = element.closest(".item").dataset.itemId;
+        //console.log("***---***" + itemId);
+        let item = this.actor.getOwnedItem(itemId);
+        //console.log(item);
+        item.sheet.render(true);
+    }
+
     _onItemEdit(event){
         event.preventDefault();
         let element = event.currentTarget;
@@ -421,7 +482,11 @@ export default class tftloopActorSheet extends ActorSheet {
         event.preventDefault();
         let element = event.currentTarget;
         let actor = this.actor;
-       
+        let item = '';
+        if(element.closest(".item")){
+        let itemId = element.closest(".item").dataset.itemId;
+        item = this.actor.getOwnedItem(itemId);
+        }
 
         switch (element.dataset.toggle){
             case "upset": 
@@ -500,6 +565,33 @@ export default class tftloopActorSheet extends ActorSheet {
                     //console.log(this.actor.data.data.prideCheck);
                     this.actor.data.data.prideCheck = true;
                     actor.update({ "data.prideCheck" : true});
+                    
+                }
+                break;
+            case "accepted":
+                console.log("toggel accepted");
+                console.log(item.data);
+                if(item.data.data.accepted){
+                    console.log("toggel accepted to false");
+                    item.data.data.accepted = false;
+                    item.update({"data.accepted": false});
+                } else {
+                    console.log("toggel accepted to true");
+                    item.data.data.accepted = true;
+                    item.update({"data.accepted": true});
+                }
+                break;
+            case "shameCheck":
+                //console.log("pride");
+                if(this.actor.data.data.shameCheck){
+                    //console.log(this.actor.data.data.prideCheck);
+                    this.actor.data.data.shameCheck = false;
+                    actor.update({ "data.shameCheck" : false});
+                    ;
+                } else {
+                    //console.log(this.actor.data.data.prideCheck);
+                    this.actor.data.data.shameCheck = true;
+                    actor.update({ "data.shameCheck" : true});
                     
                 }
                 break;

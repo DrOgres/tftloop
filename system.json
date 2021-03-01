@@ -1,9 +1,9 @@
 {
     "name" : "tftloop",
     "title" : "Tales from the Loop",
-    "description": "A System for Tales From the Loop",
+    "description": "A System for Tales from the Loop - Now with Things from the Flood support.",
     "author" : "Dr Ogres", 
-    "version" : "0.8.3",
+    "version" : "0.9.12",
     "miniumumCoreVersion" : "0.7.6",
     "compatibleCoreVersion" : "0.7.9",
 
@@ -38,6 +38,16 @@
             "lang": "es",
             "name": "Spanish",
             "path": "lang/es.json"
+        },
+        {   
+            "lang": "pt-BR",
+            "name": "Português (Brasil)",
+            "path": "lang/pt-br.json"
+        },
+        {   
+            "lang": "sv-SE",
+            "name": "Svenska (Sverige)",
+            "path": "lang/sv-SE.json"
         }
 
     ],
