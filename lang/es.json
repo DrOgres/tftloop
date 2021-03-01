@@ -66,13 +66,15 @@
         "tested": "Tirada",
         "rerolled": "Tirada repetida",
         "reroll": "Repetir tirada",
-        "rolling": "Tirando"
-
-    },
-
-    "SETTINGS" : {
-        "homebrewKidTypes": "Tipos de niños",
-        "francein80s" : "Usar tipos de niños adicionales en la Francia de los 80."
+        "rolling": "Tirando",
+        "relationship": "Relación",
+        "natureofRelationship": "Naturaleza de la relación",
+        "relationWith": "Relación con",
+        "item": "Objeto",
+        "bonus": "Bonificación"
+        
+        
+        
     },
 
     "tftflood": {
@@ -96,6 +98,13 @@
         "shortDesc": "Descripción corta"
 
     },
+    
+    
+    "SETTINGS" : {
+        "homebrewKidTypes": "Tipos de niños",
+        "francein80s" : "Usar tipos de niños adicionales en la Francia de los 80."
+    },
+    
     "france" : {
         "resourceful": "Ingeniosa/o",
          "showoff": "Presumida/o",
