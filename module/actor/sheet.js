@@ -24,11 +24,14 @@ export default class tftloopActorSheet extends ActorSheet {
             data.scars = data.items.filter(function(item) {return item.type == "scar"});
         }
         //console.log(data.bonusItems);
+       
+       // set the max luck to change the number of boxes we draw on the sheet
         if(this.actor.data.type == 'kid'){
             data.data.luck.max = 15-Number(data.data.age);
+            //console.log(data.data.luck.max);
             data.curLuck = data.data.luck.max - data.data.luck.value;
         }
-
+        
         if(game.settings.get("tftloop", "francein80s")){
             data.francein80s = true;
         } else {

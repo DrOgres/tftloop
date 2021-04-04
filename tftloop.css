@@ -31,6 +31,13 @@
 .editor-edit {
   box-shadow: 2px 2px #7f7f7f;
 }
+a.entity-link {
+  background: none;
+  padding: none;
+  border: none;
+  white-space: normal;
+  word-break: normal;
+}
 #context-menu li.context-item:hover {
   color: #f38704;
   text-shadow: none;
