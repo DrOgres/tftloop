@@ -27,9 +27,9 @@ export default class tftloopActorSheet extends ActorSheet {
        
        // set the max luck to change the number of boxes we draw on the sheet
         if(this.actor.data.type == 'kid'){
-            data.data.luck.max = 15-Number(data.data.age);
+            this.actor.data.luck.max = 15-Number(data.data.age);
             //console.log(data.data.luck.max);
-            data.curLuck = data.data.luck.max - data.data.luck.value;
+            this.actor.data.curLuck = this.actor.data.luck.max - this.actor.data.luck.value;
         }
         
         if(game.settings.get("tftloop", "francein80s")){
