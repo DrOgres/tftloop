@@ -18,6 +18,10 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3> Version 1.0.0 </h3>
+
+* Foundry VTT 0.8.2b compatible, this is a Fork of the main release.  if you are using 0.7.9 this release will not work for you. 
+
 <h3>Version 0.9.12</h3>
 
 * Bugfix: Item name not displayed when selecting item in rolls - FIXED
