@@ -27,9 +27,11 @@ export default class tftloopActorSheet extends ActorSheet {
        
        // set the max luck to change the number of boxes we draw on the sheet
         if(this.actor.data.type == 'kid'){
-            this.actor.data.luck.max = 15-Number(data.data.age);
-            //console.log(data.data.luck.max);
-            this.actor.data.curLuck = this.actor.data.luck.max - this.actor.data.luck.value;
+            //console.log(data.data.data.age);
+            //console.log(data.data.data.luck.max);
+            data.data.data.luck.max = 15-Number(data.data.data.age);
+            //console.log(data.data.data.luck.max);
+            data.data.curLuck = data.data.data.luck.max - data.data.data.luck.value;
         }
         
         if(game.settings.get("tftloop", "francein80s")){
@@ -57,7 +59,7 @@ export default class tftloopActorSheet extends ActorSheet {
         html.find(".item").on("drag", this._onItemDrag.bind(this));
         }
 
-        if(this.actor.owner){
+        if(this.actor.isOwner){
             html.find(".add-to-pool").click(this._onAddToPool.bind(this));
 
         }
@@ -80,6 +82,7 @@ export default class tftloopActorSheet extends ActorSheet {
         event.preventDefault();
         let actor = this.actor;
         let storedItem = game.data.itemstore;
+       // console.log(game.data);
         let storedID = storedItem.data._id;
         
 
@@ -242,7 +245,7 @@ export default class tftloopActorSheet extends ActorSheet {
         //console.log("html segment"+items);
             
         for(let n = 0; n<items.length; n++){
-            list += '<option value="'+items[n].data.bonus+'">'+items[n].name+' + '+ items[n].data.bonus+'</option>'
+            list += '<option value="'+items[n].data.data.bonus+'">'+items[n].name+' + '+ items[n].data.data.bonus+'</option>'
             
         }
         
@@ -260,7 +263,7 @@ export default class tftloopActorSheet extends ActorSheet {
             <label for="roll-item">`+game.i18n.localize("tftloop.useItem")+`:</label>
             <select id="roll-item" name="useItem" style="margin-bottom: 5px">
                 <option value="0">`+game.i18n.localize("tftloop.none")+`</option>
-                <option value="2">`+game.i18n.localize("tftloop.iconic")+`:`+data.iconicItem.desc+` + 2</option>
+                <option value="2">`+game.i18n.localize("tftloop.iconic")+``+data.iconicItem.desc+` + 2</option>
                 `+list+` 
             </select>
             </div>
@@ -394,18 +397,25 @@ export default class tftloopActorSheet extends ActorSheet {
 
     _onExpChange(event){
         event.preventDefault();
-
+        let actor = this.actor;
+        //console.log("tftloop | exp: " + this.actor.data.data.exp);
         let currentCount = this.actor.data.data.exp;
+        
         let newCount;
-
+        //console.log(currentCount);
         if(event.type == "click"){
             newCount = Math.min(currentCount + 1, 10);
         } else {
             //right click
             newCount = Math.max(currentCount - 1, 0);
         }
-
-        this.actor.update({"data.exp" : newCount});
+       
+       // this.actor.data.update({"data.exp" : newCount});
+        //this.actor.update({"data.data.exp" : newCount});
+        //console.log("tftloop newexp | " + this.actor.data.data.exp);
+        actor.update({"data.exp" : newCount});
+        //console.log(this.actor.data.update({"data.exp" : newCount}));
+        //console.log(actor);
     }
 
     _resetLuck(event){

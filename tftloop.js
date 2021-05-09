@@ -39,8 +39,8 @@ Hooks.once("init", function(){
     }
 
     CONFIG.tftloop = tftloop;
-    CONFIG.Actor.entityClass = tftloopActor; //deprecated in 0.8.0
-    CONFIG.Item.entityClass = tftloopItem;  //deprecated in 0.8.0
+    CONFIG.Actor.documentClass = tftloopActor; //deprecated in 0.8.0
+    CONFIG.Item.documentClass = tftloopItem;  //deprecated in 0.8.0
     
     // Register System Settings
     registerSystemSettings();
@@ -56,7 +56,7 @@ Hooks.once("init", function(){
 
     Handlebars.registerHelper("times", function(n, content) {
         let result = "";
-        //console.log(n);
+        //console.log("tftloop | times helper n times:  "+n);
         for(let i = 0; i<n; ++i){
             content.data.index = i+1;
             result = result+content.fn(i);

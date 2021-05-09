@@ -3,9 +3,9 @@
     "title" : "Tales from the Loop",
     "description": "A System for Tales from the Loop - Now with Things from the Flood support.",
     "author" : "Dr Ogres", 
-    "version" : "0.9.13",
-    "miniumumCoreVersion" : "0.7.6",
-    "compatibleCoreVersion" : "0.7.9",
+    "version" : "1.0.0",
+    "miniumumCoreVersion" : "0.8.2",
+    "compatibleCoreVersion" : "0.8.2",
 
     "esmodules" : [
         "tftloop.js"
@@ -58,7 +58,7 @@
     "url": "https://github.com/DrOgres/tftloop",
     "manifest": "https://github.com/DrOgres/tftloop/raw/main/system.json",
     "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
-    "background" : "./img/loop_system.png",
+    "background" : "systems/tftloop/img/loop_system.png",
 
     "media": [
         {

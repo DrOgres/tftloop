@@ -403,6 +403,7 @@ select:focus {
 .section-header {
   background-color: black;
   padding: 5px;
+  padding-top: 0px;
   margin: 0px;
   font-family: Avant, sans-serif;
   color: white;
@@ -410,6 +411,7 @@ select:focus {
   font-size: 1.2em;
   font-style: normal;
   justify-content: space-between;
+  max-height: 36px;
 }
 .section-header .col-head {
   font-size: 0.75em;
@@ -489,12 +491,11 @@ select:focus {
   box-shadow: 2px 2px #7f7f7f;
   margin-bottom: 4px;
   margin-top: 4px;
-  line-height: 15px;
   flex-basis: 225px;
   background: #fff1da;
 }
 .main .scars .section-header {
-  max-height: fit-content;
+  max-height: 36px;
 }
 .main .scars .info-item {
   font-size: 0.85em;
@@ -691,7 +692,7 @@ select:focus {
 }
 .main .special-item {
   font-family: Trixie, 'Courier New', Courier, monospace;
-  font-size: 1em;
+  font-size: 0.9em;
   background: #f9bd8d;
   border-right: 1px solid black;
   border-top: 1px solid black;
