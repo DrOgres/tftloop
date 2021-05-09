@@ -56,7 +56,7 @@
     "gridUnits": "meter",
     "inititive" : "",
     "url": "https://github.com/DrOgres/tftloop",
-    "manifest": "https://github.com/DrOgres/tftloop/raw/main/system.json",
+    "manifest": "https://github.com/DrOgres/tftloop/raw/foundry-0.8.X/system.json",
     "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
     "background" : "systems/tftloop/img/loop_system.png",
 
