@@ -18,6 +18,11 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3> Version 1.0.1 </h3>
+
+* Foundry VTT 0.8.5 compatible. This fork will be the main release going forward, you must use Foundry VTT 0.8.5 or better to use this system
+* Updated CSS for better readability and space usage on sheet.
+
 <h3> Version 1.0.0 </h3>
 
 * Foundry VTT 0.8.2b compatible, this is a Fork of the main release.  if you are using 0.7.9 this release will not work for you. 
