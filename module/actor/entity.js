@@ -8,11 +8,13 @@ export default class tftloopActor extends Actor{
         
         // set the updated value here for use on the check boxes on the kid character sheet
         if(actorData.type == 'kid'){
+           //console.log("TFTLOOP | Actor Data" + actorData.data.age);
         actorData.data.luck.max = 15-Number(actorData.data.age);
-        actorData.curLuck = actorData.data.luck.max - actorData.data.luck.value;
+        actorData.data.curLuck = actorData.data.luck.max - actorData.data.luck.value;
         }
         //console.log(actorData.curLuck);
-        
+        this.data.exp = actorData.data.exp
+        //console.log(this.data.exp);
     }
 
       /** @override */
