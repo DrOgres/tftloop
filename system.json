@@ -51,8 +51,8 @@
   "system": [],
   "dependencies": [],
   "socket": false,
-  "manifest": "https://github.com/DrOgres/tftloop/raw/foundry-0.8.X/system.json",
-  "download": "https://github.com/DrOgres/tftloop/archive/refs/heads/foundry-0.8.X.zip",
+  "manifest": "https://raw.githubusercontent.com/DrOgres/tftloop/main/system.json",
+  "download": "https://github.com/DrOgres/tftloop/archive/refs/heads/main.zip",
   "protected": false,
   "gridDistance": 1,
   "gridUnits": "meter"
