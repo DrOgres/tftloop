@@ -336,6 +336,11 @@
             padding-left: 2px;
             align-content: space-between;
             justify-content: space-between;
+            padding-left: 3px;
+
+            .even{
+                background: @iconic-item-color;
+            }
 
             
             p{
@@ -382,9 +387,14 @@
         .info-item{
             font-size: .85em;
             line-height: 25px;
-            padding-left: 2px;
+            padding-left: 3px;
             align-content: space-between;
             justify-content: space-between;
+
+            .even{
+                background: @iconic-item-color;
+            }
+
 
            
             p{
@@ -454,12 +464,13 @@
    
         .iconic-item{
             list-style: none;
-            font-family: Trixie, 'Courier New', Courier, monospace;
+            font-family: Avant, sans-serif;
             font-size: 1em;
             background: @iconic-item-color;
             border-top: 1px solid @black;
             line-height: 34px;
             justify-content: space-between;
+            padding-left: 3px;
 
             .item-name{
                 flex: 0 0 60%;
@@ -493,7 +504,7 @@
 
     .friction{
         list-style: none;
-        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-family: Avant, sans-serif;
         font-size: 1em;
         background: @iconic-item-color;
         border-right: 1px solid @black;
@@ -518,16 +529,28 @@
 
 
     }
+
+    .info-item.short{
+        flex: 0 0 180px;
+    }
     
+    .info-item.even{
+        background: @iconic-item-color;
+    }
+
+    .info-item.odd{
+        background: @field-color; 
+    }
+
     .info-item{
         list-style: none;
-        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-family: Avant, sans-serif;
         font-size: 1em;
-        background: @field-color;
+        background: @field-color; 
         border-right: 1px solid @black;
         border-top: 1px solid @black;
-
-        
+        padding-left: 3px;
+        overflow-x: auto;
 
         .item-name{
             flex: 0 0 60%;
@@ -579,7 +602,7 @@
     }
 
     .special-item{
-        font-family: Trixie, 'Courier New', Courier, monospace;
+        font-family: Avant, sans-serif;
         font-size: .9em;
         background: @section-head-color;
         border-right: 1px solid @black;
@@ -588,6 +611,7 @@
         align-content: space-between;
         justify-content: space-between;
         border-bottom: 1px solid @black;
+        padding-left: 3px;
 
         img{
             border:none;
@@ -621,6 +645,9 @@
         align-content: space-between;
         margin-top: 4px;
 
+        .even{
+            background: @iconic-item-color;
+        }
         
             
             

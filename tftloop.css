@@ -58,7 +58,7 @@ a:hover {
   text-shadow: none;
 }
 textarea {
-  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-family: Avant, sans-serif;
   height: 100%;
 }
 textarea:focus {
@@ -125,6 +125,9 @@ button {
 select:focus {
   box-shadow: none;
   border: 1px solid #f38704;
+}
+.editor-content {
+  padding-left: 3px;
 }
 .editor-content img {
   border: none;
@@ -227,7 +230,7 @@ select:focus {
   text-align: left;
 }
 .editor-content p {
-  text-indent: 25px;
+  text-indent: none;
 }
 .black-bar {
   background: black;
@@ -503,6 +506,10 @@ select:focus {
   padding-left: 2px;
   align-content: space-between;
   justify-content: space-between;
+  padding-left: 3px;
+}
+.main .scars .info-item .even {
+  background: #fedd9e;
 }
 .main .scars .info-item p {
   margin: 0px;
@@ -534,9 +541,12 @@ select:focus {
 .main .conditions .info-item {
   font-size: 0.85em;
   line-height: 25px;
-  padding-left: 2px;
+  padding-left: 3px;
   align-content: space-between;
   justify-content: space-between;
+}
+.main .conditions .info-item .even {
+  background: #fedd9e;
 }
 .main .conditions .info-item p {
   margin: 0px;
@@ -587,12 +597,13 @@ select:focus {
 }
 .main .info-list .iconic-item {
   list-style: none;
-  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-family: Avant, sans-serif;
   font-size: 1em;
   background: #fedd9e;
   border-top: 1px solid black;
   line-height: 34px;
   justify-content: space-between;
+  padding-left: 3px;
 }
 .main .info-list .iconic-item .item-name {
   flex: 0 0 60%;
@@ -620,7 +631,7 @@ select:focus {
 }
 .main .friction {
   list-style: none;
-  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-family: Avant, sans-serif;
   font-size: 1em;
   background: #fedd9e;
   border-right: 1px solid black;
@@ -641,13 +652,24 @@ select:focus {
 .main .friction input[type="text"]:focus {
   box-shadow: 0 0 5px #f38704;
 }
+.main .info-item.short {
+  flex: 0 0 180px;
+}
+.main .info-item.even {
+  background: #fedd9e;
+}
+.main .info-item.odd {
+  background: #fff1da;
+}
 .main .info-item {
   list-style: none;
-  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-family: Avant, sans-serif;
   font-size: 1em;
   background: #fff1da;
   border-right: 1px solid black;
   border-top: 1px solid black;
+  padding-left: 3px;
+  overflow-x: auto;
   line-height: 34px;
   justify-content: space-between;
   align-content: space-between;
@@ -691,7 +713,7 @@ select:focus {
   border: none;
 }
 .main .special-item {
-  font-family: Trixie, 'Courier New', Courier, monospace;
+  font-family: Avant, sans-serif;
   font-size: 0.9em;
   background: #f9bd8d;
   border-right: 1px solid black;
@@ -700,6 +722,7 @@ select:focus {
   align-content: space-between;
   justify-content: space-between;
   border-bottom: 1px solid black;
+  padding-left: 3px;
 }
 .main .special-item img {
   border: none;
@@ -728,6 +751,9 @@ select:focus {
   padding-left: 2px;
   align-content: space-between;
   margin-top: 4px;
+}
+.item-sheet .info-item .even {
+  background: #fedd9e;
 }
 .item-sheet .item-desc input {
   background: #ffffff00;

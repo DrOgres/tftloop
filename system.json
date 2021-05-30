@@ -1,74 +1,59 @@
 {
-    "name" : "tftloop",
-    "title" : "Tales from the Loop",
-    "description": "A System for Tales from the Loop - Now with Things from the Flood support.",
-    "author" : "Dr Ogres", 
-    "version" : "1.0.0",
-    "miniumumCoreVersion" : "0.8.2",
-    "compatibleCoreVersion" : "0.8.2",
-
-    "esmodules" : [
-        "tftloop.js"
-    ],
-
-    "styles" : [
-       "tftloop.css" 
-    ],
-
-    "packs": [
-
-    ],
-    "languages" : [
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
-        },
-        {
-            "lang": "fr",
-            "name": "Français",
-            "path": "lang/fr.json"
-        },
-        {   
-            "lang": "de",
-            "name": "Deutsche",
-            "path": "lang/de.json"
-        },
-        {   
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/es.json"
-        },
-        {   
-            "lang": "pt-BR",
-            "name": "Português (Brasil)",
-            "path": "lang/pt-br.json"
-        },
-        {   
-            "lang": "sv-SE",
-            "name": "Svenska (Sverige)",
-            "path": "lang/sv-SE.json"
-        }
-
-    ],
-
-    "gridDistance": 1,
-    "gridUnits": "meter",
-    "inititive" : "",
-    "url": "https://github.com/DrOgres/tftloop",
-    "manifest": "https://github.com/DrOgres/tftloop/raw/foundry-0.8.X/system.json",
-    "download": "https://github.com/DrOgres/tftloop/archive/main.zip",
-    "background" : "systems/tftloop/img/loop_system.png",
-
-    "media": [
-        {
-          "type": "cover",
-          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.png"
-        },
-        {
-          "type": "screenshot",
-          "url": "https://raw.githubusercontent.com/DrOgres/tftloop/main/img/loop_system.jpg"
-        }
-      ]
-
+  "name": "tftloop",
+  "title": "Tales from the Loop",
+  "description": "A System for Tales from the Loop - Now with Things from the Flood support.",
+  "author": "Dr Ogres",
+  "authors": [],
+  "url": "https://github.com/DrOgres/tftloop",
+  "flags": {},
+  "version": "1.0.1",
+  "compatibleCoreVersion": "0.8.5",
+  "scripts": [],
+  "esmodules": [
+    "tftloop.js"
+  ],
+  "styles": [
+    "tftloop.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json"
+    },
+    {
+      "lang": "de",
+      "name": "Deutsche",
+      "path": "lang/de.json"
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json"
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-br.json"
+    },
+    {
+      "lang": "sv-SE",
+      "name": "Svenska (Sverige)",
+      "path": "lang/sv-SE.json"
+    }
+  ],
+  "packs": [],
+  "system": [],
+  "dependencies": [],
+  "socket": false,
+  "manifest": "https://github.com/DrOgres/tftloop/raw/foundry-0.8.X/system.json",
+  "download": "https://github.com/DrOgres/tftloop/archive/refs/heads/foundry-0.8.X.zip",
+  "protected": false,
+  "gridDistance": 1,
+  "gridUnits": "meter"
 }

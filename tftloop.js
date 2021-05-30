@@ -20,7 +20,6 @@ Hooks.on("renderChatMessage", (app, html, data) =>{
 
 Hooks.once("init", function(){
     console.log("TFTLOOP | Initializing Tales From the Loop");
-    console.log('%c     ', 'font-size:200px; background:url(./img/tftl-logo.png) no-repeat;');
     console.log(tftloop.ASCII);
     
 
