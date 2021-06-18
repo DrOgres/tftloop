@@ -45,6 +45,11 @@
       "lang": "sv-SE",
       "name": "Svenska (Sverige)",
       "path": "lang/sv-SE.json"
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "lang/ja.json"
     }
   ],
   "packs": [],
