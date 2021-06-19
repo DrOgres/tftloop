@@ -18,6 +18,9 @@ feedback is always welcome.
     <li>TODO - code clean-up and documentation of system use</li>
 </ul>
 
+<h3> Version 1.0.2 </h3>
+* Japanese Localization added thanks to Brother Sharpe and asami
+
 <h3> Version 1.0.1 </h3>
 
 * Foundry VTT 0.8.5 compatible. This fork will be the main release going forward, you must use Foundry VTT 0.8.5 or better to use this system
