@@ -1,8 +1,7 @@
 import {tftloop} from "./config.js";
 
 
-export const registerSystemSettings = function(){
-
+export const registerSystemSettings = function (){
     game.settings.registerMenu("tftloop", "homebrewMenu", {
         name: "Change the Default Kid Types",
         label: "Kid Type Editor",
@@ -16,18 +15,16 @@ export const registerSystemSettings = function(){
             title: "Define Types of Kids"
         },
         config: true
-      });
+    });
 
-
-      game.settings.register("tftloop", "francein80s",{
-          name: "SETTINGS.francein80s",
-          scope: "world",
-          config: true,
-          restricted: true,
-          default: false,
-          type: Boolean 
-      });
-
+    game.settings.register("tftloop", "francein80s", {
+        name: "SETTINGS.francein80s",
+        scope: "world",
+        config: true,
+        restricted: true,
+        default: false,
+        type: Boolean 
+    });
    
     game.settings.register("tftloop", "kidTypeExpansion", {
         name: "SETTINGS.homebrewKidTypes",
@@ -36,19 +33,12 @@ export const registerSystemSettings = function(){
         type: String,
         default: [],
         onChange: value => console.log(value)
-
     });
-
-    
-    
-
-
 }
 
-class homeBrewMenu extends FormApplication{
 
-
-    static get defaultOptions(){
+class homeBrewMenu extends FormApplication {
+    static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             title: "Define Types of Kids",
             id: "kid-config", 
@@ -59,54 +49,29 @@ class homeBrewMenu extends FormApplication{
         })
     }
 
-    getData(){
-
-        const data = super.getData();
+    getData() {
         data.config = CONFIG.tftloop;
-        console.log(data);
-        console.log(data.config);
         data.options.customTypes = tftloop.customTypes;
 
         return data;
     }
     
-
     activateListeners(html) {
         super.activateListeners(html);
         html.find(".item-create").click(this._onItemCreate.bind(this));
-
-
     }
     
-    async _updateObject(event, formData) {
+    async _updateObject(_event, _formData) {
         console.log("update Object");
-         
     }
-    close(options){
+
+    close(options) {
         super.close(options);
-        
-        
     } 
-    
     
     _onItemCreate(event){
         event.preventDefault();
-        console.log(game.settings.get("tftloop", "kidTypeExpansion"));
-        console.log("create clicked");
-        console.log(this);
         this.options.customTypes.push("New Kid Type");
-        let element = event.currentTarget;
-        console.log(this.options.customTypes);
-        console.log(element);
-        console.log(game.settings.get("tftloop", "kidTypeExpansion"));
-        let count = this.options.customTypes.length;
         game.settings.set("tftloop", "kidTypeExpansion", this.options.customTypes)
-        console.log(game.settings);
-       
-        
-        
     }
-
-    
 }
-

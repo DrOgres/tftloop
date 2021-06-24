@@ -12,19 +12,15 @@ Hooks.on("preCreateItem", (createData) => {
     if (!createData.img)
     createData.img = "systems/tftloop/img/riks_logo.jpg"
 });
-Hooks.on("renderChatLog", (app, html, data) => Chat.addChatListeners(html));
-Hooks.on("renderChatMessage", (app, html, data) =>{
-    Chat.hideChatActionButtons(app, html, data);
+Hooks.on("renderChatLog", (_app, html, _data) => Chat.addChatListeners(html));
+Hooks.on("renderChatMessage", (app, html, data) => Chat.hideChatActionButtons(app, html, data));
 
-});
 
-Hooks.once("init", function(){
+Hooks.once("init", function() {
     console.log("TFTLOOP | Initializing Tales From the Loop");
-    console.log(tftloop.ASCII);
-    
 
-    game.tftloop ={
-        applications:{
+    game.tftloop = {
+        applications: {
             tftloopActor,
             tftloopActorSheet,
             tftloopItem,
@@ -44,24 +40,21 @@ Hooks.once("init", function(){
     // Register System Settings
     registerSystemSettings();
 
-
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("tftloop", tftloopActorSheet, {makeDefault: true});
+    Actors.registerSheet("tftloop", tftloopActorSheet, { makeDefault: true });
 
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("tftloop", tftloopItemSheet, {makeDefault: true});
+    Items.registerSheet("tftloop", tftloopItemSheet, { smakeDefault: true });
 
     preloadHandlebarsTemplates();
 
     Handlebars.registerHelper("times", function(n, content) {
         let result = "";
-        //console.log("tftloop | times helper n times:  "+n);
-        for(let i = 0; i<n; ++i){
-            content.data.index = i+1;
-            result = result+content.fn(i);
+        for (let i = 0; i < n; ++i){
+            content.data.index = i + 1;
+            result = result + content.fn(i);
         }
         
         return result;
     });
-
 })

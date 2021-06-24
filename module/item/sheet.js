@@ -1,31 +1,28 @@
-export default class tftloopItemSheet extends ItemSheet{
-
+export default class tftloopItemSheet extends ItemSheet {
     constructor(...args) {
         super(...args);
     }
 
 
-    static get defaultOptions(){
+    static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             width : 650, 
             height: 350,
             classes: ["tftloop", "sheet", "item"],
-            resizable: true,
-            
+            resizable: true, 
         });
     }
+
 
     get template() {
         const path = "systems/tftloop/templates/items";
         return `${path}/${this.item.data.type}.hbs`;
     }
 
-    getData(){
+
+    getData() {
         const data = super.getData();
         data.config = CONFIG.tftloop;
-
         return data;
     }
-
-
 }

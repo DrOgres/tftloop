@@ -1,8 +1,7 @@
 {
     "Actor": {
         "types": [
-            "kid",
-            "teen"
+            "kid", "teen"
         ],
         "templates": {
             "attributes": {
@@ -11,22 +10,22 @@
                 "heart": 0,
                 "mind": 0
             },
-            "bodySkills":{
+            "bodySkills": {
                 "sneak": 0,
                 "force": 0,
                 "move": 0
             },
-            "techSkills":{
+            "techSkills": {
                 "tinker": 0,
                 "program": 0,
                 "calculate": 0
             }, 
-            "heartSkills":{
+            "heartSkills": {
                 "contact": 0,
                 "charm": 0,
                 "lead": 0
             },
-            "mindSkills":{
+            "mindSkills": {
                 "investigate": 0,
                 "comprehend": 0,
                 "empathize": 0
@@ -38,12 +37,11 @@
                 "injured": false,
                 "broken": false
             }
-
-
-
         },
         "kid" : {
-            "templates": ["attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"],
+            "templates": [
+                "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
+            ],
             "age": 10,
             "type": "type",
             "drive": "Drive",
@@ -67,11 +65,11 @@
             },
             "dicePool": 0, 
             "exp": 0
-            
-
         },
-        "teen":{
-            "templates": ["attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"],
+        "teen": {
+            "templates": [
+                "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
+            ],
             "age": 14,
             "type": "type",
             "drive": "Drive",
@@ -92,38 +90,26 @@
             "dicePool": 0, 
             "exp": 0, 
             "scars": {}
-
         },
-        "creature": {
-
-        }
+        "creature": {}
     },
-
     "Item": {
         "types": [
-            "item",
-            "relationship",
-            "scar"
+            "item", "relationship", "scar"
         ],
-
-        "relationship":{
-            "description" : "kid",
+        "relationship": {
+            "description": "kid",
             "notes": ""
         },
-
         "item": {
-            "description" : "item",
+            "description": "item",
             "bonus": 1,
             "notes": ""
         },
-
         "scar": {
-            "description" : "Scar",
+            "description": "Scar",
             "notes": "",
             "accpted": false
         }
-
     }
-
-
 }

@@ -1,7 +1,6 @@
 export const tftloop = {};
 
 
-
 tftloop.ASCII = 
 `
 ███████████      ████                                           
@@ -41,6 +40,7 @@ tftloop.attributes = {
     "mind":  "tftloop.mind"
 };
 
+
 tftloop.kidTypes = {
     "bookworm" : "tftloop.bookworm",
     "computer geek" : "tftloop.geek",
@@ -51,5 +51,6 @@ tftloop.kidTypes = {
     "troublemaker": "tftloop.troublemaker",
     "weirdo" : "tftloop.weirdo"
 };
+
 
 tftloop.customTypes = [];
