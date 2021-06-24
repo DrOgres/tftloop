@@ -1,6 +1,6 @@
 {
-    "tftloop" : {
-        "attributesSkills" : "Atributos/Habilidades",
+    "tftloop": {
+        "attributesSkills": "Atributos/Habilidades",
         "experience": "Experiencia",
         "type": "Tipo",
         "bookworm": "Rata/ón de biblioteca",
@@ -49,7 +49,7 @@
         "new": "Nuevo",
         "delete": "Borrar",
         "newRelationship": "Nueva relación",
-        "newItem" : "Nuevo objeto",
+        "newItem": "Nuevo objeto",
         "reset": "Reset",
         "addexp": "Click para añadir Experiencia, Click-Derecho para gastarlo!",
         "currentPool": "Reserva actual",
@@ -72,9 +72,6 @@
         "relationWith": "Relación con",
         "item": "Objeto",
         "bonus": "Bonificación"
-        
-        
-        
     },
 
     "tftflood": {
@@ -84,10 +81,10 @@
         "wolf": "Loba/o solitaria/o",
         "motorhead": "Fanática/o del motor",
         "partyanimal": "Fiestera/o",
-        "raver" : "Ravera/o",
+        "raver": "Ravera/o",
         "rocker": "Rockera/o",
         "seeker": "Buscador(a)",
-        "snob" : "Snob",
+        "snob": "Snob",
         "streetkid": "Chica/o de la calle",
         "broken": "Roto y traumatizado",
         "scars": "Traumas",
@@ -96,20 +93,17 @@
         "friction": "Fricción",
         "scar": "Trauma",
         "shortDesc": "Descripción corta"
-
     },
     
-    
-    "SETTINGS" : {
+    "SETTINGS": {
         "homebrewKidTypes": "Tipos de niños",
-        "francein80s" : "Usar tipos de niños adicionales en la Francia de los 80."
+        "francein80s": "Usar tipos de niños adicionales en la Francia de los 80."
     },
     
-    "france" : {
+    "france": {
         "resourceful": "Ingeniosa/o",
-         "showoff": "Presumida/o",
-         "inventor": "Inventor(a)",
-         "rolePlayer": "Jugador(a) de rol"
-                    
+        "showoff": "Presumida/o",
+        "inventor": "Inventor(a)",
+        "rolePlayer": "Jugador(a) de rol"
     }
 }
