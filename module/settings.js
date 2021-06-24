@@ -1,7 +1,7 @@
 import {tftloop} from "./config.js";
 
 
-export const registerSystemSettings = function (){
+export const registerSystemSettings = function () {
     game.settings.registerMenu("tftloop", "homebrewMenu", {
         name: "Change the Default Kid Types",
         label: "Kid Type Editor",
@@ -71,6 +71,7 @@ class homeBrewMenu extends FormApplication {
     
     _onItemCreate(event){
         event.preventDefault();
+        
         this.options.customTypes.push("New Kid Type");
         game.settings.set("tftloop", "kidTypeExpansion", this.options.customTypes)
     }

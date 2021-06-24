@@ -1,18 +1,19 @@
 export default class tftloopActorSheet extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(
-            super.defaultOptions, {
+            super.defaultOptions,
+            {
                 template: "systems/tftloop/templates/actors/character.hbs",
                 classes: ["tftloop", "sheet", "actor", "character", "kid"],
                 width: 800,
                 height: 950
-        });
+            }
+        );
     }
 
 
     get template() {
-        const path = "systems/tftloop/templates/actors";
-        return `${path}/${this.actor.data.type}.hbs`;
+        return `systems/tftloop/templates/actors/${this.actor.data.type}.hbs`;
     }
 
 
@@ -28,23 +29,19 @@ export default class tftloopActorSheet extends ActorSheet {
             return item.type == "item"
         });
 
-        if (this.actor.data.type == 'teen'){
+        if (this.actor.data.type == 'teen') {
             data.scars = data.items.filter(function(item) {
                 return item.type == "scar"
             });
         }
        
         // set the max luck to change the number of boxes we draw on the sheet
-        if (this.actor.data.type == 'kid'){
+        if (this.actor.data.type == 'kid') {
             data.data.data.luck.max = 15 - Number(data.data.data.age);
             data.data.curLuck = data.data.data.luck.max - data.data.data.luck.value;
         }
-        
-        if (game.settings.get("tftloop", "francein80s")) {
-            data.francein80s = true;
-        } else {
-            data.francein80s = false;
-        }
+
+        data.francein80s = game.settings.get("tftloop", "francein80s") ? true : false;
         
         return data;
     }
@@ -72,7 +69,7 @@ export default class tftloopActorSheet extends ActorSheet {
     }
 
 
-    _onItemDrag(event){
+    _onItemDrag(event) {
         event.preventDefault();
 
         game.data.item = this.actor.getOwnedItem(
@@ -90,6 +87,8 @@ export default class tftloopActorSheet extends ActorSheet {
         if (storedItem.data._id && storedItem.actor != actor) {
             return actor.createOwnedItem(storedItem.data);
         }
+
+        return;
     }
 
 
@@ -307,15 +306,14 @@ export default class tftloopActorSheet extends ActorSheet {
                         
                         let r = new Roll(rollFormula, this.actor.data.data);
                         r.evaluate();
+
                         let rollValue = r.total;
                         let rollTooltip = await Promise.resolve(r.getTooltip());
                         let sucessText = game.i18n.localize("tftloop.failure");
                         if (rollValue > 0) {
-                            if (rollValue > 1) {
-                                sucessText = rollValue + " " + game.i18n.localize("tftloop.successes");
-                            } else {
-                                sucessText = rollValue + " " + game.i18n.localize("tftloop.success");
-                            }
+                            sucessText = rollValue + " " + game.i18n.localize(
+                                rollValue > 1 ? "tftloop.successes" : "tftloop.success"
+                            );
                         }
 
                         let reRollDiceFormula = Number(data.dicePool - r.total);
@@ -348,8 +346,9 @@ export default class tftloopActorSheet extends ActorSheet {
                         `
 
                         data.dicePool = 0;
+
                         if (game.dice3d) {
-                            let check = game.dice3d.showForRoll(r, game.user, true, null, false);
+                            game.dice3d.showForRoll(r, game.user, true, null, false);
                         }
 
                         let chatOptions = {
@@ -377,18 +376,11 @@ export default class tftloopActorSheet extends ActorSheet {
 
     _onExpChange(event) {
         event.preventDefault();
+
         let actor = this.actor;
-        
         let currentCount = this.actor.data.data.exp;
         
-        let newCount;
-        
-        if(event.type == "click") {
-            newCount = Math.min(currentCount + 1, 10);
-        } else {
-            //right click
-            newCount = Math.max(currentCount - 1, 0);
-        }
+        let newCount = event.type == "click" ? Math.min(currentCount + 1, 10) : Math.max(currentCount - 1, 0);
         
         actor.update({ "data.exp" : newCount });
     }
@@ -403,7 +395,6 @@ export default class tftloopActorSheet extends ActorSheet {
 
     _onUseLuck(event) {
         event.preventDefault();
-        let element = event.currentTarget;
 
         let actor = this.actor;
         let maxLuck = actor.data.data.luck.max;
@@ -422,9 +413,7 @@ export default class tftloopActorSheet extends ActorSheet {
     _onItemOpen(event) {
         event.preventDefault();
 
-        let element = event.currentTarget;
-        let itemId = element.closest(".item").dataset.itemId;
-        let item = this.actor.getOwnedItem(itemId);
+        let item = this.actor.getOwnedItem(event.currentTarget.closest(".item").dataset.itemId);
         item.sheet.render(true);
     }
 
@@ -433,9 +422,7 @@ export default class tftloopActorSheet extends ActorSheet {
         event.preventDefault();
 
         let element = event.currentTarget;
-        let itemId = element.closest(".item").dataset.itemId;
-        
-        let item = this.actor.getOwnedItem(itemId);
+        let item = this.actor.getOwnedItem(element.closest(".item").dataset.itemId);
         let field = element.dataset.field;
         
         return item.update({ [field]: element.value });
@@ -444,26 +431,20 @@ export default class tftloopActorSheet extends ActorSheet {
 
     _onItemDelete(event) {
         event.preventDefault();
-
-        let element = event.currentTarget;
-        let itemId = element.closest(".info-item").dataset.itemId;
        
-        return this.actor.deleteOwnedItem(itemId);
+        return this.actor.deleteOwnedItem(event.currentTarget.closest(".info-item").dataset.itemId);
     }
 
 
     _onItemCreate(event) {
         event.preventDefault();
 
-        let element = event.currentTarget;
-        let actor = this.actor;
-        let type = element.dataset.type
         let itemData = {
             name: game.i18n.localize("tftloop.new"),
-            type: element.dataset.type
+            type: event.currentTarget.dataset.type
         };
         
-        return actor.createOwnedItem(itemData);
+        return this.actor.createOwnedItem(itemData);
     }
 
 
@@ -474,9 +455,8 @@ export default class tftloopActorSheet extends ActorSheet {
         let actor = this.actor;
         let item = '';
 
-        if (element.closest(".item")){
-            let itemId = element.closest(".item").dataset.itemId;
-            item = this.actor.getOwnedItem(itemId);
+        if (element.closest(".item")) {
+            item = this.actor.getOwnedItem(element.closest(".item").dataset.itemId);
         }
 
         switch (element.dataset.toggle) {

@@ -1,6 +1,7 @@
 export default class tftloopActor extends Actor {
     prepareData() {
         super.prepareData();
+        
         const actorData = this.data;
 
         // set the updated value here for use on the check boxes on the kid character sheet
@@ -26,7 +27,7 @@ export default class tftloopActor extends Actor {
                     disposition: 1
                 }, {
                     overwrite: false
-                });
+            });
         }
 
         return super.create(data, options);

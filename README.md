@@ -15,7 +15,7 @@ feedback is always welcome.
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftftloop&colorB=4aa94a)
 
 <ul>
-    <li>TODO - code clean-up and documentation of system use</li>
+    <li>TODO - documentation of system use</li>
 </ul>
 
 <h3> Version 1.0.2 </h3>

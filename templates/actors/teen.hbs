@@ -2,33 +2,38 @@
     <header class="teen-header">
         <img src="systems/tftloop/img/flood/tftflood_sheet_logo.png" class="logo" title="tales from the loop logo">
     </header>
+
     <div class="sheet-body flexrow">
         <div class="sidebar flexcol">
             <div class="name-box">
                 <h1 class="charname">
                     <input name="name" type="text" value="{{actor.name}}" placeholder="name"/>
                 </h1>
-                <div class = "portrait">
+
+                <div class="portrait">
                     <img src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="160"  width="160"/>
                 </div>
-                <div class = "type">
+
+                <div class="type">
                     <label>{{localize "tftloop.type"}}</label>
-                <select name="data.type">
-                    {{#select data.data.type}}
-                    <option value="hacker">{{localize "tftflood.hacker"}}</option>
-                    <option value="jock">{{localize "tftflood.jock"}}</option>
-                    <option value="wolf">{{localize "tftflood.wolf"}}</option>
-                    <option value="motorhead">{{localize "tftflood.motorhead"}}</option>
-                    <option value="partyanimal">{{localize "tftflood.partyanimal"}}</option>
-                    <option value="raver">{{localize "tftflood.raver"}}</option>
-                    <option value="rocker">{{localize "tftflood.rocker"}}</option>
-                    <option value="seeker">{{localize "tftflood.seeker"}}</option>
-                    <option value="snob">{{localize "tftflood.snob"}}</option>
-                    <option value="streetkid">{{localize "tftflood.streetkid"}}</option>
-                    {{/select}}
-                </select>
+                    
+                    <select name="data.type">
+                        {{#select data.data.type}}
+                        <option value="hacker">{{localize "tftflood.hacker"}}</option>
+                        <option value="jock">{{localize "tftflood.jock"}}</option>
+                        <option value="wolf">{{localize "tftflood.wolf"}}</option>
+                        <option value="motorhead">{{localize "tftflood.motorhead"}}</option>
+                        <option value="partyanimal">{{localize "tftflood.partyanimal"}}</option>
+                        <option value="raver">{{localize "tftflood.raver"}}</option>
+                        <option value="rocker">{{localize "tftflood.rocker"}}</option>
+                        <option value="seeker">{{localize "tftflood.seeker"}}</option>
+                        <option value="snob">{{localize "tftflood.snob"}}</option>
+                        <option value="streetkid">{{localize "tftflood.streetkid"}}</option>
+                        {{/select}}
+                    </select>
                 </div>  
             </div>
+
             <div class="attributes-skills">
                 <h4 class="section-header">{{localize "tftloop.attributesSkills"}}</h4>
                 <ol class="attribute-list">
@@ -111,30 +116,32 @@
                                 <input type="text" name="data.empathize" value="{{data.data.empathize}}" data-dtype="Number"/>
                             </li>
                         </ol>
-                    </li>    
+                    </li>
                 </ol>
+            </div>
 
-            </div>
             <div class="experience-group">
-            <div class="section-header experience">
-            {{localize "tftloop.experience"}}
-            </div>
-            <div class="exp-boxes flexrow" title="{{localize "tftloop.addexp"}}">
-                {{#times 10}}
-                <div class="exp-box">
-                    <div class="img-container">
-                        {{#if (gte ../data.data.exp @index)}}
-                        <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
-                        {{/if}}
-                        {{#unless (gte ../data.data.exp @index)}}
-                        <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
-                        {{/unless}}
-                    </div>
+                <div class="section-header experience">
+                    {{localize "tftloop.experience"}}
                 </div>
-                {{/times}}
-            </div>
+
+                <div class="exp-boxes flexrow" title="{{localize "tftloop.addexp"}}">
+                    {{#times 10}}
+                    <div class="exp-box">
+                        <div class="img-container">
+                            {{#if (gte ../data.data.exp @index)}}
+                            <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
+                            {{/if}}
+                            {{#unless (gte ../data.data.exp @index)}}
+                            <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
+                            {{/unless}}
+                        </div>
+                    </div>
+                    {{/times}}
+                </div>
             </div>
         </div>
+
         <div class="main flexcol">
             {{> "systems/tftloop/templates/actors/parts/core-teen.hbs"}}
             
@@ -143,6 +150,7 @@
             {{> "systems/tftloop/templates/actors/parts/conditions-teen.hbs"}}
         </div>
     </div>
+
     <footer class="sheet-footer">
         <img src="systems/tftloop/img/flood/sheet-footer.jpg" class="logo" title="page footer image">
     </footer>

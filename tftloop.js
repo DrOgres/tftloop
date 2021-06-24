@@ -9,8 +9,9 @@ import tftloopItem from "./module/item/entity.js";
 
 
 Hooks.on("preCreateItem", (createData) => {
-    if (!createData.img)
-    createData.img = "systems/tftloop/img/riks_logo.jpg"
+    if (!createData.img) {
+        createData.img = "systems/tftloop/img/riks_logo.jpg"
+    }
 });
 Hooks.on("renderChatLog", (_app, html, _data) => Chat.addChatListeners(html));
 Hooks.on("renderChatMessage", (app, html, data) => Chat.hideChatActionButtons(app, html, data));

@@ -42,14 +42,14 @@ tftloop.attributes = {
 
 
 tftloop.kidTypes = {
-    "bookworm" : "tftloop.bookworm",
-    "computer geek" : "tftloop.geek",
+    "bookworm": "tftloop.bookworm",
+    "computer geek": "tftloop.geek",
     "hick": "tftloop.hick",
     "jock": "tftloop.jock",
     "popular kid": "tftloop.popular",
     "rocker": "tftloop.rocker",
     "troublemaker": "tftloop.troublemaker",
-    "weirdo" : "tftloop.weirdo"
+    "weirdo": "tftloop.weirdo"
 };
 
 
