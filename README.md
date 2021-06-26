@@ -18,6 +18,9 @@ feedback is always welcome.
     <li>TODO - documentation of system use</li>
 </ul>
 
+<h3> Version 1.0.3 </h3>
+* Code Clean up (thanks Tobias you champion!) and foundry compatibility update.
+
 <h3> Version 1.0.2 </h3>
 * Japanese Localization added thanks to Brother Sharpe and asami
 
