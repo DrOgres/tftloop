@@ -6,8 +6,8 @@
     "authors": [],
     "url": "https://github.com/DrOgres/tftloop",
     "flags": {},
-    "version": "1.0.2",
-    "compatibleCoreVersion": "0.8.5",
+    "version": "1.0.3",
+    "compatibleCoreVersion": "0.8.7",
     "scripts": [],
     "esmodules": [
         "tftloop.js"
