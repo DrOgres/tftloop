@@ -1,6 +1,6 @@
 {
-    "tftloop" : {
-        "attributesSkills" : "Egenskaper/Färdigheter",
+    "tftloop": {
+        "attributesSkills": "Egenskaper/Färdigheter",
         "experience": "Erfarenhet",
         "type": "Typ",
         "bookworm": "Plugghästen",
@@ -49,7 +49,7 @@
         "new": "Ny",
         "delete": "Ta bort",
         "newRelationship": "Ny Relation",
-        "newItem" : "Ny Ägodel",
+        "newItem": "Ny Ägodel",
         "reset": "Rensa",
         "addexp": "Klicka för att lägga till erfarenhet, högerklicka för att spendera!",
         "currentPool": "Current Pool",
@@ -72,9 +72,6 @@
         "relationWith": "Relation Med",
         "item": "Föremål",
         "bonus": "Bonus"
-
-
-
     },
 
     "tftflood": {
@@ -84,10 +81,10 @@
         "wolf": "Enstöring",
         "motorhead": "Fartdåre",
         "partyanimal": "Partyprisse",
-        "raver" : "Rejvare",
+        "raver": "Rejvare",
         "rocker": "Rocker",
         "seeker": "Sökare",
-        "snob" : "Glidare",
+        "snob": "Glidare",
         "streetkid": "Gatubuse",
         "broken": "Bruten & Ärrad",
         "scars": "Ärr",
@@ -96,20 +93,17 @@
         "friction": "Friktion",
         "scar": "Ärr",
         "shortDesc": "Kort Beskrivning"
-
     },
 
-
-    "SETTINGS" : {
+    "SETTINGS": {
         "homebrewKidTypes": "Typer",
-        "francein80s" : "Använd ytterligare typer från 80-talets Frankrike."
+        "francein80s": "Använd ytterligare typer från 80-talets Frankrike."
     },
 
-    "france" : {
+    "france": {
         "resourceful": "Den praktiska",
-         "showoff": "Skrytmånsen",
-         "inventor": "Uppfinnaren",
-         "rolePlayer": "Rollspelaren"
-                    
+        "showoff": "Skrytmånsen",
+        "inventor": "Uppfinnaren",
+        "rolePlayer": "Rollspelaren"           
     }
 }

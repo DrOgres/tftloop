@@ -1,6 +1,6 @@
 {
-    "tftloop" : {
-        "attributesSkills" : "Attributs/Compétences",
+    "tftloop": {
+        "attributesSkills": "Attributs/Compétences",
         "experience": "Expérience",
         "type": "Type",
         "bookworm": "Intello",
@@ -49,7 +49,7 @@
         "new": "Nouveau",
         "delete": "Suppression",
         "newRelationship": "Nouveau Lien",
-        "newItem" : "Nouvel Objet",
+        "newItem": "Nouvel Objet",
         "reset": "Effacer",
         "addexp": "Click pour ajouter de l'Experience, Click droit pour le dépenser!",
         "currentPool": "Current Pool",
@@ -74,12 +74,10 @@
         "bonus": "Prime"
     },
 
-    "france" : {
+    "france": {
         "resourceful": "Combinard",
-         "showoff": "Frimeur",
-         "inventor": "Inventeur",
-         "rolePlayer": "Rôliste"
-                    
+        "showoff": "Frimeur",
+        "inventor": "Inventeur",
+        "rolePlayer": "Rôliste"
     }
-
 }
