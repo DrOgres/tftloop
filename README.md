@@ -16,9 +16,17 @@ feedback is always welcome.
 
 <ul>
     <li>TODO - documentation of system use</li>
+    <li>TODO = * Future proofing codebase against 0.9.X standards (refactoring deprecated code etc.)
+    </li>
 </ul>
 
+<h3> Version 1.0.4 </h3>
+
+* Foundry 0.8.8 combatibility update
+* Added dice so nice custom dice for Tales from the Loop
+
 <h3> Version 1.0.3 </h3>
+
 * Code Clean up (thanks Tobias you champion!) and foundry compatibility update.
 
 <h3> Version 1.0.2 </h3>

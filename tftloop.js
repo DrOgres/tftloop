@@ -7,6 +7,37 @@ import { registerSystemSettings } from "./module/settings.js";
 import tftloopItemSheet from "./module/item/sheet.js";
 import tftloopItem from "./module/item/entity.js";
 
+//dice so nice hooks for us to use the custom dice
+Hooks.on('diceSoNiceReady', (dice3d) => {
+	console.log("TFTLOOP STARTER - Dice init");
+	dice3d.addSystem({id: "tftloop", name : "Tales from the Loop"}, "force");
+	
+	dice3d.addColorset({
+		name: 'loop-orange',
+		description : "Tales from the Loop Dice",
+		category : "Tales From the Loop",
+		foreground : '#fe7100',
+		background : '#fe7100',
+		outline : '#fe7100',
+		edge : '#fe7100',
+		texture : '#fe7100',
+		material : 'plastic'
+	});
+	
+	dice3d.addDicePreset({
+		type: "d6",
+		labels: [
+			"systems/tftloop/img/dice/face1.png",
+			"systems/tftloop/img/dice/face2.png",
+			"systems/tftloop/img/dice/face3.png",
+			"systems/tftloop/img/dice/face4.png",
+			"systems/tftloop/img/dice/face5.png",
+			"systems/tftloop/img/dice/face6.png"
+		],
+		colorset: "loop-orange",
+		system: "tftloop"
+	});
+});
 
 Hooks.on("preCreateItem", (createData) => {
     if (!createData.img) {
