@@ -16,9 +16,13 @@ feedback is always welcome.
 
 <ul>
     <li>TODO - documentation of system use</li>
-    <li>TODO = * Future proofing codebase against 0.9.X standards (refactoring deprecated code etc.)
+    <li>TODO - Future proofing codebase against 0.9.X standards (refactoring deprecated code etc.)
     </li>
 </ul>
+
+<h3> Version 1.0.5 </h3>
+
+* (bugfix) Iconic item not showing 
 
 <h3> Version 1.0.4 </h3>
 
