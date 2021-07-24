@@ -3,12 +3,21 @@
     "title": "Tales from the Loop - Official",
     "description": "The Official System for Playing Tales from the Loop on Foundry VTT - Now with Things from the Flood support.",
     "author": "Dr Ogres",
-    "authors": [],
     "url": "https://github.com/DrOgres/tftloop",
     "flags": {},
     "version": "1.0.5",
     "compatibleCoreVersion": "0.8.8",
     "scripts": [],
+    "media": [
+		{
+			"type": "cover",
+			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.png?raw=true"
+		},
+		{
+			"type": "screenshot",
+			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.jpg?raw=true"
+		}
+	],
     "esmodules": [
         "tftloop.js"
     ],
