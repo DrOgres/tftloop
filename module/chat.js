@@ -4,7 +4,7 @@ export const hideChatActionButtons = function (_message, html, _data) {
     if (card.length > 0){
         let actor = game.actors.get(card.attr("data-actor-id"));
 
-        if ((actor && !actor.owner)){
+        if ((actor && !actor.isOwner)){
             const buttons = card.find(".reroll");
             buttons.each((_i, btn) => {
                 btn.style.display = "none"
@@ -61,8 +61,8 @@ async function onReroll(event) {
                     <h4 class="dice-total">` + sucessText + `</h4>
                 </div>
             </div>
-            <div class="reroll-info" data-owner-id="` + actor._id + `">
-                <button class="reroll" data-owner-id="` + actor._id + `" data-tested="` + rolled + `" data-dicepool="` + reRollDiceFormula + `" type="button">
+            <div class="reroll-info" data-owner-id="` + actor.id + `">
+                <button class="reroll" data-owner-id="` + actor.id + `" data-tested="` + rolled + `" data-dicepool="` + reRollDiceFormula + `" type="button">
                     ` + game.i18n.localize("tftloop.reroll") + `
                 </button>
             </div>
@@ -77,7 +77,7 @@ async function onReroll(event) {
     }
 
     let chatOptions = {
-        user: game.user._id,
+        user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: actor, token: actor.img }),
         type: CONST.CHAT_MESSAGE_TYPES.OTHER,
         roll: r,

@@ -1,9 +1,8 @@
 /*****************************
-/
-/       Colors
+/           Colors
 *****************************/
 /******************************
-/        Fonts
+/           Fonts
 ******************************/
 @font-face {
   font-family: Avant;
@@ -26,7 +25,7 @@
   src: url(fonts/Trixie-Text.otf);
 }
 /******************************
-/        Foundry overrides
+/       Foundry overrides
 ******************************/
 .editor-edit {
   box-shadow: 2px 2px #7f7f7f;

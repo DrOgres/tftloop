@@ -16,9 +16,20 @@ feedback is always welcome.
 
 <ul>
     <li>TODO - documentation of system use</li>
-    <li>TODO = * Future proofing codebase against 0.9.X standards (refactoring deprecated code etc.)
     </li>
 </ul>
+
+<h3> Version 1.0.7</h3>
+
+* Code base brought up to match Foundry v9.220 (v9 prototype 1)
+
+<h3> Version 1.0.6</h3>
+
+* Brought version up to required version for core Module Compatability
+
+<h3> Version 1.0.5 </h3>
+
+* (bugfix) Iconic item not showing 
 
 <h3> Version 1.0.4 </h3>
 

@@ -84,7 +84,7 @@ export default class tftloopActorSheet extends ActorSheet {
         let actor = this.actor;
         let storedItem = game.data.itemstore;
 
-        if (storedItem.data._id && storedItem.actor != actor) {
+        if (storedItem.data.id && storedItem.actor != actor) {
             return actor.createOwnedItem(storedItem.data);
         }
 
@@ -325,7 +325,7 @@ export default class tftloopActorSheet extends ActorSheet {
                                     <img class="portrait" width="48" height="48" src="` + this.actor.data.img + `"/>
                                     <h1>` + game.i18n.localize("tftloop.tested") + `: ` + game.i18n.localize("tftloop." + rolled) + `</h1>
                                 </div>
-                                <div class="tftloop chat-card" data-actor-id="` + actor._id + `">
+                                <div class="tftloop chat-card" data-actor-id="` + actor.id + `">
                                 <div class="dice-roll">
                                     <div class="dice-result">
                                         <div class="dice-formula">
@@ -335,8 +335,8 @@ export default class tftloopActorSheet extends ActorSheet {
                                         <h4 class="dice-total">` + sucessText + `</h4>
                                     </div>
                                 </div>
-                                <div class="reroll-info" data-owner-id="` + actor._id + `">
-                                    <button class="reroll" data-owner-id="` + actor._id + `" data-tested="` + game.i18n.localize("tftloop." + rolled) + `" data-dicepool="` + reRollDiceFormula + `" type="button">
+                                <div class="reroll-info" data-owner-id="` + actor.id + `">
+                                    <button class="reroll" data-owner-id="` + actor.id + `" data-tested="` + game.i18n.localize("tftloop." + rolled) + `" data-dicepool="` + reRollDiceFormula + `" type="button">
                                         ` + game.i18n.localize("tftloop.reroll") + `
                                     </button>
                                 </div>
@@ -352,7 +352,7 @@ export default class tftloopActorSheet extends ActorSheet {
                         }
 
                         let chatOptions = {
-                            user: game.user._id,
+                            user: game.user.id,
                             speaker: ChatMessage.getSpeaker({ actor: this.actor, token: this.actor.img }),
                             type: CONST.CHAT_MESSAGE_TYPES.OTHER,
                             roll: r,
@@ -431,20 +431,25 @@ export default class tftloopActorSheet extends ActorSheet {
 
     _onItemDelete(event) {
         event.preventDefault();
+        let deleteId = [
+            event.currentTarget.closest(".info-item").dataset.itemId
+        ];
        
-        return this.actor.deleteOwnedItem(event.currentTarget.closest(".info-item").dataset.itemId);
+        return this.actor.deleteEmbeddedDocuments('Item', deleteId);
     }
 
 
     _onItemCreate(event) {
         event.preventDefault();
 
-        let itemData = {
+        let itemData = [{
             name: game.i18n.localize("tftloop.new"),
             type: event.currentTarget.dataset.type
-        };
+        }];
         
-        return this.actor.createOwnedItem(itemData);
+       
+        return this.actor.createEmbeddedDocuments('Item', itemData);
+        
     }
 
 
