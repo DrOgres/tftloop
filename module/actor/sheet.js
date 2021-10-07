@@ -6,7 +6,9 @@ export default class tftloopActorSheet extends ActorSheet {
                 template: "systems/tftloop/templates/actors/character.hbs",
                 classes: ["tftloop", "sheet", "actor", "character", "kid"],
                 width: 800,
-                height: 950
+                height: 950,
+                tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "main"}]
+
             }
         );
     }

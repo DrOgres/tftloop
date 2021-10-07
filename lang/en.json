@@ -71,7 +71,8 @@
         "natureofRelationship": "Nature of Relationship",
         "relationWith": "Relation With",
         "item": "Item",
-        "bonus": "Bonus"
+        "bonus": "Bonus",
+        "main": "Main"
     },
 
     "tftflood": {
