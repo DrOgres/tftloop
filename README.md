@@ -18,6 +18,10 @@ feedback is always welcome.
     <li>TODO - documentation of system use</li>
     </li>
 </ul>
+<h3> Version 1.0.8 </h3>
+
+* Changed sheet layout to move notes to new tab
+
 
 <h3> Version 1.0.7</h3>
 
