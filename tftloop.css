@@ -27,6 +27,12 @@
 /******************************
 /       Foundry overrides
 ******************************/
+#client-settings nav.tabs {
+  flex: 0 0 32px;
+  line-height: 16px;
+  font-size: 16px;
+  border-bottom: 1px solid #000;
+}
 .editor-edit {
   box-shadow: 2px 2px #7f7f7f;
 }
@@ -119,6 +125,7 @@ button {
   margin-bottom: 0px;
   margin-top: 5px;
   max-height: 25px;
+  line-height: 16px;
 }
 .tabs .item.active {
   text-shadow: none;
