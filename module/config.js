@@ -54,3 +54,5 @@ tftloop.kidTypes = {
 
 
 tftloop.customTypes = [];
+
+tftloop.dataset = "./actor/types.json";

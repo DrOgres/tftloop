@@ -5,12 +5,12 @@
     "author": "Dr Ogres",
     "url": "https://github.com/DrOgres/tftloop",
     "flags": {},
-    "version": "1.0.9",
-    "compatibleCoreVersion": "9.220",
+    "version": "1.0.10",
+    "compatibleCoreVersion": "9.224",
     "scripts": [],
     "media": [
 		{
-			"type": "cover",
+			"type": "cover", 
 			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.png?raw=true"
 		},
 		{

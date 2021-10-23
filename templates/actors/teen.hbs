@@ -3,7 +3,7 @@
         <img src="systems/tftloop/img/flood/tftflood_sheet_logo.png" class="logo" title="tales from the loop logo">
     </header>
 
-    <div class="sheet-body flexrow">
+    <div class="flexrow">
         <div class="sidebar flexcol">
             <div class="name-box">
                 <h1 class="charname">
@@ -143,23 +143,25 @@
         </div>
 
         <div class="flexcol">
-         <div class="sheet-tabs tabs flexrow" data-group="primary">
-                <b class="item" data-tab="main">{{localize "tftloop.main"}}</b>
-                <b class="item" data-tab="note">{{localize "tftloop.notes"}}</b>
-        </div>
-            <div class="tab" data-group="primary" data-tab="main">
-                <div class="main flexcol">
-                    {{> "systems/tftloop/templates/actors/parts/core-teen.hbs"}}
-                    {{> "systems/tftloop/templates/actors/parts/teen-item-notes.hbs"}} 
-                    {{> "systems/tftloop/templates/actors/parts/relationships-teen.hbs"}}
-                    {{> "systems/tftloop/templates/actors/parts/conditions-teen.hbs"}}
-                </div>
+            <div class="sheet-tabs tabs flexrow" data-group="primary">
+                    <b class="item" data-tab="main">{{localize "tftloop.main"}}</b>
+                    <b class="item" data-tab="note">{{localize "tftloop.notes"}}</b>
             </div>
-            <div class="tab" data-group="primary" data-tab="note">
-                <div class="notes-group info-group">
-                    <h4 class="section-header">{{localize "tftloop.notes"}}</h4>
-                    <div class="kid-notes">
-                        {{editor content=data.data.notes.value target="data.notes.value" button=true owner=owner editable=true }}
+            <div class="sheet-body">
+                <div class="tab" data-group="primary" data-tab="main">
+                    <div class="main flexcol">
+                        {{> "systems/tftloop/templates/actors/parts/core-teen.hbs"}}
+                        {{> "systems/tftloop/templates/actors/parts/teen-item-notes.hbs"}} 
+                        {{> "systems/tftloop/templates/actors/parts/relationships-teen.hbs"}}
+                        {{> "systems/tftloop/templates/actors/parts/conditions-teen.hbs"}}
+                    </div>
+                </div>
+                <div class="tab" data-group="primary" data-tab="note">
+                    <div class="notes-group info-group">
+                        <h4 class="section-header">{{localize "tftloop.notes"}}</h4>
+                        <div class="kid-notes">
+                            {{editor content=data.data.notes.value target="data.notes.value" button=true owner=owner editable=true }}
+                        </div>
                     </div>
                 </div>
             </div>

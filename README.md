@@ -19,7 +19,12 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 1.0.10</h3>
+
+* v9 224 compatability fix - tab not showing
+
 <h3>Version 1.0.9</h3>
+
 * (BUGFIX) Hideout Notes not saving properly
 
 <h3> Version 1.0.8 </h3>

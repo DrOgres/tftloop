@@ -1,0 +1,123 @@
+{
+    "default":{
+        "geek":{
+            "value": "geek",
+            "age": "kid",
+            "keys": ["calculate", "program", "comprehend"]
+        },
+        "hick":{
+            "value": "hick",
+            "age": "kid",
+            "keys": ["force", "move", "tinker"]
+        },
+        "jock":{
+            "value": "jock",
+            "age": "kid",
+            "keys": ["force", "move", "contact"]
+        },
+        "popular":{
+            "value": "popular",
+            "age": "kid",
+            "keys": ["contact", "charm", "lead"]
+        },
+        "rocker":{
+            "value": "rocker",
+            "age": "kid",
+            "keys": ["move", "charm", "empathize"]
+        },
+        "troublemaker":{
+            "value": "troublemaker",
+            "age": "kid",
+            "keys": ["force", "sneak", "lead"]
+        },
+        "weirdo":{
+            "value": "weirdo",
+            "age": "kid",
+            "keys": ["sneak", "investigate", "empathize"]
+        },
+        "hacker":{
+            "value": "hacker",
+            "age": "teen",
+            "keys": ["program", "calculate", "comprehend"]
+        },
+        "floodJock":{
+            "value": "jock",
+            "age": "teen",
+            "keys": ["force", "move", "lead"]
+        },
+        "wolf":{
+            "value": "wolf",
+            "age": "teen",
+            "keys": ["sneak", "comprehend", "empathize"]
+        },
+        "motorhead":{
+            "value": "motorhead",
+            "age": "teen",
+            "keys": ["tinker", "calculate", "charm"]
+        },
+        "partyAnimal":{
+            "value": "partyanimal",
+            "age": "teen",
+            "keys": ["move", "contact", "lead"]
+        },
+        "raver":{
+            "value": "raver",
+            "age": "teen",
+            "keys": ["tinker", "contact", "charm"]
+        },
+        "floodRocker":{
+            "value": "rocker",
+            "age": "teen",
+            "keys": ["move", "empathize", "investigate"]
+        },
+        "seeker":{
+            "value": "seeker",
+            "age": "teen",
+            "keys": ["investigate", "empathize", "lead"]
+        },
+        "snob":{
+            "value": "snob",
+            "age": "teen",
+            "keys": ["charm", "contact", "comprehend"]
+        },
+        "streetKid":{
+            "value": "streetkid",
+            "age": "teen",
+            "keys": ["force", "sneak", "investigate"]
+        }
+
+    },
+    "france" : {
+        "combinard":{
+            "value": "france.resourceful",
+            "age": "kid",
+            "keys": ["program", "lead", "contact"]
+        },
+        "frimeur":{
+            "value": "france.showoff",
+            "age": "kid",
+            "keys": ["move", "tinker", "lead"]
+        },
+        "inventeur":{
+            "value": "france.inventor",
+            "age": "kid",
+            "keys": ["calculate", "tinker", "program"]
+        },
+        "roliste":{
+            "value": "france.rolePlayer",
+            "age": "kid",
+            "keys": ["comprehend", "investigate", "empathize"]
+        }
+
+    }, 
+    "homebrew": {
+        "value": [],
+        "age" : [],
+        "keys": []
+
+    }
+
+
+   
+
+}

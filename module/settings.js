@@ -49,6 +49,21 @@ class homeBrewMenu extends FormApplication {
         })
     }
 
+
+    // load the data from the types.json file
+    static async loadDataset() {
+		const dataset = game.settings.get("forbidden-lands", "datasetDir") || null;
+		if (dataset && dataset.substr(-4, 4) !== "json")
+			throw ForbiddenLandsCharacterGenerator.handleBadDataset("Dataset is not a JSON file.");
+		const lang = game.i18n.lang;
+		const datasetName = CONFIG.fbl.dataSetConfig[lang] || "dataset";
+		const defaultDataset = `systems/forbidden-lands/assets/datasets/chargen/${datasetName}.json`;
+		const resp = await fetch(dataset ? dataset : defaultDataset).catch((_err) => {
+			return {};
+		});
+		return resp.json();
+	}
+
     getData() {
         data.config = CONFIG.tftloop;
         data.options.customTypes = tftloop.customTypes;
