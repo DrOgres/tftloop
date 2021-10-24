@@ -74,7 +74,7 @@ export default class tftloopActorSheet extends ActorSheet {
     _onItemDrag(event) {
         event.preventDefault();
 
-        game.data.item = this.actor.getOwnedItem(
+        game.data.item = this.actor.getEmbeddedDocument('Item',
             event.currentTarget.closest(".item").dataset.itemId
         )
     }
@@ -87,7 +87,7 @@ export default class tftloopActorSheet extends ActorSheet {
         let storedItem = game.data.itemstore;
 
         if (storedItem.data.id && storedItem.actor != actor) {
-            return actor.createOwnedItem(storedItem.data);
+            return actor.createEmbeddedDocuments('Item', storedItem.data);
         }
 
         return;
@@ -417,7 +417,7 @@ export default class tftloopActorSheet extends ActorSheet {
     _onItemOpen(event) {
         event.preventDefault();
 
-        let item = this.actor.getOwnedItem(event.currentTarget.closest(".item").dataset.itemId);
+        let item = this.actor.getEmbeddedDocument('Item',event.currentTarget.closest(".item").dataset.itemId);
         item.sheet.render(true);
     }
 
@@ -426,9 +426,8 @@ export default class tftloopActorSheet extends ActorSheet {
         event.preventDefault();
 
         let element = event.currentTarget;
-        let item = this.actor.getOwnedItem(element.closest(".item").dataset.itemId);
+        let item = this.actor.getEmbeddedDocument('Item', element.closest(".item").dataset.itemId);
         let field = element.dataset.field;
-        
         return item.update({ [field]: element.value });
     }
 
@@ -465,7 +464,7 @@ export default class tftloopActorSheet extends ActorSheet {
         let item = '';
 
         if (element.closest(".item")) {
-            item = this.actor.getOwnedItem(element.closest(".item").dataset.itemId);
+            item = this.actor.getEmbeddedDocument('Item',element.closest(".item").dataset.itemId);
         }
 
         switch (element.dataset.toggle) {
