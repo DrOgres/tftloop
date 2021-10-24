@@ -307,12 +307,14 @@ export default class tftloopActorSheet extends ActorSheet {
                         let rollFormula = data.dicePool+"d6cs6";
                         
                         let r = new Roll(rollFormula, this.actor.data.data);
-                        r.evaluate();
+                        await r.evaluate();
 
                         let rollValue = r.total;
+                        console.log("DICE ROLL :" + rollValue);
                         let rollTooltip = await Promise.resolve(r.getTooltip());
                         let sucessText = game.i18n.localize("tftloop.failure");
                         if (rollValue > 0) {
+                            console.log("DICE ROLL success");
                             sucessText = rollValue + " " + game.i18n.localize(
                                 rollValue > 1 ? "tftloop.successes" : "tftloop.success"
                             );

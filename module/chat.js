@@ -29,7 +29,7 @@ async function onReroll(event) {
     let rolled = card.dataset.tested;
 
     let r = new Roll(rollFormula, actor.data.data);
-    r.evaluate();
+    await r.evaluate();
     
     let rollValue = r.total;
     let rollTooltip = await Promise.resolve(r.getTooltip());
