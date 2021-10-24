@@ -5,7 +5,7 @@
     "author": "Dr Ogres",
     "url": "https://github.com/DrOgres/tftloop",
     "flags": {},
-    "version": "1.2.2",
+    "version": "1.2.3",
     "compatibleCoreVersion": "9.226",
     "scripts": [],
     "media": [
@@ -18,6 +18,7 @@
 			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.jpg?raw=true"
 		}
 	],
+    "background": "img/loop_system.png.jpg",
     "esmodules": [
         "tftloop.js"
     ],
