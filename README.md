@@ -19,6 +19,9 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 1.2.3</h3>
+
+* FIXED Relationship nature field not keeping edits!
 
 <h3>Version 1.2.2</h3>
 
