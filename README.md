@@ -19,6 +19,15 @@ feedback is always welcome.
     </li>
 </ul>
 
+
+<h3>Version 1.2.2</h3>
+
+* FIXED dice roll - async behavior not showing sucesses!
+
+<h3>Version 1.2.1</h3>
+
+* reversiond to fix offical content version check bug
+
 <h3>Version 1.0.10</h3>
 
 * v9 224 compatability fix - tab not showing
