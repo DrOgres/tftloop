@@ -18,7 +18,7 @@
 			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.jpg?raw=true"
 		}
 	],
-    "background": "img/loop_system.png.jpg",
+    "background": "img/loop_system.png",
     "esmodules": [
         "tftloop.js"
     ],
