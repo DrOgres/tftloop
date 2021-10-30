@@ -5,7 +5,7 @@
     "author": "Dr Ogres",
     "url": "https://github.com/DrOgres/tftloop",
     "flags": {},
-    "version": "1.2.3",
+    "version": "1.2.4",
     "compatibleCoreVersion": "9.226",
     "scripts": [],
     "media": [
@@ -60,6 +60,11 @@
             "lang": "ja",
             "name": "日本語",
             "path": "lang/ja.json"
+        },
+        {
+            "lang": "pl",
+            "name": "Polski",
+            "path": "lang/pl.json"
         }
     ],
     "packs": [],
