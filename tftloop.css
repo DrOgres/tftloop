@@ -130,7 +130,8 @@ button {
 .tabs .item.active {
   text-shadow: none;
   color: #f38704;
-  border-bottom: 3px solid #f38704;
+  border-bottom: 2px solid #f38704;
+  margin-bottom: -4px;
 }
 .sidebar-tab .directory-header .header-search input {
   background: white;
