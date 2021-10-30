@@ -98,9 +98,15 @@
 
     "SETTINGS": {
         "homebrewKidTypes": "Typy Dzieciaków",
+		"polishedition": "Użyj dodatkowych Typów Dzieciaków z Polskiego Wydania TFTL",
         "francein80s": "Użyj dodatkowych Typów Dzieciaków we Francji w latach '80."
     },
-
+	
+	"polish": {
+		"harcerka": "Harcerka",
+		"punk": "Punk"
+	},
+	
     "france": {
         "resourceful": "Resourceful",
         "showoff": "Showoff",

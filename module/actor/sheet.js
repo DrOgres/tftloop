@@ -44,6 +44,7 @@ export default class tftloopActorSheet extends ActorSheet {
         }
 
         data.francein80s = game.settings.get("tftloop", "francein80s") ? true : false;
+        data.polishedition = game.settings.get("tftloop", "polishedition") ? true : false;
         
         return data;
     }

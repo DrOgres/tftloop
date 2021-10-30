@@ -25,6 +25,15 @@ export const registerSystemSettings = function () {
         default: false,
         type: Boolean 
     });
+
+    game.settings.register("tftloop", "polishedition", {
+        name: "SETTINGS.polishedition",
+        scope: "world",
+        config: true,
+        restricted: true,
+        default: false,
+        type: Boolean 
+    });
    
     game.settings.register("tftloop", "kidTypeExpansion", {
         name: "SETTINGS.homebrewKidTypes",
