@@ -110,6 +110,19 @@
         }
 
     }, 
+	
+    "polish" : {
+        "harcerka":{
+            "value": "polish.scout",
+            "age": "kid",
+            "keys": ["move", "charm", "investigate"]
+        },
+        "punk":{
+            "value": "polish.punk",
+            "age": "kid",
+            "keys": ["force", "contact", "empathize"]
+        }
+    }, 
     "homebrew": {
         "value": [],
         "age" : [],

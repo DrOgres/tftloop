@@ -98,9 +98,15 @@
 
     "SETTINGS": {
         "homebrewKidTypes": "Kid Types",
+		"polishedition": "Use additional Kid Types from Polish version of TFTL.",
         "francein80s": "Use additional Kid Types in France in the 80's Supplement."
     },
-
+	
+	"polish": {
+		"harcerka": "Scout",
+		"punk": "Punk"
+	},
+	
     "france": {
         "resourceful": "Resourceful",
         "showoff": "Showoff",
