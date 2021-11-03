@@ -15,8 +15,62 @@ feedback is always welcome.
 ![Forge Installs](https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https%3A%2F%2Fforge-vtt.com%2Fapi%2Fbazaar%2Fpackage%2Ftftloop&colorB=4aa94a)
 
 <ul>
-    <li>TODO - code clean-up and documentation of system use</li>
+    <li>TODO - documentation of system use</li>
+    </li>
 </ul>
+<h3>Version 1.2.4</h3>
+
+* Added Polish Localization thanks to arturkonczalski! ||  Dodano polską lokalizację dzięki arturkonczalskiemu!
+
+
+<h3>Version 1.2.3</h3>
+
+* FIXED Relationship nature field not keeping edits!
+
+<h3>Version 1.2.2</h3>
+
+* FIXED dice roll - async behavior not showing sucesses!
+
+<h3>Version 1.2.1</h3>
+
+* reversiond to fix offical content version check bug
+
+<h3>Version 1.0.10</h3>
+
+* v9 224 compatability fix - tab not showing
+
+<h3>Version 1.0.9</h3>
+
+* (BUGFIX) Hideout Notes not saving properly
+
+<h3> Version 1.0.8 </h3>
+
+* Changed sheet layout to move notes to new tab
+
+
+<h3> Version 1.0.7</h3>
+
+* Code base brought up to match Foundry v9.220 (v9 prototype 1)
+
+<h3> Version 1.0.6</h3>
+
+* Brought version up to required version for core Module Compatability
+
+<h3> Version 1.0.5 </h3>
+
+* (bugfix) Iconic item not showing 
+
+<h3> Version 1.0.4 </h3>
+
+* Foundry 0.8.8 combatibility update
+* Added dice so nice custom dice for Tales from the Loop
+
+<h3> Version 1.0.3 </h3>
+
+* Code Clean up (thanks Tobias you champion!) and foundry compatibility update.
+
+<h3> Version 1.0.2 </h3>
+* Japanese Localization added thanks to Brother Sharpe and asami
 
 <h3> Version 1.0.1 </h3>
 

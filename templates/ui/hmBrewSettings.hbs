@@ -1,38 +1,38 @@
 <form autocomplete="off" class="homebrew-kids">
     <div>
-        This is work in progress it doesn't function yet :) </br>
+        This is work in progress it doesn't function yet :)</br>
         Default Kids: create a list going through the config item
-
         
-           <div class="kid-factory section-header flexrow">
-               <h4>Add Kid Type</h4>
-                <a class="item-control item-create" data-type="kid-type" data-trait="kid-type" title="{{localize "tftloop.addKidType"}}" >
+        <div class="kid-factory section-header flexrow">
+            <h4>Add Kid Type</h4>
+            <a class="item-control item-create" data-type="kid-type" data-trait="kid-type" title="{{localize "tftloop.addKidType"}}">
                 <i class="fas fa-plus"></i>
-                </a> 
-           </div> 
-           <ol class="info-list">
-        {{#each options.customTypes as |type|}}
-        <li class="info-item flexrow item" data-item-id="{{type._id}}">
-        <input class="type-name inline-edit" data-field="name" type="text" value="{{type}}"/>
-        <a class="item-control item-delete" data-type="kid-type" data-trait="kid-type" title="{{localize "tftloop.delete"}}" >
-        <i class="fas fa-minus"></i>
-        </a>
-        </li>
-        {{/each}}
-    </ol>
+            </a>
+        </div>
+        <ol class="info-list">
+            {{#each options.customTypes as |type|}}
+            <li class="info-item flexrow item" data-item-id="{{type._id}}">
+                <input class="type-name inline-edit" data-field="name" type="text" value="{{type}}"/>
+                <a class="item-control item-delete" data-type="kid-type" data-trait="kid-type" title="{{localize "tftloop.delete"}}">
+                    <i class="fas fa-minus"></i>
+                </a>
+            </li>
+            {{/each}}
+        </ol>
         here we will do the work for homebrew items
         set up an add and delete function
         set up a default list
         set up a edit function... all that stuff
+
+        editable name - Key Skills ( 1, 2 3) - Kid or Teen
     </div>
 
     <div class="form-group buttons-save">
-            <button type="button" name="reset">
-                <i class="fas fa-refresh"></i> Reset
-            </button>
-            <button type="submit" name="submit">
-                <i class="fas fa-save"></i> Save
-            </button>
-        </div>
+        <button type="button" name="reset">
+            <i class="fas fa-refresh"></i> Reset
+        </button>
+        <button type="submit" name="submit">
+            <i class="fas fa-save"></i> Save
+        </button>
+    </div>
 </form>
-

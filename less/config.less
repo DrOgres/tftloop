@@ -1,8 +1,6 @@
 /*****************************
-/
-/       Colors
+/           Colors
 *****************************/
-
 @footer-color: #ee7113;
 @highlight: #f38704;
 @section-head-color: #f9bd8d;
@@ -16,40 +14,47 @@
 @drop-shadow-color: #7f7f7f;
 @button-color: black;
 
-/******************************
-/        Fonts
-******************************/
 
-@font-face{
+/******************************
+/           Fonts
+******************************/
+@font-face {
     font-family: Avant;
     src:url(fonts/AvantGuard.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: AvantBold;
     src:url(fonts/AvantBold.otf);
 }
 
-@font-face{
+@font-face {
     font-family: SabonItalic;
     src:url(fonts/Sabon_Italic.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: SabonRoman;
     src:url(fonts/Sabon_Roman.ttf);
 }
 
-@font-face{
+@font-face {
     font-family: Trixie;
     src:url(fonts/Trixie-Text.otf);
 }
 
 
 /******************************
-/        Foundry overrides
+/       Foundry overrides
 ******************************/
-.editor-edit{
+#client-settings nav.tabs {
+    flex: 0 0 32px;
+    line-height: 16px;
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+  }
+
+.editor-edit {
     box-shadow: 2px 2px @drop-shadow-color;
 }
 
@@ -61,38 +66,36 @@ a.entity-link {
     word-break: normal;
 }
 
-#context-menu li.context-item:hover{
+#context-menu li.context-item:hover {
     color:@highlight;
     text-shadow: none;
 }
 
-button:hover{
+button:hover {
     box-shadow: 2px 2px @drop-shadow-color;
 }
 
-.window-app .window-content{
+.window-app .window-content {
     background-color: @background;
     background: @background;
-    
 }
 
-a:hover{
+a:hover {
     box-shadow: none;
     text-shadow: none;
     color: @highlight;
 }
 
-
-.fa-edit:hover{
+.fa-edit:hover {
     text-shadow: none;
 }
 
-textarea{
+textarea {
     font-family: Avant, sans-serif;
     height: 100%;
 }
 
-textarea:focus{
+textarea:focus {
     outline: 2px solid @highlight;
     box-shadow: 0 0 5px @footer-color;
 }
@@ -107,7 +110,7 @@ h3, h4, h5, h6 {
     font-family: Avant, sans-serif;
 }
 
-blockquote{
+blockquote {
     font-family: Trixie, 'Courier New', Courier, monospace;
     background: url(img/chat_background.jpg);
     max-width: 50%;
@@ -116,37 +119,38 @@ blockquote{
     break-inside: avoid;
     font-style: normal;
     float: right;
-    hr{
+    
+    hr {
         border-top: 1px solid @black;
         border-bottom: 1px solid @black;
     }
 }
 
-section.secret{
+section.secret {
     font-family: SabonRoman;
     font-size: 1.1em;
 }
 
-#chat-form textarea{
+#chat-form textarea {
     background: url(img/chat_background.jpg);
 }
 
-#chat-controls{
-    .roll-type-select{
+#chat-controls {
+    .roll-type-select {
         background: @white;
     }
 }
 
-#chat-log .message{
+#chat-log .message {
     border-color: @footer-color;
 }
 
-.chat-message{
+.chat-message {
     background: url(img/chat_background.jpg);
     font-family: Trixie, 'Courier New', Courier, monospace;
 }
 
-.app{
+.app {
     color: @white;
 }
 
@@ -154,161 +158,163 @@ button {
     background: @white;
 }
 
+.sheet-tabs{
+    padding: 5px;
+    background-color: transparent;
+	margin-bottom: 0px;
+    margin-top: 5px;
+    max-height: 25px;
+    line-height: 16px;
+}
+
 .tabs {
-    .item.active{
+    .item.active {
         text-shadow: none;
         color: @highlight;
-        border-bottom: 3px solid @highlight;
+        border-bottom: 2px solid @highlight;
+        margin-bottom: -4px;
     }
 }
 
 .sidebar-tab {
     .directory-header {
-        .header-search{
-            input{
+        .header-search {
+            input {
                 background: @white;
             }
         }
     }
 }
 
-select:focus{
+select:focus {
     box-shadow: none;
     border: 1px solid @highlight;
 }
 
-
-
-.editor-content{
+.editor-content {
     padding-left: 3px;
    
-        img{
-            border: none;
+    img {
+        border: none;
 
-        }
-        table{
-            background: @field-color;
-            border: none;
+    }
+
+    table {
+        background: @field-color;
+        border: none;
+        font-family: AvantBold;
+        margin: 30px;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+
+        th { 
+            padding-left: 3px;
+            background:@black;
+            color: @white;
+            text-align: left;
             font-family: AvantBold;
-            margin: 30px;
-            width: 50%;
-            margin-left: auto;
-            margin-right: auto;
-
-            th{ 
-                padding-left: 3px;
-                background:@black;
-                color: @white;
-                text-align: left;
-                font-family: AvantBold;
-            }
-            tr:nth-child(odd){
-                background: @iconic-item-color;
-
-            }
-        }
-        .chapter-header{
-            font-family: AvantBold;
-            font-weight: 900;
-            color: @footer-color;
-            border-bottom: none;
-            font-style: bold;
-            padding-left: 5px;
         }
 
-        .lore-text{
-            font-family: SabonItalic;
-            padding-left: 5px;
+        tr:nth-child(odd) {
+            background: @iconic-item-color;
+        }
+    }
+
+    .chapter-header {
+        font-family: AvantBold;
+        font-weight: 900;
+        color: @footer-color;
+        border-bottom: none;
+        font-style: bold;
+        padding-left: 5px;
+    }
+
+    .lore-text {
+        font-family: SabonItalic;
+        padding-left: 5px;
+        text-indent: 0px;
+    }
+
+    .us-text {
+        color: @highlight;
+        font-weight: 300;
+    }
+
+    .example-text {
+        font-size: .9em;
+        padding-left: 8px;
+        border-left: dotted 2px @highlight;
+        max-width: 90%;
+        background: @field-color;
+        break-inside: avoid;
+        
+        p {
             text-indent: 0px;
         }
+    }
 
-        .us-text{
-            color: @highlight;
-            font-weight: 300;
-        }
+    .major-heading {
+        display: grid;
+        grid-template-columns: 140px auto;
+        justify-items: stretch;
+    }
 
-        .example-text{
-            font-size: .9em;
-            padding-left: 8px;
-            border-left: dotted 2px @highlight;
-            max-width: 90%;
-            background: @field-color;
-            break-inside: avoid;
-            p{
-            text-indent: 0px;
-            }
-        }
+    .chap-number {
+        font-family: AvantBold;
+        color: white;
+        background-image: url('img/grunge.png');
+        background-color: #fbba1c;
+        object-fit: cover;
+    }
 
-
-        .major-heading{
-            display: grid;
-            grid-template-columns: 140px auto;
-            justify-items: stretch;
-            
-
-        }
-
-        .chap-number{
-            
-            font-family: AvantBold;
-            color: white;
-            background-image: url('img/grunge.png');
-            background-color: #fbba1c;
-            object-fit: cover;
-        }
-
-        .grunge{
-            
-            position: absolute;
-            width: 140px;
-            
-            img{
+    .grunge {
+        position: absolute;
+        width: 140px;
+        
+        img {
             border: none;
             object-fit: cover;
-            }
-            
-            z-index: 7;
-            
-            
         }
+        
+        z-index: 7;
+    }
 
-        .two-col{
-            column-count: 2;
-            column-gap: 3em;
-            margin-top: 10px;
-            margin-right: 10px;
-            text-align: justify;
-            
-        }
+    .two-col {
+        column-count: 2;
+        column-gap: 3em;
+        margin-top: 10px;
+        margin-right: 10px;
+        text-align: justify;
+    }
 
-        h5{
-            font-size: 1.2em;
-            font-family: AvantBold, Arial, Helvetica, sans-serif;
-            font-weight: 600;
-            color: @highlight;
-            margin-block-start: 1em;
-            margin-block-end: .5em;
-            font-style: italic;
-            
-        }
+    h5 {
+        font-size: 1.2em;
+        font-family: AvantBold, Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        color: @highlight;
+        margin-block-start: 1em;
+        margin-block-end: .5em;
+        font-style: italic;
+    }
 
-        h1{
-            font-size: 3.5em;
-            border-color: @black;
-        }
+    h1 {
+        font-size: 3.5em;
+        border-color: @black;
+    }
 
-        h2{
-            font-size: 1.5em;
-            border: none;
-            text-align: left;
-        }
+    h2 {
+        font-size: 1.5em;
+        border: none;
+        text-align: left;
+    }
 
-        h3{
-            font-family: AvantBold;
-            text-align: left;
-        }
+    h3 {
+        font-family: AvantBold;
+        text-align: left;
+    }
 
-        p{
-            text-indent: none;
-        }
+    p {
+        text-indent: none;
+    }
 }

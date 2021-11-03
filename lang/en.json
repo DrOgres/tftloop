@@ -1,6 +1,6 @@
 {
-    "tftloop" : {
-        "attributesSkills" : "Attributes/Skills",
+    "tftloop": {
+        "attributesSkills": "Attributes/Skills",
         "experience": "Experience",
         "type": "Type",
         "bookworm": "Bookworm",
@@ -49,7 +49,7 @@
         "new": "New",
         "delete": "Delete",
         "newRelationship": "New Relationship",
-        "newItem" : "New Item",
+        "newItem": "New Item",
         "reset": "Reset",
         "addexp": "Click to add Experience, Right-Click to spend it!",
         "currentPool": "Current Pool",
@@ -71,10 +71,8 @@
         "natureofRelationship": "Nature of Relationship",
         "relationWith": "Relation With",
         "item": "Item",
-        "bonus": "Bonus"
-
-
-
+        "bonus": "Bonus",
+        "main": "Main"
     },
 
     "tftflood": {
@@ -84,10 +82,10 @@
         "wolf": "Lone Wolf",
         "motorhead": "Motorhead",
         "partyanimal": "Party Animal",
-        "raver" : "Raver",
+        "raver": "Raver",
         "rocker": "Rocker",
         "seeker": "Seeker",
-        "snob" : "Snob",
+        "snob": "Snob",
         "streetkid": "Street Kid",
         "broken": "Broken & Scarred",
         "scars": "Scars",
@@ -96,20 +94,23 @@
         "friction": "Friction",
         "scar": "Scar",
         "shortDesc": "Short Description"
-
     },
 
-
-    "SETTINGS" : {
+    "SETTINGS": {
         "homebrewKidTypes": "Kid Types",
-        "francein80s" : "Use additional Kid Types in France in the 80's Supplement."
+		"polishedition": "Use additional Kid Types from Polish version of TFTL.",
+        "francein80s": "Use additional Kid Types in France in the 80's Supplement."
     },
-
-    "france" : {
+	
+	"polish": {
+		"scout": "Scout",
+		"punk": "Punk"
+	},
+	
+    "france": {
         "resourceful": "Resourceful",
-         "showoff": "Showoff",
-         "inventor": "Inventor",
-         "rolePlayer": "Role Player"
-                    
+        "showoff": "Showoff",
+        "inventor": "Inventor",
+        "rolePlayer": "Role Player"
     }
 }

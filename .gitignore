@@ -6,3 +6,15 @@ img/loop_bug_sm.png~
 img/riks_logo_black.png~
 img/.grunge.png-autosave.kra
 img/.riks_logo_white.png-autosave.kra
+
+# VS Code
+.idea/
+logs/
+img/dice/.face6.png-autosave.kra
+img/dice/face1.png~
+img/dice/face2.png~
+img/dice/face3.png~
+img/dice/face4.png~
+img/dice/face5.png~
+img/dice/face6.png~
+

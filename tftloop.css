@@ -1,9 +1,8 @@
 /*****************************
-/
-/       Colors
+/           Colors
 *****************************/
 /******************************
-/        Fonts
+/           Fonts
 ******************************/
 @font-face {
   font-family: Avant;
@@ -26,8 +25,14 @@
   src: url(fonts/Trixie-Text.otf);
 }
 /******************************
-/        Foundry overrides
+/       Foundry overrides
 ******************************/
+#client-settings nav.tabs {
+  flex: 0 0 32px;
+  line-height: 16px;
+  font-size: 16px;
+  border-bottom: 1px solid #000;
+}
 .editor-edit {
   box-shadow: 2px 2px #7f7f7f;
 }
@@ -114,10 +119,19 @@ section.secret {
 button {
   background: white;
 }
+.sheet-tabs {
+  padding: 5px;
+  background-color: transparent;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  max-height: 25px;
+  line-height: 16px;
+}
 .tabs .item.active {
   text-shadow: none;
   color: #f38704;
-  border-bottom: 3px solid #f38704;
+  border-bottom: 2px solid #f38704;
+  margin-bottom: -4px;
 }
 .sidebar-tab .directory-header .header-search input {
   background: white;
@@ -447,20 +461,31 @@ select:focus {
   height: 85%;
   overflow-y: auto;
 }
+.notes-group {
+  height: fit-content;
+  background: #fff1da;
+  margin-left: 5px;
+}
+.info-group {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0px;
+  margin: 2px;
+  margin-left: 5px;
+  padding: 0px;
+  box-shadow: 2px 2px #7f7f7f;
+}
 .main {
   display: table;
   margin-left: 5px;
-  min-width: 70%;
+  min-width: 100%;
   justify-content: flex-start;
 }
 .main #hideout {
   border: none;
   resize: none;
   height: 85%;
-}
-.main .notes-group {
-  height: fit-content;
-  background: #fff1da;
 }
 .main .items {
   min-height: 0px;
@@ -474,15 +499,6 @@ select:focus {
 }
 .main .hideout .hideout-text {
   height: 85%;
-}
-.main .info-group {
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
-  border-radius: 0px;
-  margin: 2px;
-  padding: 0px;
-  box-shadow: 2px 2px #7f7f7f;
 }
 .main .scars {
   border-bottom: 1px solid black;
