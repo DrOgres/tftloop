@@ -18,6 +18,12 @@ feedback is always welcome.
     <li>TODO - documentation of system use</li>
     </li>
 </ul>
+
+<h3>Version 1.2.7</h3>
+
+* Updated Japanese localization
+
+
 <h3>Version 1.2.4</h3>
 
 * Added Polish Localization thanks to arturkonczalski! ||  Dodano polską lokalizację dzięki arturkonczalskiemu!
