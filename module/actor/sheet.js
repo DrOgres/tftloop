@@ -15,38 +15,42 @@ export default class tftloopActorSheet extends ActorSheet {
 
 
     get template() {
-        return `systems/tftloop/templates/actors/${this.actor.data.type}.hbs`;
+        console.log(this.actor);
+        return `systems/tftloop/templates/actors/${this.actor.type}.hbs`;
     }
 
 
     getData() {
-        const data = super.getData();
+        const sheet = super.getData();
+        console.log(sheet);
         data.config = CONFIG.tftloop;
+        const actor = this.actor;
+        console.log(actor);
 
-        data.relationships = data.items.filter(function(item) {
+        sheet.relationships = sheet.items.filter(function(item) {
             return item.type == "relationship"
         });
 
-        data.bonusItems = data.items.filter(function(item) {
+        sheet.bonusItems = sheet.items.filter(function(item) {
             return item.type == "item"
         });
 
-        if (this.actor.data.type == 'teen') {
-            data.scars = data.items.filter(function(item) {
+        if (actor.type == 'teen') {
+            sheet.scars = sheet.items.filter(function(item) {
                 return item.type == "scar"
             });
         }
        
-        // set the max luck to change the number of boxes we draw on the sheet
-        if (this.actor.data.type == 'kid') {
-            data.data.data.luck.max = 15 - Number(data.data.data.age);
-            data.data.curLuck = data.data.data.luck.max - data.data.data.luck.value;
+        // set the max luck to change the number of boxes we draw on the sheet data.system.luck.max
+        if (actor.type == 'kid') {
+            sheet.data.system.luck.max = 15 - Number(sheet.data.system.age);
+            sheet.data.curLuck = sheet.data.system.luck.max - sheet.data.system.luck.value;
         }
 
-        data.francein80s = game.settings.get("tftloop", "francein80s") ? true : false;
-        data.polishedition = game.settings.get("tftloop", "polishedition") ? true : false;
+        sheet.francein80s = game.settings.get("tftloop", "francein80s") ? true : false;
+        sheet.polishedition = game.settings.get("tftloop", "polishedition") ? true : false;
         
-        return data;
+        return sheet;
     }
 
 
