@@ -9,6 +9,7 @@ export default class tftloopActor extends Actor {
         // set the updated value here for use on the check boxes on the kid character sheet
         if (actorData.type == 'kid') {
             actorData.luck.max = 15 - Number(actorData.age);
+            console.log("luck:" + (15 - Number(actorData.age)));
             actorData.curLuck = actorData.luck.max - actorData.luck.value;
         }
         

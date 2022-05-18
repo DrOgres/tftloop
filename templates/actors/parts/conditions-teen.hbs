@@ -5,11 +5,11 @@
         <div class="flexcol">
             <div class="info-item flexrow">{{localize "tftloop.upset"}}
                 <label class="imgCheck">
-                    {{#unless data.data.upset}}
+                    {{#unless system.upset}}
                     <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                 
-                    {{#if data.data.upset}}
+                    {{#if system.upset}}
                     <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
@@ -17,11 +17,11 @@
 
             <div class="info-item flexrow">{{localize "tftloop.scared"}} 
                 <label class="imgCheck">
-                    {{#unless data.data.scared}}
+                    {{#unless system.scared}}
                     <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                 
-                    {{#if data.data.scared}}
+                    {{#if system.scared}}
                     <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
@@ -29,11 +29,11 @@
 
             <div class="info-item flexrow">{{localize "tftloop.exhausted"}} 
                 <label class="imgCheck">
-                    {{#unless data.data.exhausted}}
+                    {{#unless system.exhausted}}
                     <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                 
-                    {{#if data.data.exhausted}}
+                    {{#if system.exhausted}}
                     <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
@@ -41,11 +41,11 @@
 
             <div class="info-item flexrow">{{localize "tftloop.injured"}} 
                 <label class="imgCheck">
-                    {{#unless data.data.injured}}
+                    {{#unless system.injured}}
                     <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                     
-                    {{#if data.data.injured}}
+                    {{#if system.injured}}
                     <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
@@ -54,11 +54,11 @@
             <div class="special-item flexrow">
                 {{localize "tftflood.broken"}}
                 <label class="imgCheck">
-                    {{#unless data.data.broken}}
+                    {{#unless system.broken}}
                     <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                     
-                    {{#if data.data.broken}}
+                    {{#if system.broken}}
                     <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
@@ -82,14 +82,14 @@
             {{#each scars as |scar id|}}
             <li class="info-item flexrow item" data-item-id="{{scar._id}}">
                 <input class="scar-name inline-edit" data-field="name" type="text" value="{{name}}"/>
-                <input class="scar-desc inline-edit" data-field="data.description" type="text" value="{{data.description}}"/>
+                <input class="scar-desc inline-edit" data-field="description" type="text" value="{{description}}"/>
                 
                 <label class="imgCheck">
-                    {{#unless data.accepted}}
+                    {{#unless accepted}}
                     <img class="toggle-boolean" data-toggle="accepted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                     
-                    {{#if data.accepted}}
+                    {{#if accepted}}
                     <img class="toggle-boolean" data-toggle="accepted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>

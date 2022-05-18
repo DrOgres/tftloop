@@ -3,8 +3,8 @@
         <div class="info-item short">
             <label>{{localize "tftloop.age"}}</label>
 
-            <select name="data.age">
-                {{#select data.data.age}}
+            <select name="age">
+                {{#select system.age}}
                 <option value="10">14</option>
                 <option value="11">15</option>
                 <option value="12">16</option>
@@ -17,34 +17,34 @@
 
         <div class="info-item flexrow">
             <label>{{localize "tftloop.favSong"}}</label>
-            <input name="data.favoriteSong" type="text" value="{{data.data.favoriteSong}}" placeholder=""/>
+            <input name="favoriteSong" type="text" value="{{system.favoriteSong}}" placeholder=""/>
         </div>
     </div>
     
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.drive"}}</label>
-        <input name="data.drive" type="text" value="{{data.data.drive}}" placeholder=""/>
+        <input name="drive" type="text" value="{{system.drive}}" placeholder=""/>
     </div>
 
     <div class="info-item odd flexrow">
         <label>{{localize "tftloop.anchor"}}</label>
-        <input name="data.anchor" type="text" value="{{data.data.anchor}}" placeholder=""/>
+        <input name="anchor" type="text" value="{{system.anchor}}" placeholder=""/>
     </div>
 
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.problem"}}</label>
-        <input name="data.problem" type="text" value="{{data.data.problem}}" placeholder=""/>
+        <input name="problem" type="text" value="{{system.problem}}" placeholder=""/>
     </div>
 
     <div class="info-item odd flexrow">
         <label>{{localize "tftflood.shame"}}: </label>
-        <input name="data.shame" type="text" value="{{data.data.shame}}" placeholder=""/>
+        <input name="shame" type="text" value="{{system.shame}}" placeholder=""/>
         <label class="imgCheck">
-            {{#unless data.data.shameCheck}}
+            {{#unless system.shameCheck}}
             <img class="toggle-boolean" data-toggle="shameCheck" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
             {{/unless}}
 
-            {{#if data.data.shameCheck}}    
+            {{#if system.shameCheck}}    
             <img class="toggle-boolean" data-toggle="shameCheck" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
             {{/if}}
         </label>
@@ -52,6 +52,6 @@
 
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.description"}}</label>
-        <input name="data.description" type="text" value="{{data.data.description}}" placeholder=""/>
+        <input name="description" type="text" value="{{system.description}}" placeholder=""/>
     </div>  
 </div>

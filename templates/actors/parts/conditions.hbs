@@ -5,11 +5,11 @@
         <div class="info-item">{{localize "tftloop.upset"}}
         
         <label class="imgCheck">
-            {{#unless data.data.upset}}
+            {{#unless data.system.upset}}
             <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
             {{/unless}}
             
-            {{#if data.data.upset}}
+            {{#if data.system.upset}}
             <img class="toggle-boolean" data-toggle="upset" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
             {{/if}}
         </label>
@@ -17,11 +17,11 @@
         
         <div class="info-item">{{localize "tftloop.scared"}} 
             <label class="imgCheck">
-                {{#unless data.data.scared}}
+                {{#unless data.system.scared}}
                 <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                 {{/unless}}
                     
-                {{#if data.data.scared}}
+                {{#if data.system.scared}}
                 <img class="toggle-boolean" data-toggle="scared" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                 {{/if}}
             </label>
@@ -29,11 +29,11 @@
 
         <div class="info-item">{{localize "tftloop.exhausted"}} 
             <label class="imgCheck">
-                {{#unless data.data.exhausted}}
+                {{#unless data.system.exhausted}}
                 <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                 {{/unless}}
         
-                {{#if data.data.exhausted}}
+                {{#if data.system.exhausted}}
                 <img class="toggle-boolean" data-toggle="exhausted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                 {{/if}}
             </label>
@@ -41,11 +41,11 @@
 
         <div class="info-item">{{localize "tftloop.injured"}} 
             <label class="imgCheck">
-                {{#unless data.data.injured}}
+                {{#unless data.system.injured}}
                 <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                 {{/unless}}
 
-                {{#if data.data.injured}}
+                {{#if data.system.injured}}
                 <img class="toggle-boolean" data-toggle="injured" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                 {{/if}}
             </label>
@@ -53,11 +53,11 @@
                 
         <div class="special-item">{{localize "tftloop.broken"}} 
             <label class="imgCheck">
-                {{#unless data.data.broken}}
+                {{#unless data.system.broken}}
                 <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                 {{/unless}}
 
-                {{#if data.data.broken}}
+                {{#if data.system.broken}}
                 <img class="toggle-boolean" data-toggle="broken" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                 {{/if}}
             </label>

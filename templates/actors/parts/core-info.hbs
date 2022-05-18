@@ -2,10 +2,10 @@
     <div class="flexrow">
         <div class="info-item short">
             <label>{{localize "tftloop.age"}}</label>
-            {{data.age}}
+            {{age}}
 
-            <select name="data.age">
-                {{#select data.data.age}}
+            <select name="age">
+                {{#select system.age}}
                 <option value="10">10</option>
                 <option value="11">11</option>
                 <option value="12">12</option>
@@ -18,11 +18,11 @@
 
         <div class="special-item flexrow">
             <label class="use-luck">{{localize "tftloop.luck"}}
-                {{#times data.curLuck}}
+                {{#times data.system.curLuck}}
                 <img src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                 {{/times}}
 
-                {{#times data.data.luck.value}}
+                {{#times data.system.luck.value}}
                 <img src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                 {{/times}}
             </label>
@@ -33,28 +33,28 @@
     
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.drive"}}</label>
-        <input name="data.drive" type="text" value="{{data.data.drive}}" placeholder=""/>
+        <input name="drive" type="text" value="{{data.system.drive}}" placeholder=""/>
     </div>
 
     <div class="info-item odd flexrow">
         <label>{{localize "tftloop.anchor"}}</label>
-        <input name="data.anchor" type="text" value="{{data.data.anchor}}" placeholder=""/>
+        <input name="anchor" type="text" value="{{data.system.anchor}}" placeholder=""/>
     </div>
 
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.problem"}}</label>
-        <input name="data.problem" type="text" value="{{data.data.problem}}" placeholder=""/>
+        <input name="problem" type="text" value="{{data.system.problem}}" placeholder=""/>
     </div>
 
     <div class="info-item odd flexrow">
         <label>{{localize "tftloop.pride"}}</label>
-        <input name="data.pride" type="text" value="{{data.data.pride}}" placeholder=""/>
+        <input name="pride" type="text" value="{{data.system.pride}}" placeholder=""/>
         <label class="imgCheck">
-            {{#unless data.data.prideCheck}}
+            {{#unless data.system.prideCheck}}
             <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
             {{/unless}}
 
-            {{#if data.data.prideCheck}}
+            {{#if data.system.prideCheck}}
             <img class="toggle-boolean" data-toggle="prideCheck" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
             {{/if}}
         </label>
@@ -62,11 +62,11 @@
 
     <div class="info-item even flexrow">
         <label>{{localize "tftloop.description"}}</label>
-        <input name="data.description" type="text" value="{{data.data.description}}" placeholder=""/>
+        <input name="description" type="text" value="{{data.system.description}}" placeholder=""/>
     </div>
 
     <div class="info-item odd flexrow">
         <label>{{localize "tftloop.favSong"}}</label>
-        <input name="data.favoriteSong" type="text" value="{{data.data.favoriteSong}}" placeholder=""/>
+        <input name="favoriteSong" type="text" value="{{data.system.favoriteSong}}" placeholder=""/>
     </div>
 </div>

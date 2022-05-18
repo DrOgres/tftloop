@@ -43,7 +43,7 @@
                 "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
             ],
             "age": 10,
-            "type": "type",
+            "arcetype": "type",
             "drive": "Drive",
             "luck": {
                 "value": 0,
@@ -64,14 +64,15 @@
                 "value": "Notes"
             },
             "dicePool": 0, 
-            "exp": 0
+            "exp": 0,
+            "curLuck": 5
         },
         "teen": {
             "templates": [
                 "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
             ],
             "age": 14,
-            "type": "type",
+            "arcetype": "type",
             "drive": "Drive",
             "anchor": "Anchor",
             "problem": "Problem",

@@ -8,11 +8,12 @@
         </div>
     </div>
 
+
     <ol class="info-list">
         {{#each relationships as |relationship id|}}
         <li class="info-item flexrow item" data-item-id="{{relationship._id}}" draggable="true">
             <input class="relationship-name inline-edit" data-field="name" type="text" value="{{name}}"/>
-            <input class="relationship-desc inline-edit" data-field="data.description" type="text" value="{{data.description}}"/>
+            <input class="relationship-desc inline-edit" data-field="description" type="text" value="{{description}}"/>
             <div class="item-control">
                 <a class="item-open">
                     <i class="fas fa-edit"></i>
@@ -28,6 +29,6 @@
 
     <div class="friction flexrow">
         <label>{{localize "tftflood.friction"}}: </label>
-        <input name="data.friction" type="text" value="{{data.data.friction}}" placeholder=""/>
+        <input name="friction" type="text" value="{{system.friction}}" placeholder=""/>
     </div>
 </div>
