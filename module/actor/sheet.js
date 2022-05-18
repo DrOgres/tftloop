@@ -16,7 +16,6 @@ export default class tftloopActorSheet extends ActorSheet {
   }
 
   get template() {
- 
     return `systems/tftloop/templates/actors/${this.actor.type}.hbs`;
   }
 
@@ -46,8 +45,8 @@ export default class tftloopActorSheet extends ActorSheet {
     if (actor.type == "kid") {
       const maxLuck = 15 - Number(sheet.data.system.age);
       const curLuck = maxLuck - sheet.data.system.luck.value;
-        actor.update({ "system.luck.max": maxLuck });
-        actor.update({"system.curLuck" : curLuck});
+      actor.update({ "system.luck.max": maxLuck });
+      actor.update({ "system.curLuck": curLuck });
     }
     console.log(actor);
     sheet.francein80s = game.settings.get("tftloop", "francein80s")
@@ -59,8 +58,6 @@ export default class tftloopActorSheet extends ActorSheet {
 
     return sheet;
   }
-
-
 
   activateListeners(html) {
     if (this.isEditable) {
@@ -125,7 +122,6 @@ export default class tftloopActorSheet extends ActorSheet {
     let items = actor.items.filter(function (item) {
       return item.type == "item";
     });
-
 
     let element = event.currentTarget;
     let rolled = element.dataset.rolled;
@@ -604,7 +600,6 @@ export default class tftloopActorSheet extends ActorSheet {
     let actor = this.actor;
     let currentCount = actor.system.exp;
 
-
     let newCount =
       event.type == "click"
         ? Math.min(currentCount + 1, 10)
@@ -625,7 +620,6 @@ export default class tftloopActorSheet extends ActorSheet {
     let actor = this.actor;
     let maxLuck = actor.system.luck.max;
     let usedLuck = actor.system.luck.value;
-
 
     if (usedLuck < maxLuck) {
       usedLuck += 1;
@@ -648,13 +642,17 @@ export default class tftloopActorSheet extends ActorSheet {
 
   _onItemEdit(event) {
     event.preventDefault();
-
+    console.log(event);
     let element = event.currentTarget;
     let item = this.actor.getEmbeddedDocument(
       "Item",
       element.closest(".item").dataset.itemId
     );
+
+    console.log(item);
     let field = element.dataset.field;
+      console.log(field);
+
     return item.update({ [field]: element.value });
   }
 
