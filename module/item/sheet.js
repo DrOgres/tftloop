@@ -15,7 +15,7 @@ export default class tftloopItemSheet extends ItemSheet {
 
 
     get template() {
-        return `systems/tftloop/templates/items/${this.item.data.type}.hbs`;
+        return `systems/tftloop/templates/items/${this.item.type}.hbs`;
     }
 
 
