@@ -752,6 +752,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
         break;
       case "accepted":
+        console.log(item);
         if (item.system.accepted) {
           item.system.accepted = false;
           item.update({ "system.accepted": false });

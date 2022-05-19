@@ -82,14 +82,14 @@
             {{#each scars as |scar id|}}
             <li class="info-item flexrow item" data-item-id="{{scar._id}}">
                 <input class="scar-name inline-edit" data-field="name" type="text" value="{{name}}"/>
-                <input class="scar-desc inline-edit" data-field="description" type="text" value="{{description}}"/>
+                <input class="scar-desc inline-edit" data-field="system.description" type="text" value="{{scar.system.description}}"/>
                 
                 <label class="imgCheck">
-                    {{#unless accepted}}
+                    {{#unless scar.system.accepted}}
                     <img class="toggle-boolean" data-toggle="accepted" src="systems/tftloop/img/box_not_checked.png" height="18px" width="18px">
                     {{/unless}}
                     
-                    {{#if accepted}}
+                    {{#if scar.system.accepted}}
                     <img class="toggle-boolean" data-toggle="accepted" src="systems/tftloop/img/box_checked.png" height="18px" width="18px">
                     {{/if}}
                 </label>
