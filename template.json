@@ -72,7 +72,7 @@
                 "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
             ],
             "age": 14,
-            "arcetype": "type",
+            "type": "type",
             "drive": "Drive",
             "anchor": "Anchor",
             "problem": "Problem",
