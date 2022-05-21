@@ -43,7 +43,7 @@
                 "attributes", "bodySkills", "techSkills", "heartSkills", "mindSkills", "conditions"
             ],
             "age": 10,
-            "arcetype": "type",
+            "type": "type",
             "drive": "Drive",
             "luck": {
                 "value": 0,
