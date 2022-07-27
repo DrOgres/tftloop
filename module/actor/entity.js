@@ -3,8 +3,7 @@ export default class tftloopActor extends Actor {
         super.prepareData();
         
         const actorData = this.system;
-        console.log(this);
-        console.log(actorData);
+        
 
         // set the updated value here for use on the check boxes on the kid character sheet
         if (actorData.type == 'kid') {

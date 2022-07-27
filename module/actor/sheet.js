@@ -24,9 +24,6 @@ export default class tftloopActorSheet extends ActorSheet {
     sheet.config = CONFIG.tftloop;
     const actor = this.actor;
 
-    console.log(sheet);
-    console.log(actor);
-
     sheet.relationships = sheet.items.filter(function (item) {
       return item.type == "relationship";
     });
@@ -48,7 +45,7 @@ export default class tftloopActorSheet extends ActorSheet {
       actor.update({ "system.luck.max": maxLuck });
       actor.update({ "system.curLuck": curLuck });
     }
-    console.log(actor);
+    
     sheet.francein80s = game.settings.get("tftloop", "francein80s")
       ? true
       : false;
@@ -492,7 +489,9 @@ export default class tftloopActorSheet extends ActorSheet {
 
             let rollFormula = data.dicePool + "d6cs6";
 
-            let r = new Roll(rollFormula, this.actor.data.data);
+            console.log("TFTLOOP | Rolling Dice: " + this.actor);
+
+            let r = new Roll(rollFormula, this.actor.system.data);
             await r.evaluate();
 
             let rollValue = r.total;
@@ -517,7 +516,7 @@ export default class tftloopActorSheet extends ActorSheet {
                             <span class="flavor-text">
                                 <div class="chat-header flexrow">
                                     <img class="portrait" width="48" height="48" src="` +
-              this.actor.data.img +
+              this.actor.img +
               `"/>
                                     <h1>` +
               game.i18n.localize("tftloop.tested") +
@@ -554,7 +553,7 @@ export default class tftloopActorSheet extends ActorSheet {
               reRollDiceFormula +
               `" type="button">
                                         ` +
-              game.i18n.localize("tftloop.reroll") +
+              game.i18n.localize("tftloop.push") +
               `
                                     </button>
                                 </div>
