@@ -55,8 +55,8 @@ optgroup{
 }
 
 #client-settings nav.tabs {
-    flex: 0 0 32px;
-    line-height: 16px;
+   
+    line-height: 32px;
     font-size: 16px;
     border-bottom: 1px solid #000;
   }
@@ -65,7 +65,7 @@ optgroup{
     box-shadow: 2px 2px @drop-shadow-color;
 }
 
-a.entity-link {
+a.content-link {
     background: none;
     padding: none;
     border: none;
@@ -86,6 +86,8 @@ button:hover {
     background-color: @background;
     background: @background;
 }
+
+
 
 a:hover {
     box-shadow: none;
@@ -170,8 +172,31 @@ button {
     background-color: transparent;
 	margin-bottom: 0px;
     margin-top: 5px;
-    max-height: 25px;
+    max-height: 32px;
     line-height: 16px;
+
+    .item:hover{
+        cursor: pointer;
+    }
+}
+
+.sheet.journal-entry{
+    background: unset;
+    color: @black;
+    .journal-sidebar{
+        background: unset;
+        color: @black;
+    }
+}
+
+.sheet{
+    .journal-sidebar{
+        background-color: @background;
+        border: 1px solid @black;
+        border-radius: 5px;
+        padding: 5px;
+        margin: 5px;
+    }
 }
 
 .tabs {
@@ -198,7 +223,7 @@ select:focus {
     border: 1px solid @highlight;
 }
 
-.editor-content {
+.journal-entry-content {
     padding-left: 3px;
    
     img {
@@ -245,7 +270,7 @@ select:focus {
 
     .us-text {
         color: @highlight;
-        font-weight: 300;
+        font-weight: 600;
     }
 
     .example-text {
