@@ -13,11 +13,11 @@
             <li class="iconic-item flexrow">
                 <div class="item-name flexrow">
                     {{localize "tftloop.iconic"}}
-                    <input name="data.iconicItem.desc" type="text" value="{{data.data.iconicItem.desc}}"/>
+                    <input name="system.iconicItem.desc" type="text" value="{{data.system.iconicItem.desc}}"/>
                 </div>
 
                 <div class="item-plus">+</div>
-                <div class="item-bonus">{{data.data.iconicItem.bonus}}</div>
+                <div class="item-bonus">{{data.system.iconicItem.bonus}}</div>
                 <div class="item-control">&nbsp;</div>
             </li>
 
@@ -25,7 +25,7 @@
             <li class="info-item flexrow item" data-item-id="{{item._id}}" draggable="true">
                 <input class="item-name inline-edit" data-field="name" type="text" value="{{item.name}}"/>
                 <div class="item-plus">+</div>
-                <input class="item-bonus inline-edit" data-field="data.bonus" type="text" value="{{item.data.bonus}}" data-dtype="Number"/>
+                <input class="item-bonus inline-edit" data-field="system.bonus" type="text" value="{{item.system.bonus}}" data-dtype="Number"/>
                 <div class="item-control">
                     <a class="item-open">
                         <i class="fas fa-edit"></i>
@@ -44,7 +44,7 @@
         <h4 class="section-header">{{localize "tftloop.hideout"}}</h4>
         <div class="hideout-text">
            
-            <textarea  data-field="data.hideout" id="hideout" name="data.hideout" rows="5">{{data.data.hideout}}</textarea>
+            <textarea  data-field="data.hideout" id="hideout" name="system.hideout" rows="5">{{data.system.hideout}}</textarea>
         </div>
     </div>
 </div>

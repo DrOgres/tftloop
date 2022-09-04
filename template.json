@@ -64,7 +64,8 @@
                 "value": "Notes"
             },
             "dicePool": 0, 
-            "exp": 0
+            "exp": 0,
+            "curLuck": 5
         },
         "teen": {
             "templates": [

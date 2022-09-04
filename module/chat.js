@@ -28,7 +28,7 @@ async function onReroll(event) {
 
     let rolled = card.dataset.tested;
 
-    let r = new Roll(rollFormula, actor.data.data);
+    let r = new Roll(rollFormula, actor.system.data);
     await r.evaluate();
     
     let rollValue = r.total;
@@ -48,7 +48,7 @@ async function onReroll(event) {
     let chatHTML = `
         <span class="flavor-text">
             <div class="chat-header flexrow">
-                <img class="portrait" width="48" height="48" src="` + actor.data.img + `"/>
+                <img class="portrait" width="48" height="48" src="` + actor.img + `"/>
                 <h1>` + game.i18n.localize("tftloop.rerolled") + `: ` + rolled + `</h1>
             </div>
             
@@ -63,7 +63,7 @@ async function onReroll(event) {
             </div>
             <div class="reroll-info" data-owner-id="` + actor.id + `">
                 <button class="reroll" data-owner-id="` + actor.id + `" data-tested="` + rolled + `" data-dicepool="` + reRollDiceFormula + `" type="button">
-                    ` + game.i18n.localize("tftloop.reroll") + `
+                    ` + game.i18n.localize("tftloop.push") + `
                 </button>
             </div>
             <div class="bug">
