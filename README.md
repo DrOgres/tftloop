@@ -19,7 +19,7 @@ feedback is always welcome.
     </li>
 </ul>
 
-<h3>Version 2.0.0</h3>
+<h3>Version 2.0.1</h3>
 
 * Foundry V10 compatibility update
 
