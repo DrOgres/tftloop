@@ -19,6 +19,10 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.0.0</h3>
+
+* Foundry V10 compatibility update
+
 <h3>Version 1.2.7</h3>
 
 * Updated Japanese localization
