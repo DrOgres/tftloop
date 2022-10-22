@@ -185,24 +185,32 @@ button {
 .sheet.journal-entry .journal-entry-content{
     background: unset;
     color: @black;
-    .journal-sidebar{
-        background: unset;
-        color: @black;
-    }
+
 
     background: @background;
 	padding: 10px;
 }
 
-.sheet{
+.sheet.journal-entry .pages-list .directory-item{
+    border-bottom: @footer-color 1px solid;
+}
+
+.sheet.journal-entry
     .journal-sidebar{
+        background: unset;
+        color: @black;
         background-color: @background;
         border: 1px solid @black;
         border-radius: 5px;
         padding: 5px;
         margin: 5px;
     }
-}
+
+    .sheet.journal-entry .pages-list .page-heading .page-title:hover{
+        cursor: pointer;
+        color:@highlight;
+    text-shadow: none;
+    }
 
 .tabs {
     .item.active {
