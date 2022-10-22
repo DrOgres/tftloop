@@ -134,11 +134,13 @@ button {
 .sheet-tabs .item:hover {
   cursor: pointer;
 }
-.sheet.journal-entry {
+.sheet.journal-entry .journal-entry-content {
   background: unset;
   color: black;
+  background: white;
+  padding: 10px;
 }
-.sheet.journal-entry .journal-sidebar {
+.sheet.journal-entry .journal-entry-content .journal-sidebar {
   background: unset;
   color: black;
 }
@@ -162,13 +164,13 @@ select:focus {
   box-shadow: none;
   border: 1px solid #f38704;
 }
-.journal-entry-content {
+.journal-entry-content .journal-entry-pages {
   padding-left: 3px;
 }
-.journal-entry-content img {
+.journal-entry-content .journal-entry-pages img {
   border: none;
 }
-.journal-entry-content table {
+.journal-entry-content .journal-entry-pages table {
   background: #fff1da;
   border: none;
   font-family: AvantBold;
@@ -177,17 +179,17 @@ select:focus {
   margin-left: auto;
   margin-right: auto;
 }
-.journal-entry-content table th {
+.journal-entry-content .journal-entry-pages table th {
   padding-left: 3px;
   background: black;
   color: white;
   text-align: left;
   font-family: AvantBold;
 }
-.journal-entry-content table tr:nth-child(odd) {
+.journal-entry-content .journal-entry-pages table tr:nth-child(odd) {
   background: #fedd9e;
 }
-.journal-entry-content .chapter-header {
+.journal-entry-content .journal-entry-pages .chapter-header {
   font-family: AvantBold;
   font-weight: 900;
   color: #ee7113;
@@ -195,16 +197,16 @@ select:focus {
   font-style: bold;
   padding-left: 5px;
 }
-.journal-entry-content .lore-text {
+.journal-entry-content .journal-entry-pages .lore-text {
   font-family: SabonItalic;
   padding-left: 5px;
   text-indent: 0px;
 }
-.journal-entry-content .us-text {
+.journal-entry-content .journal-entry-pages .us-text {
   color: #f38704;
   font-weight: 600;
 }
-.journal-entry-content .example-text {
+.journal-entry-content .journal-entry-pages .example-text {
   font-size: 0.9em;
   padding-left: 8px;
   border-left: dotted 2px #f38704;
@@ -212,39 +214,39 @@ select:focus {
   background: #fff1da;
   break-inside: avoid;
 }
-.journal-entry-content .example-text p {
+.journal-entry-content .journal-entry-pages .example-text p {
   text-indent: 0px;
 }
-.journal-entry-content .major-heading {
+.journal-entry-content .journal-entry-pages .major-heading {
   display: grid;
   grid-template-columns: 140px auto;
   justify-items: stretch;
 }
-.journal-entry-content .chap-number {
+.journal-entry-content .journal-entry-pages .chap-number {
   font-family: AvantBold;
   color: white;
   background-image: url('img/grunge.png');
   background-color: #fbba1c;
   object-fit: cover;
 }
-.journal-entry-content .grunge {
+.journal-entry-content .journal-entry-pages .grunge {
   position: absolute;
   width: 140px;
   z-index: 7;
 }
-.journal-entry-content .grunge img {
+.journal-entry-content .journal-entry-pages .grunge img {
   border: none;
   object-fit: cover;
 }
-.journal-entry-content .two-col {
+.journal-entry-content .journal-entry-pages .two-col {
   column-count: 2;
   column-gap: 3em;
   margin-top: 10px;
   margin-right: 10px;
   text-align: justify;
 }
-.journal-entry-content h5 {
-  font-size: 1.2em;
+.journal-entry-content .journal-entry-pages h5 {
+  font-size: 1em;
   font-family: AvantBold, Arial, Helvetica, sans-serif;
   font-weight: 600;
   color: #f38704;
@@ -252,20 +254,20 @@ select:focus {
   margin-block-end: 0.5em;
   font-style: italic;
 }
-.journal-entry-content h1 {
-  font-size: 3.5em;
+.journal-entry-content .journal-entry-pages h1 {
+  font-size: 1.5em;
   border-color: black;
 }
-.journal-entry-content h2 {
-  font-size: 1.5em;
+.journal-entry-content .journal-entry-pages h2 {
+  font-size: 1.2em;
   border: none;
   text-align: left;
 }
-.journal-entry-content h3 {
+.journal-entry-content .journal-entry-pages h3 {
   font-family: AvantBold;
   text-align: left;
 }
-.journal-entry-content p {
+.journal-entry-content .journal-entry-pages p {
   text-indent: none;
 }
 .black-bar {

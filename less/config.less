@@ -180,13 +180,18 @@ button {
     }
 }
 
-.sheet.journal-entry{
+
+
+.sheet.journal-entry .journal-entry-content{
     background: unset;
     color: @black;
     .journal-sidebar{
         background: unset;
         color: @black;
     }
+
+    background: @background;
+	padding: 10px;
 }
 
 .sheet{
@@ -223,7 +228,7 @@ select:focus {
     border: 1px solid @highlight;
 }
 
-.journal-entry-content {
+.journal-entry-content .journal-entry-pages{
     padding-left: 3px;
    
     img {
@@ -321,7 +326,7 @@ select:focus {
     }
 
     h5 {
-        font-size: 1.2em;
+        font-size: 1em;
         font-family: AvantBold, Arial, Helvetica, sans-serif;
         font-weight: 600;
         color: @highlight;
@@ -331,12 +336,12 @@ select:focus {
     }
 
     h1 {
-        font-size: 3.5em;
+        font-size: 1.5em;
         border-color: @black;
     }
 
     h2 {
-        font-size: 1.5em;
+        font-size: 1.2em;
         border: none;
         text-align: left;
     }
