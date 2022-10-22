@@ -1,85 +1,92 @@
 {
-    "id": "tftloop",
-    "title": "Tales from the Loop - Official",
-    "description": "The Official System for Playing Tales from the Loop on Foundry VTT - Now with Things from the Flood support.",
-    "authors": [
-        { "name": "Dr Ogres",
-          "url": "https://github.com/DrOgres"
-      }
-      ],
-    "url": "https://github.com/DrOgres/tftloop",
-    "flags": {},
-    "version": "2.0.1",
-    "compatibility": {
-        "minimum": "10",
-        "verified": "10"
-       
-      },
-    "scripts": [],
-    "media": [
-		{
-			"type": "cover", 
-			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.png?raw=true"
-		},
-		{
-			"type": "screenshot",
-			"url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.jpg?raw=true"
-		}
-	],
-    "background": "systems/tftloop/img/loop_system.png",
-    "esmodules": [
-        "tftloop.js"
-    ],
-    "styles": [
-        "tftloop.css"
-    ],
-    "languages": [
-        {
-            "lang": "en",
-            "name": "English",
-            "path": "lang/en.json"
-        },
-        {
-            "lang": "fr",
-            "name": "Français",
-            "path": "lang/fr.json"
-        },
-        {
-            "lang": "de",
-            "name": "Deutsche",
-            "path": "lang/de.json"
-        },
-        {
-            "lang": "es",
-            "name": "Español",
-            "path": "lang/es.json"
-        },
-        {
-            "lang": "pt-BR",
-            "name": "Português (Brasil)",
-            "path": "lang/pt-br.json"
-        },
-        {
-            "lang": "sv-SE",
-            "name": "Svenska (Sverige)",
-            "path": "lang/sv-SE.json"
-        },
-        {
-            "lang": "ja",
-            "name": "日本語",
-            "path": "lang/ja.json"
-        },
-        {
-            "lang": "pl",
-            "name": "Polski",
-            "path": "lang/pl.json"
-        }
-    ],
-   
-    "socket": false,
-    "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
-    "download": "https://github.com/DrOgres/tftloop/releases/latest/download/system.zip",
-    "protected": false,
-    "gridDistance": 1,
-    "gridUnits": "meter"
+  "id": "tftloop",
+  "title": "Tales from the Loop - Official",
+  "description": "The Official System for Playing Tales from the Loop on Foundry VTT - Now with Things from the Flood support.",
+  "authors": [
+    {
+      "name": "Dr Ogres",
+      "url": "https://github.com/DrOgres",
+      "flags": {}
+    }
+  ],
+  "url": "https://github.com/DrOgres/tftloop",
+  "version": "2.0.1",
+  "compatibility": {
+    "minimum": "10"
+  },
+  "media": [
+    {
+      "type": "cover",
+      "url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.png?raw=true",
+      "loop": false,
+      "flags": {}
+    },
+    {
+      "type": "screenshot",
+      "url": "https://github.com/DrOgres/tftloop/blob/main/img/loop_system.jpg?raw=true",
+      "loop": false,
+      "flags": {}
+    }
+  ],
+  "background": "systems/tftloop/img/loop_system.png",
+  "esmodules": [
+    "tftloop.js"
+  ],
+  "styles": [
+    "tftloop.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    },
+    {
+      "lang": "fr",
+      "name": "Français",
+      "path": "lang/fr.json",
+      "flags": {}
+    },
+    {
+      "lang": "de",
+      "name": "Deutsche",
+      "path": "lang/de.json",
+      "flags": {}
+    },
+    {
+      "lang": "es",
+      "name": "Español",
+      "path": "lang/es.json",
+      "flags": {}
+    },
+    {
+      "lang": "pt-BR",
+      "name": "Português (Brasil)",
+      "path": "lang/pt-br.json",
+      "flags": {}
+    },
+    {
+      "lang": "sv-SE",
+      "name": "Svenska (Sverige)",
+      "path": "lang/sv-SE.json",
+      "flags": {}
+    },
+    {
+      "lang": "ja",
+      "name": "日本語",
+      "path": "lang/ja.json",
+      "flags": {}
+    },
+    {
+      "lang": "pl",
+      "name": "Polski",
+      "path": "lang/pl.json",
+      "flags": {}
+    }
+  ],
+  "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
+  "download": "https://github.com/DrOgres/tftloop/releases/download/2.0.1/system.zip",
+  "gridDistance": 1,
+  "gridUnits": "meter"
 }
