@@ -1,8 +1,19 @@
 {
+    "SETTINGS": {
+        "homebrewKidTypes": "Types d'enfants",
+        "polishedition": "Utiliser les archétypes de la version Polonaise de TftL.",
+        "francein80s": "Utiliser les archétypes du supplément 'La France des Années 80'."
+    },
+
+    "ACTOR": {
+        "TypeKid": "Enfant",
+        "TypeTeen": "Adolescent"
+    },
+
     "tftloop": {
         "attributesSkills": "Attributs/Compétences",
         "experience": "Expérience",
-        "type": "Type",
+        "type": "Stéréotype",
         "bookworm": "Intello",
         "geek": "Geek",
         "hick": "Campagnard",
@@ -52,7 +63,7 @@
         "newItem": "Nouvel Objet",
         "reset": "Effacer",
         "addexp": "Click pour ajouter de l'Experience, Click droit pour le dépenser!",
-        "currentPool": "Current Pool",
+        "currentPool": "Réserve de dés",
         "roll": "Lancé!",
         "cancel": "Annuler",
         "useItem": "Utiliser l'Objet",
@@ -62,16 +73,44 @@
         "diceRoll": "Dice Roll Dialog",
         "success": "Succès",
         "successes": "Succès",
-        "failure": "Echec",
+        "failure": "Échec",
         "tested": "Test",
         "rerolled": "Relancé",
         "reroll": "Relancer",
+        "push": "Forcer",
         "rolling": "Lancer",
         "relationship": "Relation",
         "natureofRelationship": "Nature de la Relation",
         "relationWith": "Relation Avec",
         "item": "Objet",
-        "bonus": "Prime"
+        "bonus": "Bonus",
+        "main": "Fiche"
+    },
+
+    "tftflood": {
+        "shame": "Honte",
+        "hacker": "Hacker",
+        "jock": "Sportif",
+        "wolf": "Loup Solitaire",
+        "motorhead": "Mécano",
+        "partyanimal": "Fêtard",
+        "raver": "Raveur",
+        "rocker": "Rockeur",
+        "seeker": "Mystique",
+        "snob": "Snobinard",
+        "streetkid": "Zonard",
+        "broken": "Brisé & Traumatisé",
+        "scars": "Séquelles",
+        "newScar": "Nouvelle séquelle",
+        "accepted": "Acceptée",
+        "friction": "Friction",
+        "scar": "Séquelle",
+        "shortDesc": "Description courte"
+    },
+
+    "polish": {
+        "scout": "Scout",
+        "punk": "Punk"
     },
 
     "france": {
@@ -79,5 +118,11 @@
         "showoff": "Frimeur",
         "inventor": "Inventeur",
         "rolePlayer": "Rôliste"
+    },
+
+    "france90": {
+        "activist": "Activiste",
+        "militant": "Militant",
+        "survivalist": "Survivaliste"
     }
 }
