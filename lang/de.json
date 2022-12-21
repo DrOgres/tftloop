@@ -71,6 +71,46 @@
         "natureofRelationship": "Natur der Beziehung",
         "relationWith": "Beziehung mit",
         "item": "Gegenstand",
-        "bonus": "Bonus"
+        "bonus": "Bonus",
+        "main": "Übersicht"
+    },
+
+    "tftflood": {
+        "shame": "Schande",
+        "hacker": "Hacker",
+        "jock": "Sportskanone",
+        "wolf": "Einsamer Wolf",
+        "motorhead": "Schrauber",
+        "partyanimal": "Partylöwe",
+        "raver": "Raver",
+        "rocker": "Rocker",
+        "seeker": "Sucher",
+        "snob": "Snob",
+        "streetkid": "Straßenkind",
+        "broken": "Gebrochen und Verängstigt",
+        "scars": "Narben",
+        "newScar": "Neue Narbe",
+        "accepted": "Akzeptiert",
+        "friction": "Spannung",
+        "scar": "Narbe",
+        "shortDesc": "Kurze Beschreibung"
+    },
+
+    "SETTINGS": {
+        "homebrewKidTypes": "Zusätzliche Archetypen",
+		"polishedition": "Aktiviere zusätzliche Archetypen aus der polnischen Version von TFTL.",
+        "francein80s": "Aktiviere zusätzliche Archetypen aus der französischen Version von TFTL."
+    },
+	
+	"polish": {
+		"scout": "Scout",
+		"punk": "Punk"
+	},
+	
+    "france": {
+        "resourceful": "Denker",
+        "showoff": "Angeber",
+        "inventor": "Erfinder",
+        "rolePlayer": "Rollenspieler"
     }
 }
