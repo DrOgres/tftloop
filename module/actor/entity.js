@@ -17,21 +17,12 @@ export default class tftloopActor extends Actor {
 
     
     static async create(data, options = {}) {
-        data.token = data.token || {};
-
         if (data.type === "kid" || data.type === "teen") {
             mergeObject(
-                data.token, {
-                    vision: true,
-                    dimSight: 30,
-                    brightSight: 0,
-                    actorLink: true,
-                    disposition: 1
-                }, {
+              {
                     overwrite: false
             });
         }
-
         return super.create(data, options);
     }
 }
