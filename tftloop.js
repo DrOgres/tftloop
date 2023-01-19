@@ -6,6 +6,7 @@ import tftloopActor from "./module/actor/entity.js";
 import { registerSystemSettings } from "./module/settings.js";
 import tftloopItemSheet from "./module/item/sheet.js";
 import tftloopItem from "./module/item/entity.js";
+import { tftloopRoll } from "./module/macros.js";
 
 //dice so nice hooks for us to use the custom dice
 Hooks.on('diceSoNiceReady', (dice3d) => {
@@ -46,6 +47,11 @@ Hooks.on("preCreateItem", (createData) => {
 });
 Hooks.on("renderChatLog", (_app, html, _data) => Chat.addChatListeners(html));
 Hooks.on("renderChatMessage", (app, html, data) => Chat.hideChatActionButtons(app, html, data));
+
+// Hooks.once("ready", function() {
+//     console.log("TFTLOOP | Ready", data);
+//         Hooks.on("hotbarDrop", (bar, data, slot) => tftloopRoll(data, slot));
+// });
 
 
 Hooks.once("init", function() {

@@ -1,18 +1,31 @@
+
+import { tftloopRoll } from "../macros.js";
+
 export default class tftloopActorSheet extends ActorSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
-      template: "systems/tftloop/templates/actors/character.hbs",
-      classes: ["tftloop", "sheet", "actor", "character", "kid"],
-      width: 800,
-      height: 950,
-      tabs: [
-        {
-          navSelector: ".sheet-tabs",
-          contentSelector: ".sheet-body",
-          initial: "main",
-        },
-      ],
-    });
+
+    let loopOptions = super.defaultOptions;
+    
+    loopOptions.template = "systems/tftloop/templates/actors/character.hbs";
+    loopOptions.classes.push("tftloop");
+    loopOptions.classes.push("sheet");
+    loopOptions.classes.push("actor");
+    loopOptions.classes.push("character");
+    loopOptions.classes.push("kid");
+    loopOptions.width = 800;
+    loopOptions.height = 950;
+    loopOptions.tabs = [
+      { 
+        navSelector: ".sheet-tabs",
+        contentSelector: ".sheet-body",
+        initial: "main",
+      },
+    ];
+    loopOptions.dragDrop.push({dragSelector: ".attribute-list .attribute", dropSelector: null});
+    loopOptions.dragDrop.push({dragSelector: ".skill-list .skill", dropSelector: null});
+
+    return loopOptions;
+
   }
 
   get template() {
@@ -79,6 +92,34 @@ export default class tftloopActorSheet extends ActorSheet {
     super.activateListeners(html);
   }
 
+
+  _onDragStart(event) {
+    
+    console.log("start drag", event.srcElement.firstElementChild.dataset.rolled);
+    console.log("start drag skill?", event.currentTarget.classList.contains("skill"));
+    console.log("start drag attribute?", event.currentTarget.classList.contains("attribute"));
+    
+    if(event.currentTarget.classList.contains("skill")||event.currentTarget.classList.contains("attribute")) {
+      console.log("a skill or attribute");
+      const rollItemDragged = event.srcElement.firstElementChild.dataset.rolled;
+      console.log("rollItemDragged", rollItemDragged);
+
+      tftloopRoll(rollItemDragged);
+      
+      
+      return;
+    } else {
+      console.log("not a skill or attribute");
+      super._onDragStart(event);
+      return;
+    }
+  
+    
+
+
+
+  }
+
   _onItemDrag(event) {
     event.preventDefault();
 
@@ -111,17 +152,17 @@ export default class tftloopActorSheet extends ActorSheet {
     return;
   }
 
-  async _onAddToPool(event) {
-    event.preventDefault();
 
-    let actor = this.actor;
+  async _poolBuilder(rolled, actor){
+
     let data = actor.system;
     let items = actor.items.filter(function (item) {
       return item.type == "item";
     });
 
-    let element = event.currentTarget;
-    let rolled = element.dataset.rolled;
+
+    console.log("pool builder", rolled, data);
+
     let statRolled = "";
     let conditionPenalty = "";
 
@@ -591,6 +632,20 @@ export default class tftloopActorSheet extends ActorSheet {
     } else {
       ui.notifications.info(game.i18n.localize("tftloop.brokeFail"));
     }
+
+  }
+
+
+
+  async _onAddToPool(event) {
+    event.preventDefault();
+
+    let actor = this.actor;
+    let element = event.currentTarget;
+    let rolled = element.dataset.rolled;
+
+    await this._poolBuilder(rolled, actor);
+
   }
 
   _onExpChange(event) {
