@@ -621,11 +621,11 @@ export default class tftloopActorSheet extends ActorSheet {
               }),
               type: CONST.CHAT_MESSAGE_TYPES.OTHER,
               roll: r,
-              rollMode: game.settings.get("core", "rollMode"),
               content: chatHTML,
             };
             console.log("TFTLOOP | Chat Options: ", chatOptions);
-            ChatMessage.create(chatOptions);
+            ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
+            await ChatMessage.create(chatOptions);
           } else {
             data.dicePool = 0;
           }
