@@ -19,6 +19,8 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.0.5</h3>
+* Fixed bug: Roll Mode not being set properly on item rolls. This closes issue #39
 
 <h3>Version 2.0.4</h3>
 * Added drag and drop macro creation for tests on skills and attributes. This closes issue #31
