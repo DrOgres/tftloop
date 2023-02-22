@@ -19,6 +19,10 @@ feedback is always welcome.
     </li>
 </ul>
 
+
+<h3>Version 2.0.5</h3>
+* Added drag and drop macro creation for tests on skills and attributes. This closes issue #31
+
 <h3>Version 2.0.2</h3>
 * Css fix for unreadable journal sidebar also covers changes to v10 journals in general.
 
