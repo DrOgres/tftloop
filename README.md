@@ -20,7 +20,7 @@ feedback is always welcome.
 </ul>
 
 
-<h3>Version 2.0.5</h3>
+<h3>Version 2.0.4</h3>
 * Added drag and drop macro creation for tests on skills and attributes. This closes issue #31
 
 <h3>Version 2.0.2</h3>
