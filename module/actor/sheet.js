@@ -1,11 +1,9 @@
-
 import { tftloopRoll } from "../macros.js";
 
 export default class tftloopActorSheet extends ActorSheet {
   static get defaultOptions() {
-
     let loopOptions = super.defaultOptions;
-    
+
     loopOptions.template = "systems/tftloop/templates/actors/character.hbs";
     loopOptions.classes.push("tftloop");
     loopOptions.classes.push("sheet");
@@ -15,17 +13,22 @@ export default class tftloopActorSheet extends ActorSheet {
     loopOptions.width = 800;
     loopOptions.height = 950;
     loopOptions.tabs = [
-      { 
+      {
         navSelector: ".sheet-tabs",
         contentSelector: ".sheet-body",
         initial: "main",
       },
     ];
-    loopOptions.dragDrop.push({dragSelector: ".attribute-list .attribute", dropSelector: null});
-    loopOptions.dragDrop.push({dragSelector: ".skill-list .skill", dropSelector: null});
+    loopOptions.dragDrop.push({
+      dragSelector: ".attribute-list .attribute",
+      dropSelector: null,
+    });
+    loopOptions.dragDrop.push({
+      dragSelector: ".skill-list .skill",
+      dropSelector: null,
+    });
 
     return loopOptions;
-
   }
 
   get template() {
@@ -58,7 +61,7 @@ export default class tftloopActorSheet extends ActorSheet {
       actor.update({ "system.luck.max": maxLuck });
       actor.update({ "system.curLuck": curLuck });
     }
-    
+
     sheet.francein80s = game.settings.get("tftloop", "francein80s")
       ? true
       : false;
@@ -92,32 +95,36 @@ export default class tftloopActorSheet extends ActorSheet {
     super.activateListeners(html);
   }
 
-
   _onDragStart(event) {
-    
-    console.log("start drag", event.srcElement.firstElementChild.dataset.rolled);
-    console.log("start drag skill?", event.currentTarget.classList.contains("skill"));
-    console.log("start drag attribute?", event.currentTarget.classList.contains("attribute"));
-    
-    if(event.currentTarget.classList.contains("skill")||event.currentTarget.classList.contains("attribute")) {
+    console.log(
+      "start drag",
+      event.srcElement.firstElementChild.dataset.rolled
+    );
+    console.log(
+      "start drag skill?",
+      event.currentTarget.classList.contains("skill")
+    );
+    console.log(
+      "start drag attribute?",
+      event.currentTarget.classList.contains("attribute")
+    );
+
+    if (
+      event.currentTarget.classList.contains("skill") ||
+      event.currentTarget.classList.contains("attribute")
+    ) {
       console.log("a skill or attribute");
       const rollItemDragged = event.srcElement.firstElementChild.dataset.rolled;
       console.log("rollItemDragged", rollItemDragged);
 
       tftloopRoll(rollItemDragged);
-      
-      
+
       return;
     } else {
       console.log("not a skill or attribute");
       super._onDragStart(event);
       return;
     }
-  
-    
-
-
-
   }
 
   _onItemDrag(event) {
@@ -152,14 +159,11 @@ export default class tftloopActorSheet extends ActorSheet {
     return;
   }
 
-
-  async _poolBuilder(rolled, actor){
-
+  async _poolBuilder(rolled, actor) {
     let data = actor.system;
     let items = actor.items.filter(function (item) {
       return item.type == "item";
     });
-
 
     console.log("pool builder", rolled, data);
 
@@ -620,7 +624,7 @@ export default class tftloopActorSheet extends ActorSheet {
               rollMode: game.settings.get("core", "rollMode"),
               content: chatHTML,
             };
-
+            console.log("TFTLOOP | Chat Options: ", chatOptions);
             ChatMessage.create(chatOptions);
           } else {
             data.dicePool = 0;
@@ -632,10 +636,7 @@ export default class tftloopActorSheet extends ActorSheet {
     } else {
       ui.notifications.info(game.i18n.localize("tftloop.brokeFail"));
     }
-
   }
-
-
 
   async _onAddToPool(event) {
     event.preventDefault();
@@ -645,7 +646,6 @@ export default class tftloopActorSheet extends ActorSheet {
     let rolled = element.dataset.rolled;
 
     await this._poolBuilder(rolled, actor);
-
   }
 
   _onExpChange(event) {
@@ -705,7 +705,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
     console.log(item);
     let field = element.dataset.field;
-      console.log(field);
+    console.log(field);
 
     return item.update({ [field]: element.value });
   }
