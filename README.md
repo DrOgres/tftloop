@@ -19,6 +19,9 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.0.6</h3>
+* Defined initiative roll to fix issue with combat tracker this closes issue #40
+
 <h3>Version 2.0.5</h3>
 * Fixed bug: Roll Mode not being set properly on item rolls. This closes issue #39
 
