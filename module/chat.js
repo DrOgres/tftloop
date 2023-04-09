@@ -81,9 +81,9 @@ async function onReroll(event) {
         speaker: ChatMessage.getSpeaker({ actor: actor, token: actor.img }),
         type: CONST.CHAT_MESSAGE_TYPES.OTHER,
         roll: r,
-        rollMode: game.settings.get("core", "rollMode"),
         content: chatHTML
     }
+    ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
+    await ChatMessage.create(chatOptions);
     
-    ChatMessage.create(chatOptions);
 }

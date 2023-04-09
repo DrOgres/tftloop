@@ -534,17 +534,16 @@ export default class tftloopActorSheet extends ActorSheet {
 
             let rollFormula = data.dicePool + "d6cs6";
 
-            console.log("TFTLOOP | Rolling Dice: " + this.actor);
+            // console.log("TFTLOOP | Rolling Dice: " + this.actor);
 
             let r = new Roll(rollFormula, this.actor.system.data);
             await r.evaluate();
 
             let rollValue = r.total;
-            console.log("DICE ROLL :" + rollValue);
             let rollTooltip = await Promise.resolve(r.getTooltip());
             let sucessText = game.i18n.localize("tftloop.failure");
             if (rollValue > 0) {
-              console.log("DICE ROLL success");
+              // console.log("DICE ROLL success");
               sucessText =
                 rollValue +
                 " " +
@@ -623,7 +622,6 @@ export default class tftloopActorSheet extends ActorSheet {
               roll: r,
               content: chatHTML,
             };
-            console.log("TFTLOOP | Chat Options: ", chatOptions);
             ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
             await ChatMessage.create(chatOptions);
           } else {
@@ -696,16 +694,16 @@ export default class tftloopActorSheet extends ActorSheet {
 
   _onItemEdit(event) {
     event.preventDefault();
-    console.log(event);
+    // console.log(event);
     let element = event.currentTarget;
     let item = this.actor.getEmbeddedDocument(
       "Item",
       element.closest(".item").dataset.itemId
     );
 
-    console.log(item);
+    // console.log(item);
     let field = element.dataset.field;
-    console.log(field);
+    // console.log(field);
 
     return item.update({ [field]: element.value });
   }
@@ -806,7 +804,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
         break;
       case "accepted":
-        console.log(item);
+        // console.log(item);
         if (item.system.accepted) {
           item.system.accepted = false;
           item.update({ "system.accepted": false });
