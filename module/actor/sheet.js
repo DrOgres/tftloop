@@ -409,7 +409,6 @@ export default class tftloopActorSheet extends ActorSheet {
       //reduce dice by conditions
       if (data.upset) {
         data.dicePool =- 1;
-        console.log("upset: ", data.dicePool);
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.upset") +
@@ -418,7 +417,6 @@ export default class tftloopActorSheet extends ActorSheet {
 
       if (data.scared) {
         data.dicePool =- 1;
-        console.log("scared: ", data.dicePool);
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.scared") +
@@ -440,7 +438,13 @@ export default class tftloopActorSheet extends ActorSheet {
           game.i18n.localize("tftloop.injured") +
           " -1</div>";
       }
-
+      
+      let poolTotal = 0
+      if(data.dicePool <= 0) {
+        poolTotal = 1;
+      } else {
+        poolTotal = data.dicePool;
+      };
       // next set up the dialog to allow the player to select an item and add any bonus dice
       // build the html for the roll dialog
       let rollHTML = `
@@ -450,7 +454,7 @@ export default class tftloopActorSheet extends ActorSheet {
                     )}: ${game.i18n.localize("tftloop." + rolled)}</h2>
                     <div class="pool-count">${game.i18n.localize(
                       "tftloop.currentPool"
-                    )}: ${data.dicePool} ${game.i18n.localize(
+                    )}: ${poolTotal} ${game.i18n.localize(
                       "tftloop.dice"
                     )}</div>
                     <div class="pool-details">
