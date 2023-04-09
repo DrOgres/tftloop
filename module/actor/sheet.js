@@ -408,9 +408,8 @@ export default class tftloopActorSheet extends ActorSheet {
 
       //reduce dice by conditions
       if (data.upset) {
-        if (data.dicePool > 0) {
-          data.dicePool -= 1;
-        }
+        data.dicePool =- 1;
+        console.log("upset: ", data.dicePool);
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.upset") +
@@ -418,9 +417,8 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.scared) {
-        if (data.dicePool > 0) {
-          data.dicePool -= 1;
-        }
+        data.dicePool =- 1;
+        console.log("scared: ", data.dicePool);
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.scared") +
@@ -428,9 +426,7 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.exhausted) {
-        if (data.dicePool > 0) {
-          data.dicePool -= 1;
-        }
+        data.dicePool =- 1;
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.exhausted") +
@@ -438,9 +434,7 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.injured) {
-        if (data.dicePool > 0) {
-          data.dicePool -= 1;
-        }
+        data.dicePool =- 1;
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.injured") +
@@ -456,7 +450,9 @@ export default class tftloopActorSheet extends ActorSheet {
                     )}: ${game.i18n.localize("tftloop." + rolled)}</h2>
                     <div class="pool-count">${game.i18n.localize(
                       "tftloop.currentPool"
-                    )}: ${data.dicePool} Dice</div>
+                    )}: ${data.dicePool} ${game.i18n.localize(
+                      "tftloop.dice"
+                    )}</div>
                     <div class="pool-details">
                         ${statRolled}
                     
