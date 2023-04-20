@@ -19,6 +19,10 @@ feedback is always welcome.
     </li>
 </ul>
 
+
+<h3>Version 2.0.8</h3>
+* Fix consition calculation this closes issue #42
+
 <h3>Version 2.0.7</h3>
 * Fix rolls for negative totals that add bonus dice. this closes issue #41
 

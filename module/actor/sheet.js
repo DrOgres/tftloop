@@ -405,10 +405,11 @@ export default class tftloopActorSheet extends ActorSheet {
             "</div>";
           break;
       }
-
+      console.log("tftloop| dice pool pre conditions: ", data.dicePool);
       //reduce dice by conditions
       if (data.upset) {
-        data.dicePool =- 1;
+        data.dicePool = data.dicePool - 1;
+        console.log("tftloop| dice pool post upset: ", data.dicePool);
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.upset") +
@@ -416,7 +417,7 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.scared) {
-        data.dicePool =- 1;
+        data.dicePool = data.dicePool - 1;
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.scared") +
@@ -424,7 +425,7 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.exhausted) {
-        data.dicePool =- 1;
+        data.dicePool = data.dicePool - 1;
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.exhausted") +
@@ -432,12 +433,14 @@ export default class tftloopActorSheet extends ActorSheet {
       }
 
       if (data.injured) {
-        data.dicePool =- 1;
+        data.dicePool = data.dicePool - 1;
         conditionPenalty +=
           '<div class="pool-detail penalty">' +
           game.i18n.localize("tftloop.injured") +
           " -1</div>";
       }
+
+      console.log("tftloop| dice pool post conditions: ", data.dicePool);
       
       let poolTotal = 0
       if(data.dicePool <= 0) {

@@ -10,7 +10,7 @@
     }
   ],
   "url": "https://github.com/DrOgres/tftloop",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "compatibility": {
     "minimum": "10"
   },
@@ -85,7 +85,6 @@
       "flags": {}
     }
   ],
-  "socket": false,
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
   "download": "https://github.com/DrOgres/tftloop/releases/download/2.0.7/system.zip",
