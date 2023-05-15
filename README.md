@@ -19,6 +19,8 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.0.9</h3>
+* Fix DSN! not respecting roll mode this closes issue #43
 
 <h3>Version 2.0.8</h3>
 * Fix consition calculation this closes issue #42
