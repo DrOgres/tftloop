@@ -611,17 +611,13 @@ export default class tftloopActorSheet extends ActorSheet {
 
             data.dicePool = 0;
 
-            if (game.dice3d) {
-              game.dice3d.showForRoll(r, game.user, true, null, false);
-            }
-
             let chatOptions = {
               user: game.user.id,
               speaker: ChatMessage.getSpeaker({
                 actor: this.actor,
                 token: this.actor.img,
               }),
-              type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+              type: CONST.CHAT_MESSAGE_TYPES.ROLL,
               roll: r,
               content: chatHTML,
             };

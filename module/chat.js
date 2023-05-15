@@ -72,18 +72,15 @@ async function onReroll(event) {
         </span>
     `
 
-    if (game.dice3d){
-        game.dice3d.showForRoll(r, game.user, true, null, false);
-    }
-
     let chatOptions = {
         user: game.user.id,
         speaker: ChatMessage.getSpeaker({ actor: actor, token: actor.img }),
-        type: CONST.CHAT_MESSAGE_TYPES.OTHER,
+        type: CONST.CHAT_MESSAGE_TYPES.ROLL,
         roll: r,
         content: chatHTML
     }
     ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
     await ChatMessage.create(chatOptions);
+
     
 }
