@@ -13,7 +13,7 @@
         {{#each relationships as |relationship id|}}
         <li class="info-item flexrow item" data-item-id="{{relationship._id}}" draggable="true">
             <input class="relationship-name inline-edit" data-field="name" type="text" value="{{name}}"/>
-            <input class="relationship-desc inline-edit" data-field="description" type="text" value="{{description}}"/>
+            <input class="relationship-desc inline-edit" data-field="description" type="text" value="{{relationship.system.description}}"/>
             <div class="item-control">
                 <a class="item-open">
                     <i class="fas fa-edit"></i>
