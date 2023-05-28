@@ -1,4 +1,11 @@
 {
+    "TYPES.Actor.kid": "Kid",
+    "TYPES.Actor.teen": "Teen",
+    "TYPES.Item.item": "Föremål",
+    "TYPES.Item.scar": "Ärr",
+    "TYPES.Item.relationship": "Relation",
+
+
     "tftloop": {
         "attributesSkills": "Egenskaper/Färdigheter",
         "experience": "Erfarenhet",

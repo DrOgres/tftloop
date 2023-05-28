@@ -1,4 +1,13 @@
 {
+
+        
+    "TYPES.Actor.kid": "Kid",
+    "TYPES.Actor.teen": "Teen",
+    "TYPES.Item.item": "Objeto",
+    "TYPES.Item.scar": "Trauma",
+    "TYPES.Item.relationship": "Relación",
+
+
     "tftloop": {
         "attributesSkills": "Atributos/Habilidades",
         "experience": "Experiencia",

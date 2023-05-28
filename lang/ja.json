@@ -1,4 +1,13 @@
 {
+
+    
+    "TYPES.Actor.kid": "Kid",
+    "TYPES.Actor.teen": "Teen",
+    "TYPES.Item.item": "ｱｲﾃﾑ",
+    "TYPES.Item.scar": "傷心",
+    "TYPES.Item.relationship": "人間関係",
+
+
     "tftloop": {
         "attributesSkills": "能力値/技能",
         "experience": "経験値",
