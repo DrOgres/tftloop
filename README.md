@@ -19,6 +19,9 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.1.1</h3>
+* Update to Foundry v11 compatability
+
 <h3>Version 2.0.10</h3>
 * Fix relationship type field and iconic item bonus display on teen sheet this closes issue #44
 
