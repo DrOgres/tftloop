@@ -262,7 +262,8 @@ select:focus {
 }
 .journal-entry-content .journal-entry-pages h1 {
   font-size: 1.5em;
-  border-color: black;
+  border-bottom: none;
+  border-left: 15px solid #f38704;
 }
 .journal-entry-content .journal-entry-pages h2 {
   font-size: 1.2em;
