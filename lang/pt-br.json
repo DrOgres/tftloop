@@ -1,8 +1,8 @@
 {
-    "TYPES.Actor.kid": "Kid",
-    "TYPES.Actor.teen": "Teen",
+    "TYPES.Actor.kid": "Criança",
+    "TYPES.Actor.teen": "Adolescente",
     "TYPES.Item.item": "Item",
-    "TYPES.Item.scar": "Scar",
+    "TYPES.Item.scar": "Cicatriz",
     "TYPES.Item.relationship": "Relacionamento",
 
 
@@ -75,6 +75,7 @@
         "rerolled": "Rerrolado",
         "reroll": "Rerrolar",
         "rolling": "Rolando",
+        "push": "Forçar",
         "relationship": "Relacionamento",
         "natureofRelationship": "Natureza do Relacionamento",
         "relationWith": "Relação com",
