@@ -38,6 +38,34 @@ Hooks.on('diceSoNiceReady', (dice3d) => {
 		colorset: "loop-orange",
 		system: "tftloop"
 	});
+
+    dice3d.addSystem({id: "tftflood", name : "Things from the Flood"}, "force");
+
+    dice3d.addColorset({
+        name: 'flood-violet',
+        description : "Things from the Flood Dice",
+        category : "Things from the Flood",
+        foreground : '#8F2C49',
+        background : '#8F2C49',
+        outline : '#8F2C49',
+        edge : '#8F2C49',
+        texture : '#8F2C49',
+        material : 'plastic'
+    });
+
+    dice3d.addDicePreset({
+        type: "d6",
+        labels: [
+            "systems/tftloop/img/dice/face1f.png",
+            "systems/tftloop/img/dice/face2f.png",
+            "systems/tftloop/img/dice/face3f.png",
+            "systems/tftloop/img/dice/face4f.png",
+            "systems/tftloop/img/dice/face5f.png",
+            "systems/tftloop/img/dice/face6f.png"
+        ],
+        colorset: "flood-violet",
+        system: "tftflood"
+    });
 });
 
 Hooks.on("preCreateItem", (createData) => {
