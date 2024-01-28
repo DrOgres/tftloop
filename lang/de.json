@@ -1,7 +1,5 @@
 {
 
-
-    
     "TYPES.Actor.kid": "Kid",
     "TYPES.Actor.teen": "Teen",
     "TYPES.Item.item": "Gegenstand",
@@ -61,12 +59,12 @@
         "newItem": "Neuer Gegenstand",
         "reset": "Zurücksetzen",
         "addexp": "Linksklick, um Erfahrungspunkte hinzuzufügen und Rechtsklick, um Erfahrungspunkte auszugen.",
-        "dice": "Würfel",
         "currentPool": "Gegenwärtiger Pool",
-        "roll": "Würfeln",
+        "roll": "Würfeln!",
         "cancel": "Abbrechen",
         "useItem": "Gegenstand verwenden",
         "none": "Nichts",
+        "dice": "Würfel",
         "bonusDice": "Bonus Würfel",
         "brokeFail": "Der Wurf schlägt immer fehl, wenn du den Zustand 'Gebrochen' hast.",
         "diceRoll": "Wüfel Dialog",
@@ -76,6 +74,7 @@
         "tested": "Gewürfelt",
         "rerolled": "Wiederholung des Wurfs",
         "reroll": "Wiederholung",
+        "push": "Strapazieren",
         "rolling": "Würfelnd",
         "relationship": "Beziehung",
         "natureofRelationship": "Natur der Beziehung",
