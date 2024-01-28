@@ -19,6 +19,9 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.1.2</h3>
+* Localization updates
+
 <h3>Version 2.1.1</h3>
 * Update to Foundry v11 compatability
 
