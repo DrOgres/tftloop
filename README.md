@@ -19,6 +19,10 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.1.3</h3>
+* Token default settings updated [#49](https://github.com/DrOgres/tftloop/issues/49)
+* super minor css changes for tabs on UI elements
+
 <h3>Version 2.1.2</h3>
 * Localization updates
 

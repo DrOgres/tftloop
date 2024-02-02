@@ -167,6 +167,8 @@ button {
     background: @white;
 }
 
+
+
 .sheet-tabs{
     padding: 5px;
     background-color: transparent;
@@ -177,6 +179,14 @@ button {
 
     .item:hover{
         cursor: pointer;
+    }
+
+    &[aria-role="Form Tab Navigation"]{
+        background: @background;
+        border: 1px solid @black;
+        border-radius: 5px;
+        padding: 1px;
+        margin: 5px;
     }
 }
 

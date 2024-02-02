@@ -4,13 +4,13 @@
   "description": "The Official System for Playing Tales from the Loop on Foundry VTT - Now with Things from the Flood support.",
   "authors": [
     {
-      "name": "Dr Ogres",
+      "name": "DrOgres",
       "url": "https://github.com/DrOgres",
       "flags": {}
     }
   ],
   "url": "https://github.com/DrOgres/tftloop",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "compatibility": {
     "minimum": "10",
     "verified": "11",
@@ -89,7 +89,7 @@
   ],
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
-  "download": "https://github.com/DrOgres/tftloop/releases/download/2.1.1/system.zip",
+  "download": "https://github.com/DrOgres/tftloop/releases/download/2.1.3/system.zip",
   "gridDistance": 1,
   "gridUnits": "meter"
 }

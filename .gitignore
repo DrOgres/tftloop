@@ -20,3 +20,8 @@ img/dice/face6.png~
 
 system.zip
 system.1.2.7.zip
+
+
+node_modules/
+package-lock.json
+package.json

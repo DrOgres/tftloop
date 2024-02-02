@@ -134,6 +134,13 @@ button {
 .sheet-tabs .item:hover {
   cursor: pointer;
 }
+.sheet-tabs[aria-role="Form Tab Navigation"] {
+  background: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px;
+  margin: 5px;
+}
 .sheet.journal-entry .journal-entry-content {
   background: unset;
   color: black;
