@@ -20,38 +20,49 @@ feedback is always welcome.
 </ul>
 
 <h3>Version 2.1.3</h3>
+
 * Token default settings updated [#49](https://github.com/DrOgres/tftloop/issues/49)
 * super minor css changes for tabs on UI elements
 
 <h3>Version 2.1.2</h3>
+
 * Localization updates
 
 <h3>Version 2.1.1</h3>
+
 * Update to Foundry v11 compatability
 
 <h3>Version 2.0.10</h3>
+
 * Fix relationship type field and iconic item bonus display on teen sheet this closes issue #44
 
 <h3>Version 2.0.9</h3>
+
 * Fix DSN! not respecting roll mode this closes issue #43
 
 <h3>Version 2.0.8</h3>
+
 * Fix consition calculation this closes issue #42
 
 <h3>Version 2.0.7</h3>
+
 * Fix rolls for negative totals that add bonus dice. this closes issue #41
 
 
 <h3>Version 2.0.6</h3>
+
 * Defined initiative roll to fix issue with combat tracker this closes issue #40
 
 <h3>Version 2.0.5</h3>
+
 * Fixed bug: Roll Mode not being set properly on item rolls. This closes issue #39
 
 <h3>Version 2.0.4</h3>
+
 * Added drag and drop macro creation for tests on skills and attributes. This closes issue #31
 
 <h3>Version 2.0.2</h3>
+
 * Css fix for unreadable journal sidebar also covers changes to v10 journals in general.
 
 <h3>Version 2.0.1</h3>
