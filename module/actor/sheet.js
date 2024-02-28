@@ -142,19 +142,31 @@ export default class tftloopActorSheet extends ActorSheet {
     let actor = this.actor;
     let storedItem = game.data.item;
 
-    if (storedItem && storedItem.actor != actor) {
-      let itemData = [
-        {
-          name: storedItem.name,
-          type: storedItem.type,
-          system: {
-            description: storedItem.system.description,
-            notes: storedItem.system.notes,
-          },
-        },
-      ];
-      return actor.createEmbeddedDocuments("Item", itemData);
-    }
+    console.log("tftloop| item drop", storedItem);
+    console.log("tftloop| actor", actor);
+    console.log("tftloop| original actor", storedItem.actor);
+
+    // remove the item from the original actor
+    let originalActor = storedItem.actor;
+    console.log("tftloop| original actor", originalActor);
+    originalActor.deleteEmbeddedDocuments("Item", [storedItem.id]);
+
+
+
+
+    // if (storedItem && storedItem.actor != actor) {
+    //   let itemData = [
+    //     {
+    //       name: storedItem.name,
+    //       type: storedItem.type,
+    //       system: {
+    //         description: storedItem.system.description,
+    //         notes: storedItem.system.notes,
+    //       },
+    //     },
+    //   ];
+    //  // return actor.createEmbeddedDocuments("Item", itemData);
+    // }
 
     return;
   }
