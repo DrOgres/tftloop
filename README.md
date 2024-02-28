@@ -19,6 +19,11 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 2.1.4</h3>
+
+* Fix: [#50](https://github.com/DrOgres/tftloop/issues/50) Dropped items on a character sheet was creating two items rather than one.
+* Improved drag and drop of items from character to character by removing the item from the source character.
+
 <h3>Version 2.1.3</h3>
 
 * Token default settings updated [#49](https://github.com/DrOgres/tftloop/issues/49)
