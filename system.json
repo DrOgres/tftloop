@@ -10,11 +10,11 @@
     }
   ],
   "url": "https://github.com/DrOgres/tftloop",
-  "version": "2.1.4",
+  "version": "3.0.0",
   "compatibility": {
     "minimum": "10",
     "verified": "11",
-    "maximum": "11"
+    "maximum": "12"
   },
   "media": [
     {
