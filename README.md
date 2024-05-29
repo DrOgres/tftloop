@@ -19,6 +19,11 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 3.0.0</h3>
+
+* Version 12 compatibility [#51](https://github.com/DrOgres/tftloop/issues/51)
+* Fixed deletion of items when dropped on originating character sheet [#52](https://github.com/DrOgres/tftloop/issues/52)
+
 <h3>Version 2.1.4</h3>
 
 * Fix: [#50](https://github.com/DrOgres/tftloop/issues/50) Dropped items on a character sheet was creating two items rather than one.
