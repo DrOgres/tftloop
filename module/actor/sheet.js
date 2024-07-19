@@ -619,6 +619,7 @@ export default class tftloopActorSheet extends ActorSheet {
               roll: r,
               content: chatHTML,
             };
+
             ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
             await ChatMessage.create(chatOptions);
           } else {
@@ -654,7 +655,7 @@ export default class tftloopActorSheet extends ActorSheet {
         ? Math.min(currentCount + 1, 10)
         : Math.max(currentCount - 1, 0);
 
-    actor.update({ "data.exp": newCount });
+     actor.update({ "system.exp": newCount });
   }
 
   _resetLuck(event) {

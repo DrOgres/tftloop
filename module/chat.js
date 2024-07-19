@@ -79,6 +79,7 @@ async function onReroll(event) {
         roll: r,
         content: chatHTML
     }
+    
     ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
     await ChatMessage.create(chatOptions);
 
