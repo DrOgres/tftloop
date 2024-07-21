@@ -10,10 +10,10 @@
     }
   ],
   "url": "https://github.com/DrOgres/tftloop",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "compatibility": {
     "minimum": "10",
-    "verified": "11",
+    "verified": "12.329",
     "maximum": "12"
   },
   "media": [
@@ -89,7 +89,7 @@
   ],
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
-  "download": "https://github.com/DrOgres/tftloop/releases/download/2.1.4/system.zip",
+  "download": "https://github.com/DrOgres/tftloop/releases/download/3.3.1/system.zip",
   "gridDistance": 1,
   "gridUnits": "meter"
 }

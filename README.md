@@ -19,6 +19,11 @@ feedback is always welcome.
     </li>
 </ul>
 
+<h3>Version 3.0.1</h3>
+
+* fixed 3D Dice not rolling [#54](https://github.com/DrOgres/tftloop/issues/54)  Thanks to @Bithir for the assist!
+* fixed XP tracker not working [#53](https://github.com/DrOgres/tftloop/issues/53) Thanks to @Bithir for the assist!
+
 <h3>Version 3.0.0</h3>
 
 * Version 12 compatibility [#51](https://github.com/DrOgres/tftloop/issues/51)
