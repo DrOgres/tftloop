@@ -608,17 +608,28 @@ export default class tftloopActorSheet extends ActorSheet {
                         `;
 
             data.dicePool = 0;
+            const version = game.data.version || game.version;
+            console.log("TFTLOOP | Version: " + version);
 
-            let chatOptions = {
-              user: game.user.id,
-              speaker: ChatMessage.getSpeaker({
-                actor: this.actor,
-                token: this.actor.img,
-              }),
-              type: CONST.CHAT_MESSAGE_TYPES.ROLL,
-              roll: r,
-              content: chatHTML,
-            };
+            let chatOptions = {};
+            if (version > 12) {
+              chatOptions = {
+                user: game.user.id,
+                speaker: ChatMessage.getSpeaker({ actor: this.actor, token: this.actor.img }),
+                rolls: [r],
+                content: chatHTML,
+              };
+            } else {
+              chatOptions = {
+                user: game.user.id,
+                speaker: ChatMessage.getSpeaker({ actor: this.actor, token: this.actor.img }),
+                type: CONST.CHAT_MESSAGE_TYPES.ROLL,
+                roll: r,
+                content: chatHTML,
+              };
+            }
+          
+
 
             ChatMessage.applyRollMode(chatOptions, game.settings.get('core', 'rollMode'));
             await ChatMessage.create(chatOptions);
