@@ -85,7 +85,14 @@
       "name": "Polski",
       "path": "lang/pl.json",
       "flags": {}
+    },
+	{
+      "lang": "cn",
+      "name": "中文",
+      "path": "lang/cn.json",
+      "flags": {}
     }
+	
   ],
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
