@@ -1,6 +1,6 @@
 import { tftloopRoll } from "../macros.js";
 
-export default class tftloopActorSheet extends ActorSheet {
+export default class tftloopActorSheet extends foundry.appv1.sheets.ActorSheet {
   static get defaultOptions() {
     let loopOptions = super.defaultOptions;
 

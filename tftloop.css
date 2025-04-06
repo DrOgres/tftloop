@@ -346,6 +346,10 @@ select:focus {
   border: none;
 }
 .reroll-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 3px;
   text-align: center;
 }

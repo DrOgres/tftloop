@@ -1,22 +1,44 @@
 export const hideChatActionButtons = function (_message, html, _data) {
-  const card = html.find(".tftloop.chat-card");
 
+  const card = html.querySelectorAll("div.tftloop.chat-card");
+  
   if (card.length > 0) {
-    let actor = game.actors.get(card.attr("data-actor-id"));
-
+    let actor = game.actors.get(card[0].dataset.actorId);
     if (actor && !actor.isOwner) {
-      const buttons = card.find(".reroll");
-      buttons.each((_i, btn) => {
-        btn.style.display = "none";
-      });
+      const button = html.querySelectorAll("button.reroll");
+      for (let i = 0; i<button.length; i++){
+        button[i].style.display = "none";
+      }
     }
   }
 };
 
 export function addChatListeners(html) {
-  html.on("click", "button.reroll", onReroll);
+  const button = html.querySelectorAll("button.reroll");
+      for (let i = 0; i<button.length; i++){
+        button[i].addEventListener('click', onReroll);
+      }
+  const formula = html.querySelectorAll("div.dice-formula");
+  for (let i = 0; i<formula.length; i++){
+    formula[i].addEventListener('click', onShowFormula);
+  }
 }
 
+
+
+
+async function onShowFormula(event) {
+  const card = event.currentTarget;
+  const diceRoll = card.closest(".dice-roll");
+  if (diceRoll.classList.contains("expanded")){
+    diceRoll.classList.remove("expanded");
+  } else {
+  diceRoll.classList.add("expanded")
+  }
+}
+
+
+//TODO add the sucesses from the first roll to the push 
 async function onReroll(event) {
   const card = event.currentTarget;
   let actor = game.actors.get(card.dataset.ownerId);

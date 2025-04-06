@@ -1,4 +1,4 @@
-export default class tftloopItemSheet extends ItemSheet {
+export default class tftloopItemSheet extends foundry.appv1.sheets.ItemSheet {
     constructor(...args) {
         super(...args);
     }

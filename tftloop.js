@@ -73,8 +73,11 @@ Hooks.on("preCreateItem", (createData) => {
         createData.img = "systems/tftloop/img/riks_logo.jpg"
     }
 });
-Hooks.on("renderChatLog", (_app, html, _data) => Chat.addChatListeners(html));
-Hooks.on("renderChatMessage", (app, html, data) => Chat.hideChatActionButtons(app, html, data));
+
+
+
+Hooks.on("renderChatMessageHTML", (app, html, data) => Chat.addChatListeners(html));
+Hooks.on("renderChatMessageHTML", (app, html, data) => Chat.hideChatActionButtons(app, html, data));
 
 // Hooks.once("ready", function() {
 //     console.log("TFTLOOP | Ready", data);
@@ -106,11 +109,11 @@ Hooks.once("init", function() {
     // Register System Settings
     registerSystemSettings();
 
-    Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("tftloop", tftloopActorSheet, { makeDefault: true });
+    foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+    foundry.documents.collections.Actors.registerSheet("tftloop", tftloopActorSheet, { makeDefault: true });
 
-    Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("tftloop", tftloopItemSheet, { smakeDefault: true });
+    foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+    foundry.documents.collections.Items.registerSheet("tftloop", tftloopItemSheet, { smakeDefault: true });
 
     preloadHandlebarsTemplates();
 
