@@ -142,7 +142,7 @@ export default class tftloopActorSheet extends ActorSheet {
     //let actor = this.actor;
     let storedItem = game.data.item;
 
-    // remove the item from the original actor unlsee it is the same actor
+    // remove the item from the original actor unless it is the same actor
     let originalActor = storedItem.actor;
    
     if (originalActor.id === this.actor.id) {
@@ -153,7 +153,7 @@ export default class tftloopActorSheet extends ActorSheet {
 
     originalActor.deleteEmbeddedDocuments("Item", [storedItem.id]);
 
-
+    console.log("tftloop| item dropped on another actor" + this.actor.id, storedItem.id); 
     return;
   }
 
