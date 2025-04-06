@@ -25,3 +25,6 @@ system.1.2.7.zip
 node_modules/
 package-lock.json
 package.json
+less/config.css
+less/sheet.css
+less/tftloop.css
