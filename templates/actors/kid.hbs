@@ -18,27 +18,9 @@
                     <label>{{localize "tftloop.type"}}</label>
                     
                     <select name="system.type">
-                        {{#select data.system.type}}
-                        <option value="bookworm">{{localize "tftloop.bookworm"}}</option>
-                        <option value="geek">{{localize "tftloop.geek"}}</option>
-                        <option value="hick">{{localize "tftloop.hick"}}</option>
-                        <option value="jock">{{localize "tftloop.jock"}}</option>
-                        <option value="popular">{{localize "tftloop.popular"}}</option>
-                        <option value="rocker">{{localize "tftloop.rocker"}}</option>
-                        <option value="troublemaker">{{localize "tftloop.troublemaker"}}</option>
-                        <option value="weirdo">{{localize "tftloop.weirdo"}}</option>
-                        {{#if francein80s}}
-                        <option value="combinard">{{localize "france.resourceful"}}</option>
-                        <option value="frimeur">{{localize "france.showoff"}}</option>
-                        <option value="inventeur">{{localize "france.inventor"}}</option>
-                        <option value="roliste">{{localize "france.rolePlayer"}}</option>
-                        {{/if}}
-						{{#if polishedition}}
-                        <option value="harcerka">{{localize "polish.scout"}}</option>
-                        <option value="punk">{{localize "polish.punk"}}</option>
-                        {{/if}}
-                        {{/select}}
+                        {{selectOptions kidSet selected=selectedKidType localize=true}} 
                     </select>
+
                 </div>  
             </div>
             <div class="attributes-skills">

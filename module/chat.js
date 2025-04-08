@@ -57,7 +57,7 @@ async function onReroll(event) {
   let sucessText = game.i18n.localize("tftloop.failure");
 
   if (rollValue > 0) {
-    sucessText =
+    sucessText = "+ " +
       rollValue +
       " " +
       game.i18n.localize(

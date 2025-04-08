@@ -18,19 +18,9 @@
                     <label>{{localize "tftloop.type"}}</label>
                     
                     <select name="system.type">
-                        {{#select data.system.type}}
-                        <option value="hacker">{{localize "tftflood.hacker"}}</option>
-                        <option value="jock">{{localize "tftflood.jock"}}</option>
-                        <option value="wolf">{{localize "tftflood.wolf"}}</option>
-                        <option value="motorhead">{{localize "tftflood.motorhead"}}</option>
-                        <option value="partyanimal">{{localize "tftflood.partyanimal"}}</option>
-                        <option value="raver">{{localize "tftflood.raver"}}</option>
-                        <option value="rocker">{{localize "tftflood.rocker"}}</option>
-                        <option value="seeker">{{localize "tftflood.seeker"}}</option>
-                        <option value="snob">{{localize "tftflood.snob"}}</option>
-                        <option value="streetkid">{{localize "tftflood.streetkid"}}</option>
-                        {{/select}}
+                        {{selectOptions teenSet selected=selectedTeenType localize=true}} 
                     </select>
+
                 </div>  
             </div>
 

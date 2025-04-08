@@ -27,6 +27,12 @@
 /******************************
 /       Foundry overrides
 ******************************/
+.flex-none {
+  flex: none;
+}
+.justify-start {
+  justify-items: flex-start;
+}
 .dialog-content {
   background: white;
   color: black;

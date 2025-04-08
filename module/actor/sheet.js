@@ -40,6 +40,8 @@ export default class tftloopActorSheet extends foundry.appv1.sheets.ActorSheet {
     sheet.config = CONFIG.tftloop;
     const actor = this.actor;
 
+
+
     sheet.relationships = sheet.items.filter(function (item) {
       return item.type == "relationship";
     });
@@ -68,6 +70,32 @@ export default class tftloopActorSheet extends foundry.appv1.sheets.ActorSheet {
     sheet.polishedition = game.settings.get("tftloop", "polishedition")
       ? true
       : false;
+
+     
+
+      let kidSet = {}
+      
+      kidSet = {...sheet.config.kidTypes};
+      
+      
+      if(sheet.francein80s) {
+        kidSet = { ...kidSet, ...sheet.config.franceKids};
+      }
+
+      if(sheet.polishedition){
+        kidSet = { ...kidSet, ...sheet.config.polishKids}
+      }
+
+      sheet.kidSet = kidSet;
+      sheet.selectedKidType = actor.system.type;
+
+      sheet.teenSet ={...sheet.config.teenTypes}
+      sheet.selectedTeenType = actor.system.type;
+
+      sheet.kidAgeSet = sheet.config.kidAgeList;
+      sheet.teenAgeSet = sheet.config.teenAgeList;
+      sheet.selectedAge = actor.system.age;
+
 
     return sheet;
   }
