@@ -13,7 +13,7 @@
   "version": "4.0.0",
   "compatibility": {
     "minimum": "13",
-    "verified": "13.339",
+    "verified": "13.342",
     "maximum": "13"
   },
   "media": [
@@ -97,6 +97,8 @@
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
   "download": "https://github.com/DrOgres/tftloop/releases/download/4.0.0/system.zip",
-  "grid.distance": 1,
-  "grid.units": "meter"
+  "grid" : {
+    "distance": 1,
+    "units": "meter"
+    }
 }
