@@ -61,18 +61,11 @@
 }
 
 .dialog-content {
-    background: @background;
-    color: @black;
-    border: 1px solid @black;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-}
-
-option,
-optgroup{
     font-family: Avant, sans-serif;
-    background: @field-color;
+
+    .option, .optgroup {
+        font-family: Avant, sans-serif;
+    }
 }
 
 #client-settings nav.tabs {
@@ -107,8 +100,6 @@ button:hover {
     background-color: @background;
     background: @background;
 }
-
-
 
 a:hover {
     box-shadow: none;
