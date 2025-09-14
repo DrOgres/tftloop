@@ -104,6 +104,11 @@
 
 .use-luck {
     cursor: pointer;
+    align-items: center;
+    
+    div {
+        margin-left: 5px;
+    }
 }
 
 .add-to-pool {
@@ -128,11 +133,8 @@
 }
 
 .window-content {
+
     .dialog-content {
-        background: url(img/chat_background.jpg);
-        padding: 5px;
-        box-shadow: 2px 2px @drop-shadow-color;
-        margin-bottom: 3px;
 
         .bug {
             background: url(img/loop_bug_sm.png);
@@ -375,25 +377,17 @@
         padding: 0px;
         box-shadow: 2px 2px @drop-shadow-color;
         margin-bottom: 4px;
-        margin-top: 4px;
-        line-height: 15px;
+        margin-left: 5px;
         max-height: 165px;
-        
-        .info-item {
-            font-size: .85em;
+
+        .common-item-style {
             line-height: 25px;
             padding-left: 3px;
-            align-content: space-between;
-            justify-content: space-between;
 
-            .even {
-                background: @iconic-item-color;
-            }
-           
             p {
                 margin: 0px;
             }
-            
+
             img {
                 border:none;
                 vertical-align: middle;
@@ -405,34 +399,23 @@
             input {
                 background: @transparent;
                 border: none;
+            }
+
+            label {
+                padding-right: 3px;
+            }
+        }
+
+        .info-item {
+            .common-item-style();
+            .even {
+                background: @iconic-item-color;
             }
         }
 
         .special-item {
-            font-size: .85em;
-            line-height: 25px;
-            padding-left: 2px;
-            align-content: space-between;
-            justify-content: space-between;
-            padding-top: 0px;
+            .common-item-style();
             border-bottom: 1px solid @black;
-
-            p {
-                margin: 0px;
-            }
-            
-            img {
-                border:none;
-                vertical-align: middle;
-                display: inline-block;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            input {
-                background: @transparent;
-                border: none;
-            }
         }
 
         .section-header {
@@ -538,6 +521,7 @@
         border-top: 1px solid @black;
         padding-left: 3px;
         overflow-x: auto;
+        align-items: center;
 
         .item-name {
             flex: 0 0 60%;
@@ -546,6 +530,7 @@
         .item-bonus {
             flex: 0 0 30px;
         }
+
         .item-plus {
             flex: 0 0 10px;
         }
@@ -564,7 +549,7 @@
         }
        
         line-height: 34px;
-        justify-content: space-between;;
+        justify-content: space-between;
         align-content: space-between;
 
         label {
@@ -572,7 +557,6 @@
         }
         
         input {
-            margin-top: 3px;
             margin-right: 3px;
             background: @transparent;
             border: none;
@@ -594,15 +578,14 @@
 
     .special-item {
         font-family: Avant, sans-serif;
-        font-size: .9em;
+        font-size: 1em;
         background: @section-head-color;
         border-right: 1px solid @black;
         border-top: 1px solid @black;
-        padding-top: 3px;
-        align-content: space-between;
         justify-content: space-between;
         border-bottom: 1px solid @black;
         padding-left: 3px;
+        align-items: center;
 
         img {
             border:none;
