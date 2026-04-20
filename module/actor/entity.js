@@ -37,10 +37,7 @@ export default class tftloopActor extends Actor {
     
     static async create(data, options = {}) {
         if (data.type === "kid" || data.type === "teen") {
-            mergeObject(
-              {
-                    overwrite: false
-            });
+            foundry.utils.mergeObject({ overwrite: false });
         }
         return super.create(data, options);
     }
