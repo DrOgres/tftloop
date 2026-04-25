@@ -6,6 +6,7 @@
 
 - Replaced TinyMCE with ProseMirror as the Actor Notes editor
 - Moved the CHANGELOG out of the README
+- Massive thanks to @henry-malinowski for the v14 update
 
 ### Fixed
 
