@@ -10,11 +10,11 @@
     }
   ],
   "url": "https://github.com/DrOgres/tftloop",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "compatibility": {
     "minimum": "13",
-    "verified": "13.342",
-    "maximum": "13"
+    "verified": "14.360",
+    "maximum": "14"
   },
   "media": [
     {
@@ -86,19 +86,18 @@
       "path": "lang/pl.json",
       "flags": {}
     },
-	{
+    {
       "lang": "cn",
       "name": "中文",
       "path": "lang/cn.json",
       "flags": {}
     }
-	
   ],
   "initiative": "1d10",
   "manifest": "https://github.com/DrOgres/tftloop/releases/latest/download/system.json",
-  "download": "https://github.com/DrOgres/tftloop/releases/download/4.0.0/system.zip",
+  "download": "https://github.com/DrOgres/tftloop/releases/download/4.0.1/system.zip",
   "grid" : {
     "distance": 1,
     "units": "meter"
-    }
+  }
 }

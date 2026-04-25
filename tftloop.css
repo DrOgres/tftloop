@@ -34,17 +34,11 @@
   justify-items: flex-start;
 }
 .dialog-content {
-  background: white;
-  color: black;
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 5px;
-  margin: 5px;
-}
-option,
-optgroup {
   font-family: Avant, sans-serif;
-  background: #fff1da;
+}
+.dialog-content .option,
+.dialog-content .optgroup {
+  font-family: Avant, sans-serif;
 }
 #client-settings nav.tabs {
   line-height: 32px;
@@ -379,6 +373,10 @@ select:focus {
 }
 .use-luck {
   cursor: pointer;
+  align-items: center;
+}
+.use-luck div {
+  margin-left: 5px;
 }
 .add-to-pool {
   cursor: pointer;
@@ -396,12 +394,6 @@ select:focus {
 }
 .reset-luck:hover {
   font-weight: 700;
-}
-.window-content .dialog-content {
-  background: url(img/chat_background.jpg);
-  padding: 5px;
-  box-shadow: 2px 2px #7f7f7f;
-  margin-bottom: 3px;
 }
 .window-content .dialog-content .bug {
   background: url(img/loop_bug_sm.png);
@@ -500,10 +492,13 @@ select:focus {
   display: flex;
   flex-direction: column;
 }
-.tox.tox-tinymce {
+.editor.prosemirror {
   border: none;
   flex: 1;
   min-height: 200px;
+}
+.editor.prosemirror .editor-content {
+  border: none;
 }
 .kid-notes {
   background: #fff1da;
@@ -597,19 +592,33 @@ select:focus {
   padding: 0px;
   box-shadow: 2px 2px #7f7f7f;
   margin-bottom: 4px;
-  margin-top: 4px;
-  line-height: 15px;
+  margin-left: 5px;
   max-height: 165px;
 }
-.main .conditions .info-item {
-  font-size: 0.85em;
+.main .conditions .common-item-style {
   line-height: 25px;
   padding-left: 3px;
-  align-content: space-between;
-  justify-content: space-between;
 }
-.main .conditions .info-item .even {
-  background: #fedd9e;
+.main .conditions .common-item-style p {
+  margin: 0px;
+}
+.main .conditions .common-item-style img {
+  border: none;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main .conditions .common-item-style input {
+  background: #ffffff00;
+  border: none;
+}
+.main .conditions .common-item-style label {
+  padding-right: 3px;
+}
+.main .conditions .info-item {
+  line-height: 25px;
+  padding-left: 3px;
 }
 .main .conditions .info-item p {
   margin: 0px;
@@ -625,13 +634,15 @@ select:focus {
   background: #ffffff00;
   border: none;
 }
+.main .conditions .info-item label {
+  padding-right: 3px;
+}
+.main .conditions .info-item .even {
+  background: #fedd9e;
+}
 .main .conditions .special-item {
-  font-size: 0.85em;
   line-height: 25px;
-  padding-left: 2px;
-  align-content: space-between;
-  justify-content: space-between;
-  padding-top: 0px;
+  padding-left: 3px;
   border-bottom: 1px solid black;
 }
 .main .conditions .special-item p {
@@ -647,6 +658,9 @@ select:focus {
 .main .conditions .special-item input {
   background: #ffffff00;
   border: none;
+}
+.main .conditions .special-item label {
+  padding-right: 3px;
 }
 .main .conditions .section-header {
   line-height: 25px;
@@ -733,6 +747,7 @@ select:focus {
   border-top: 1px solid black;
   padding-left: 3px;
   overflow-x: auto;
+  align-items: center;
   line-height: 34px;
   justify-content: space-between;
   align-content: space-between;
@@ -760,7 +775,6 @@ select:focus {
   max-width: fit-content;
 }
 .main .info-item input {
-  margin-top: 3px;
   margin-right: 3px;
   background: #ffffff00;
   border: none;
@@ -777,15 +791,14 @@ select:focus {
 }
 .main .special-item {
   font-family: Avant, sans-serif;
-  font-size: 0.9em;
+  font-size: 1em;
   background: #f9bd8d;
   border-right: 1px solid black;
   border-top: 1px solid black;
-  padding-top: 3px;
-  align-content: space-between;
   justify-content: space-between;
   border-bottom: 1px solid black;
   padding-left: 3px;
+  align-items: center;
 }
 .main .special-item img {
   border: none;

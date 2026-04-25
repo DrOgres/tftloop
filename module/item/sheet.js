@@ -5,7 +5,7 @@ export default class tftloopItemSheet extends foundry.appv1.sheets.ItemSheet {
 
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return foundry.utils.mergeObject(super.defaultOptions, {
             width : 650, 
             height: 350,
             classes: ["tftloop", "sheet", "item"],
